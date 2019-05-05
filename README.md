@@ -7,7 +7,7 @@ Ceci est la version .NET (WPF) & SQL SERVER de "Cloud Business Applications".
 
 Pour en savoir plus sur ce projet en particulier, veuillez visiter le lien suivant:
 
-http://panoplyweb.com/?portfolio=db2-jdbc-wasce
+http://panoplyweb.com/?portfolio=wpf-entity-framework-sql-server
 
 Pour en savoir plus sur les projets "Cloud Business Applications" , veuillez visiter le lien suivant:
 
@@ -21,7 +21,7 @@ This the .NET (WPF) & SQL SERVER for the "Cloud Business Applications" project.
 
 To learn more about this project in particular, please use the following link:
 
-http://panoplyweb.com/?portfolio=db2-jdbc-wasce
+http://panoplyweb.com/?portfolio=wpf-entity-framework-sql-server
 
 To learn more about the "Cloud Business Applications" projects overall, please visit the following page:
 
