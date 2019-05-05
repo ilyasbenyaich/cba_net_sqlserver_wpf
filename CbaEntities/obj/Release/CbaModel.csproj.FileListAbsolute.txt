@@ -1,0 +1,10 @@
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.dll.config
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\obj\Release\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\obj\Release\CbaModel.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.dll.config
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Release\CbaModel.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\obj\Release\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\obj\Release\CbaModel.pdb

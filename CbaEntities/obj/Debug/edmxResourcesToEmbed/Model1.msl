@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Cba_ModelStoreContainer" CdmEntityContainer="Cba_Entities">
+    <EntitySetMapping Name="CUR01">
+      <EntityTypeMapping TypeName="Cba_Model.CUR01">
+        <MappingFragment StoreEntitySet="CUR01">
+          <ScalarProperty Name="Id" ColumnName="CURRENI" />
+          <ScalarProperty Name="Code" ColumnName="CURRENC" />
+          <ScalarProperty Name="Name" ColumnName="CURRENN" />
+          <ScalarProperty Name="Symbol" ColumnName="CURRENS" />
+          <ScalarProperty Name="Status" ColumnName="CURRENG" />
+          <ScalarProperty Name="StartDate" ColumnName="CURREND" />
+          <ScalarProperty Name="EndDate" ColumnName="CURRENE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CURRENU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CURRENA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="CURRENL" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="CURRENB" />
+          <ScalarProperty Name="Country" ColumnName="CURRENF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="Cba_Model.CUR01">
+        <ModificationFunctionMapping>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateCurrency">
+            <ScalarProperty Name="Status" ParameterName="status" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="currencyId" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

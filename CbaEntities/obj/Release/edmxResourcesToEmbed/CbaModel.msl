@@ -1,0 +1,1164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Cba_ModelStoreContainer" CdmEntityContainer="CbaEntities">
+    <EntitySetMapping Name="Currency">
+      <EntityTypeMapping TypeName="CbaModel.Currency">
+        <MappingFragment StoreEntitySet="CUR01">
+          <ScalarProperty Name="Id" ColumnName="CURRENI" />
+          <ScalarProperty Name="Code" ColumnName="CURRENC" />
+          <ScalarProperty Name="Name" ColumnName="CURRENN" />
+          <ScalarProperty Name="Symbol" ColumnName="CURRENS" />
+          <ScalarProperty Name="Status" ColumnName="CURRENG" />
+          <ScalarProperty Name="StartDate" ColumnName="CURREND" />
+          <ScalarProperty Name="EndDate" ColumnName="CURRENE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CURRENU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CURRENA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="CURRENL" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="CURRENB" />
+          <ScalarProperty Name="Country" ColumnName="CURRENF" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Currency">
+        <ModificationFunctionMapping>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateCurrency">
+            <ScalarProperty Name="Status" ParameterName="status" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="currencyId" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Calendar">
+      <EntityTypeMapping TypeName="CbaModel.Calendar">
+        <MappingFragment StoreEntitySet="CAL01">
+          <ScalarProperty Name="UpdatedOn" ColumnName="CALENLU" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="CALENDP" />
+          <ScalarProperty Name="CreatedOn" ColumnName="CALENDT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CALENDU" />
+          <ScalarProperty Name="Status" ColumnName="CALENDS" />
+          <ScalarProperty Name="Name" ColumnName="CALENDN" />
+          <ScalarProperty Name="Id" ColumnName="CALENID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Calendar">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertCalendar">
+            <ScalarProperty Name="Status" ParameterName="CalendarStatus" />
+            <ScalarProperty Name="Name" ParameterName="CalendarName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateCalendar">
+            <ScalarProperty Name="Status" ParameterName="CalendarStatus" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="CalendarID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteCalendar">
+            <ScalarProperty Name="Id" ParameterName="CalendarId" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rate">
+      <EntityTypeMapping TypeName="CbaModel.Rate">
+        <MappingFragment StoreEntitySet="RAT01">
+          <ScalarProperty Name="CurrencyTo" ColumnName="RATECUT" />
+          <ScalarProperty Name="CurrencyFrom" ColumnName="RATECUF" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="RATEUPD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="RATEUPU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="RATEDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="RATEUSR" />
+          <ScalarProperty Name="EndDate" ColumnName="RATEEDA" />
+          <ScalarProperty Name="StartDate" ColumnName="RATESDA" />
+          <ScalarProperty Name="ExchangeRate" ColumnName="RATEDVA" />
+          <ScalarProperty Name="Id" ColumnName="RATEIDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Rate">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertRate">
+            <ScalarProperty Name="ExchangeRate" ParameterName="ExchageRate" />
+            <ScalarProperty Name="EndDate" ParameterName="RateEndDate" />
+            <ScalarProperty Name="StartDate" ParameterName="RateStartDate" />
+            <ScalarProperty Name="CurrencyTo" ParameterName="CurrenyTo" />
+            <ScalarProperty Name="CurrencyFrom" ParameterName="CurrencyFrom" />
+          </InsertFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteRate">
+            <ScalarProperty Name="Id" ParameterName="RateId" />
+          </DeleteFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateRate">
+            <ScalarProperty Name="ExchangeRate" ParameterName="ExchageRate" Version="Current" />
+            <ScalarProperty Name="EndDate" ParameterName="RateEndDate" Version="Current" />
+            <ScalarProperty Name="StartDate" ParameterName="RateStartDate" Version="Current" />
+            <ScalarProperty Name="CurrencyTo" ParameterName="CurrenyTo" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="RateId" Version="Current" />
+            <ScalarProperty Name="CurrencyFrom" ParameterName="CurrencyFrom" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Period">
+      <EntityTypeMapping TypeName="CbaModel.Period">
+        <MappingFragment StoreEntitySet="PER01">
+          <ScalarProperty Name="Calendar" ColumnName="PERIODC" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="PERIODM" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="PERIODL" />
+          <ScalarProperty Name="CreatedOn" ColumnName="PERIODD" />
+          <ScalarProperty Name="CreatedBy" ColumnName="PERIODU" />
+          <ScalarProperty Name="Status" ColumnName="PERIODT" />
+          <ScalarProperty Name="Adjustment" ColumnName="PERIODA" />
+          <ScalarProperty Name="EndDate" ColumnName="PERIODE" />
+          <ScalarProperty Name="StartDate" ColumnName="PERIODS" />
+          <ScalarProperty Name="Name" ColumnName="PERIODN" />
+          <ScalarProperty Name="Id" ColumnName="PERIODI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Period">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertPeriod">
+            <ScalarProperty Name="Calendar" ParameterName="PeriodCalendar" />
+            <ScalarProperty Name="Adjustment" ParameterName="PeriodAdj" />
+            <ScalarProperty Name="EndDate" ParameterName="PeriodEnd" />
+            <ScalarProperty Name="StartDate" ParameterName="PeriodStart" />
+            <ScalarProperty Name="Name" ParameterName="PeriodName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdatePeriod">
+            <ScalarProperty Name="Status" ParameterName="PeriodStatus" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="PeriodID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeletePeriod">
+            <ScalarProperty Name="Id" ParameterName="PeriodID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chart">
+      <EntityTypeMapping TypeName="CbaModel.Chart">
+        <MappingFragment StoreEntitySet="CHA01">
+          <ScalarProperty Name="UnpdatedOn" ColumnName="COAUPDD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="COAUPUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="COADATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="COAUSER" />
+          <ScalarProperty Name="Language" ColumnName="COALANG" />
+          <ScalarProperty Name="Description" ColumnName="COADESC" />
+          <ScalarProperty Name="ShortDescription" ColumnName="COASDES" />
+          <ScalarProperty Name="Name" ColumnName="COANAME" />
+          <ScalarProperty Name="Id" ColumnName="COASIDS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Chart">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertChart">
+            <ScalarProperty Name="Language" ParameterName="ChartBaseLanguage" />
+            <ScalarProperty Name="ShortDescription" ParameterName="ChartShortDescription" />
+            <ScalarProperty Name="Description" ParameterName="ChartDescription" />
+            <ScalarProperty Name="Name" ParameterName="ChartName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateChart">
+            <ScalarProperty Name="Id" ParameterName="ChartId" Version="Current" />
+            <ScalarProperty Name="Description" ParameterName="ChartBaseLanguage" Version="Current" />
+            <ScalarProperty Name="ShortDescription" ParameterName="ChartShortDescription" Version="Current" />
+            <ScalarProperty Name="Description" ParameterName="ChartDescription" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="ChartName" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteChart">
+            <ScalarProperty Name="Id" ParameterName="ChartID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Segment">
+      <EntityTypeMapping TypeName="CbaModel.Segment">
+        <MappingFragment StoreEntitySet="ACS01">
+          <ScalarProperty Name="Chart" ColumnName="ACSCOID" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="ACSNTUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="ACSNTUP" />
+          <ScalarProperty Name="CreatedOn" ColumnName="ACSDATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="ACSNTUS" />
+          <ScalarProperty Name="Description" ColumnName="ACSDESC" />
+          <ScalarProperty Name="Name" ColumnName="ACSNAME" />
+          <ScalarProperty Name="Id" ColumnName="ACSTSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Segment">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertSegment">
+            <ScalarProperty Name="Chart" ParameterName="SegmentChart" />
+            <ScalarProperty Name="Description" ParameterName="SegmentDescription" />
+            <ScalarProperty Name="Name" ParameterName="SegmentName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateSegment">
+            <ScalarProperty Name="Description" ParameterName="SegmentDescription" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="SegmentName" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="SegmentId" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteSegment">
+            <ScalarProperty Name="Id" ParameterName="SegmentId" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Account">
+      <EntityTypeMapping TypeName="CbaModel.Account">
+        <MappingFragment StoreEntitySet="ACC01">
+          <ScalarProperty Name="Parent" ColumnName="ACCNTPA" />
+          <ScalarProperty Name="Chart" ColumnName="ACCNTCA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="ACCNTUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="ACCNTUP" />
+          <ScalarProperty Name="CreatedOn" ColumnName="ACCNTDT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="ACCNTUS" />
+          <ScalarProperty Name="Group" ColumnName="ACCNTGR" />
+          <ScalarProperty Name="Level" ColumnName="ACCNTLE" />
+          <ScalarProperty Name="Status" ColumnName="ACCNTST" />
+          <ScalarProperty Name="Budget" ColumnName="ACCNTBU" />
+          <ScalarProperty Name="Posting" ColumnName="ACCNTPO" />
+          <ScalarProperty Name="Type" ColumnName="ACCNTTP" />
+          <ScalarProperty Name="Description" ColumnName="ACCNTDE" />
+          <ScalarProperty Name="Name" ColumnName="ACCNTNM" />
+          <ScalarProperty Name="Code" ColumnName="ACCNTNB" />
+          <ScalarProperty Name="Id" ColumnName="ACCNTCD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Account">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertAccount">
+            <ScalarProperty Name="Chart" ParameterName="AccountChart" />
+            <ScalarProperty Name="Name" ParameterName="AccountName" />
+            <ScalarProperty Name="Parent" ParameterName="AccountParent" />
+            <ScalarProperty Name="Level" ParameterName="AccountLevel" />
+            <ScalarProperty Name="Status" ParameterName="AccountStatus" />
+            <ScalarProperty Name="Budget" ParameterName="AccountBudgeting" />
+            <ScalarProperty Name="Posting" ParameterName="AccountPosting" />
+            <ScalarProperty Name="Type" ParameterName="AccountType" />
+            <ScalarProperty Name="Code" ParameterName="AccountCode" />
+            <ScalarProperty Name="Description" ParameterName="Description" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateAccount">
+            <ScalarProperty Name="Parent" ParameterName="AccountParent" Version="Current" />
+            <ScalarProperty Name="Level" ParameterName="AccountLevel" Version="Current" />
+            <ScalarProperty Name="Status" ParameterName="AccountStatus" Version="Current" />
+            <ScalarProperty Name="Budget" ParameterName="AccountBudgeting" Version="Current" />
+            <ScalarProperty Name="Posting" ParameterName="AccountPosting" Version="Current" />
+            <ScalarProperty Name="Type" ParameterName="AccountType" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="AccountName" Version="Current" />
+            <ScalarProperty Name="Code" ParameterName="AccountCode" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="AccountID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteAccount">
+            <ScalarProperty Name="Id" ParameterName="AccountID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tax">
+      <EntityTypeMapping TypeName="CbaModel.Tax">
+        <MappingFragment StoreEntitySet="TAX01">
+          <ScalarProperty Name="Territory" ColumnName="TAXTERR" />
+          <ScalarProperty Name="Account" ColumnName="TAXACCT" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="TAXUATE" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="TAXUUPD" />
+          <ScalarProperty Name="CreatedOn" ColumnName="TAXDATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="TAXUSER" />
+          <ScalarProperty Name="EndDate" ColumnName="TAXEEND" />
+          <ScalarProperty Name="StartDate" ColumnName="TAXSTAR" />
+          <ScalarProperty Name="Type" ColumnName="TAXTYPE" />
+          <ScalarProperty Name="Rate" ColumnName="TAXRATE" />
+          <ScalarProperty Name="Name" ColumnName="TAXNAME" />
+          <ScalarProperty Name="Id" ColumnName="TAXCODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Tax">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertTax">
+            <ScalarProperty Name="Account" ParameterName="TaxAccount" />
+            <ScalarProperty Name="Territory" ParameterName="TaxTerritory" />
+            <ScalarProperty Name="EndDate" ParameterName="TaxEndDate" />
+            <ScalarProperty Name="StartDate" ParameterName="TaxStartDate" />
+            <ScalarProperty Name="Type" ParameterName="TaxType" />
+            <ScalarProperty Name="Rate" ParameterName="TaxRate" />
+            <ScalarProperty Name="Name" ParameterName="TaxName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateTax">
+            <ScalarProperty Name="Account" ParameterName="TaxAccount" Version="Current" />
+            <ScalarProperty Name="Territory" ParameterName="TaxTerritory" Version="Current" />
+            <ScalarProperty Name="EndDate" ParameterName="TaxEndDate" Version="Current" />
+            <ScalarProperty Name="StartDate" ParameterName="TaxStartDate" Version="Current" />
+            <ScalarProperty Name="Type" ParameterName="TaxType" Version="Current" />
+            <ScalarProperty Name="Rate" ParameterName="TaxRate" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="TaxName" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="TaxID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteTax">
+            <ScalarProperty Name="Id" ParameterName="TaxID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Balance">
+      <EntityTypeMapping TypeName="CbaModel.Balance">
+        <MappingFragment StoreEntitySet="BAL01">
+          <ScalarProperty Name="Currency" ColumnName="BALANCU" />
+          <ScalarProperty Name="Ledger" ColumnName="BALANLE" />
+          <ScalarProperty Name="Period" ColumnName="BALANPE" />
+          <ScalarProperty Name="Lignes" ColumnName="BALANJI" />
+          <ScalarProperty Name="Journal" ColumnName="BALANJL" />
+          <ScalarProperty Name="Account" ColumnName="BALANAC" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BALANUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BALANUP" />
+          <ScalarProperty Name="PeriodCredit" ColumnName="BALANPC" />
+          <ScalarProperty Name="PeriodDebit" ColumnName="BALANPD" />
+          <ScalarProperty Name="CreditStart" ColumnName="BALANBC" />
+          <ScalarProperty Name="DebitStart" ColumnName="BALANBD" />
+          <ScalarProperty Name="Id" ColumnName="BALANCI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Journal">
+      <EntityTypeMapping TypeName="CbaModel.Journal">
+        <MappingFragment StoreEntitySet="JHE01">
+          <ScalarProperty Name="Period" ColumnName="JOURNPE" />
+          <ScalarProperty Name="Ledger" ColumnName="JOURNLE" />
+          <ScalarProperty Name="Currency" ColumnName="JOURNCU" />
+          <ScalarProperty Name="Category" ColumnName="JOURNCA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="JOURNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="JOURNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="JOURNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="JOURNUS" />
+          <ScalarProperty Name="TotalDebit" ColumnName="JOURNTD" />
+          <ScalarProperty Name="TotalCredit" ColumnName="JOURNTC" />
+          <ScalarProperty Name="BalancedFlag" ColumnName="JOURNBF" />
+          <ScalarProperty Name="ActualFlag" ColumnName="JOURNAF" />
+          <ScalarProperty Name="Status" ColumnName="JOURNST" />
+          <ScalarProperty Name="Source" ColumnName="JOURNSO" />
+          <ScalarProperty Name="Description" ColumnName="JOURNDE" />
+          <ScalarProperty Name="Name" ColumnName="JOURNNA" />
+          <ScalarProperty Name="Id" ColumnName="JOURNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JournalLines">
+      <EntityTypeMapping TypeName="CbaModel.JournalLines">
+        <MappingFragment StoreEntitySet="JLI01">
+          <ScalarProperty Name="Account" ColumnName="JRNLACC" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="JRNLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="JRNLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="JRNLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="JRNLUSR" />
+          <ScalarProperty Name="Amount" ColumnName="JRNLIAM" />
+          <ScalarProperty Name="DebitCreditFlag" ColumnName="JRNLIDC" />
+          <ScalarProperty Name="JournalId" ColumnName="JRNLIJI" />
+          <ScalarProperty Name="LineId" ColumnName="JRNLILI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Budget">
+      <EntityTypeMapping TypeName="CbaModel.Budget">
+        <MappingFragment StoreEntitySet="BUD01">
+          <ScalarProperty Name="Ledger" ColumnName="BUDGETL" />
+          <ScalarProperty Name="Calendar" ColumnName="BUDGECA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BUDGEUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BUDGEDU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BUDGETA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BUDGETU" />
+          <ScalarProperty Name="Status" ColumnName="BUDGETS" />
+          <ScalarProperty Name="Description" ColumnName="BUDGETD" />
+          <ScalarProperty Name="Name" ColumnName="BUDGETN" />
+          <ScalarProperty Name="Id" ColumnName="BUDGETI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BudgetLines">
+      <EntityTypeMapping TypeName="CbaModel.BudgetLines">
+        <MappingFragment StoreEntitySet="BUL01">
+          <ScalarProperty Name="Period" ColumnName="BULLPER" />
+          <ScalarProperty Name="Account" ColumnName="BULLACC" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BULLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BULLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BULLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BULLUSR" />
+          <ScalarProperty Name="Amount" ColumnName="BULLIAM" />
+          <ScalarProperty Name="BudgetId" ColumnName="BULLIBU" />
+          <ScalarProperty Name="LineId" ColumnName="BULLILI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductFamily">
+      <EntityTypeMapping TypeName="CbaModel.ProductFamily">
+        <MappingFragment StoreEntitySet="PFA01">
+          <ScalarProperty Name="UpdatedOn" ColumnName="PFALUDO" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="PFALUDB" />
+          <ScalarProperty Name="CreatedOn" ColumnName="PFADATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="PFANTUS" />
+          <ScalarProperty Name="Description" ColumnName="PFADESC" />
+          <ScalarProperty Name="Name" ColumnName="PFANAME" />
+          <ScalarProperty Name="Id" ColumnName="PFATSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.ProductFamily">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertProductFamily">
+            <ScalarProperty Name="Description" ParameterName="ProductFamilyDescription" />
+            <ScalarProperty Name="Name" ParameterName="ProductFamilyName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateProductFamily">
+            <ScalarProperty Name="Description" ParameterName="ProductFamilyDescription" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="ProductFamilyName" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="ProductFamilyID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteProductFamily">
+            <ScalarProperty Name="Id" ParameterName="ProductFamilyID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductSubFamily">
+      <EntityTypeMapping TypeName="CbaModel.ProductSubFamily">
+        <MappingFragment StoreEntitySet="PSF01">
+          <ScalarProperty Name="Family" ColumnName="PSFPFFK" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="PSFLUDO" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="PSFLUDB" />
+          <ScalarProperty Name="CreatedOn" ColumnName="PSFDATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="PSFCBUS" />
+          <ScalarProperty Name="Description" ColumnName="PSFDESC" />
+          <ScalarProperty Name="Name" ColumnName="PSFNAME" />
+          <ScalarProperty Name="Id" ColumnName="PSFTSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.ProductSubFamily">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertProductSubFamily">
+            <ScalarProperty Name="Description" ParameterName="ProductSubFamilyDescription" />
+            <ScalarProperty Name="Name" ParameterName="ProductSubFamilyName" />
+            <ScalarProperty Name="Family" ParameterName="ProductFamily" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateProductSubFamily">
+            <ScalarProperty Name="Family" ParameterName="ProductFamily" Version="Current" />
+            <ScalarProperty Name="Description" ParameterName="ProductSubFamilyDescription" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="ProductSubFamilyName" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="ProductSubFamilyID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteSubProductFamily">
+            <ScalarProperty Name="Id" ParameterName="ProductSubFamilyID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="CbaModel.Product">
+        <MappingFragment StoreEntitySet="PRO01">
+          <ScalarProperty Name="Subfamily" ColumnName="PRODTSF" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="PRODTUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="PRODTUP" />
+          <ScalarProperty Name="CreatedOn" ColumnName="PRODTDT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="PRODTUS" />
+          <ScalarProperty Name="Discontinued" ColumnName="PRODDAT" />
+          <ScalarProperty Name="EndDate" ColumnName="PRODSED" />
+          <ScalarProperty Name="StartDate" ColumnName="PRODSSD" />
+          <ScalarProperty Name="Status" ColumnName="PRODTST" />
+          <ScalarProperty Name="Class" ColumnName="PRODCLA" />
+          <ScalarProperty Name="WeightMeasure" ColumnName="PRODWUM" />
+          <ScalarProperty Name="Weight" ColumnName="PRODWEI" />
+          <ScalarProperty Name="SizeMeasure" ColumnName="PRODSUM" />
+          <ScalarProperty Name="Size" ColumnName="PRODSIZ" />
+          <ScalarProperty Name="ListPrice" ColumnName="PRODTLP" />
+          <ScalarProperty Name="Description" ColumnName="PRODTDE" />
+          <ScalarProperty Name="Name" ColumnName="PRODTNM" />
+          <ScalarProperty Name="Code" ColumnName="PRODNUB" />
+          <ScalarProperty Name="Id" ColumnName="PRODUCD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Product">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertProduct">
+            <ScalarProperty Name="ListPrice" ParameterName="ProductListPrice" />
+            <ScalarProperty Name="Description" ParameterName="ProductDescription" />
+            <ScalarProperty Name="Name" ParameterName="ProductName" />
+            <ScalarProperty Name="Code" ParameterName="ProductCode" />
+            <ScalarProperty Name="Subfamily" ParameterName="ProductSubFamily" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateProduct">
+            <ScalarProperty Name="Subfamily" ParameterName="ProductSubFamily" Version="Current" />
+            <ScalarProperty Name="ListPrice" ParameterName="ProductListPrice" Version="Current" />
+            <ScalarProperty Name="Description" ParameterName="ProductDescription" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="ProductName" Version="Current" />
+            <ScalarProperty Name="Code" ParameterName="ProductCode" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="ProductID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteProduct">
+            <ScalarProperty Name="Id" ParameterName="ProductID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bill">
+      <EntityTypeMapping TypeName="CbaModel.Bill">
+        <MappingFragment StoreEntitySet="BIL01">
+          <ScalarProperty Name="DocumentType" ColumnName="BILDOTY" />
+          <ScalarProperty Name="Period" ColumnName="BILPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="BILBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="BILLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BILRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BILRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BILRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BILRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="BILNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="BILTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="BILDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="BILGROS" />
+          <ScalarProperty Name="Note" ColumnName="BILNOTE" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="BILORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="BILORIG" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="BILSTAT" />
+          <ScalarProperty Name="DueDate" ColumnName="BILDUDA" />
+          <ScalarProperty Name="DocumentDate" ColumnName="BILDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="BILDOCN" />
+          <ScalarProperty Name="Id" ColumnName="BILLSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Bill">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertBill">
+            <ScalarProperty Name="DocumentType" ParameterName="BillDocumentType" />
+            <ScalarProperty Name="Period" ParameterName="BillPeriod" />
+            <ScalarProperty Name="BusinessPartner" ParameterName="BillBusinessPartner" />
+            <ScalarProperty Name="LegalEntity" ParameterName="BillLegalEntity" />
+            <ScalarProperty Name="Note" ParameterName="BillNote" />
+            <ScalarProperty Name="DocumentStatus" ParameterName="BillStatus" />
+            <ScalarProperty Name="DueDate" ParameterName="BillDueDate" />
+            <ScalarProperty Name="DocumentDate" ParameterName="BillDocumentDate" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateBill">
+            <ScalarProperty Name="DocumentType" ParameterName="BillDocumentType" Version="Current" />
+            <ScalarProperty Name="Period" ParameterName="BillPeriod" Version="Current" />
+            <ScalarProperty Name="BusinessPartner" ParameterName="BillBusinessPartner" Version="Current" />
+            <ScalarProperty Name="LegalEntity" ParameterName="BillLegalEntity" Version="Current" />
+            <ScalarProperty Name="Note" ParameterName="BillNote" Version="Current" />
+            <ScalarProperty Name="DocumentStatus" ParameterName="BillStatus" Version="Current" />
+            <ScalarProperty Name="DueDate" ParameterName="BillDueDate" Version="Current" />
+            <ScalarProperty Name="DocumentDate" ParameterName="BillDocumentDate" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="BillID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteBill">
+            <ScalarProperty Name="Id" ParameterName="BillID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BillLines">
+      <EntityTypeMapping TypeName="CbaModel.BillLines">
+        <MappingFragment StoreEntitySet="BLI01">
+          <ScalarProperty Name="LineTotal" ColumnName="BLINETA" />
+          <ScalarProperty Name="LineTax" ColumnName="BLITAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="BLIDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="BLILLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="BLITAID" />
+          <ScalarProperty Name="Product" ColumnName="BLILPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BLILIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BLILIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BLILDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BLILUSR" />
+          <ScalarProperty Name="Price" ColumnName="BLILPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="BLILQUA" />
+          <ScalarProperty Name="BillId" ColumnName="BLILIBI" />
+          <ScalarProperty Name="LineId" ColumnName="BLILIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsReceipt">
+      <EntityTypeMapping TypeName="CbaModel.GoodsReceipt">
+        <MappingFragment StoreEntitySet="GOR01">
+          <ScalarProperty Name="DocumentType" ColumnName="GORDOTY" />
+          <ScalarProperty Name="Period" ColumnName="GORPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="GORBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="GORLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="GORRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="GORRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="GORRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="GORRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="GORNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="GORTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="GORDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="GORGROS" />
+          <ScalarProperty Name="Note" ColumnName="GORNOTE" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="GORORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="GORORIG" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="GORSTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="GORDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="GORDOCN" />
+          <ScalarProperty Name="Id" ColumnName="GORERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GoodsReceiptLines">
+      <EntityTypeMapping TypeName="CbaModel.GoodsReceiptLines">
+        <MappingFragment StoreEntitySet="GRL01">
+          <ScalarProperty Name="LineTotal" ColumnName="GRLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="GRLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="GRLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="GRLLLTO" />
+          <ScalarProperty Name="WarehouseId" ColumnName="GRLLWAR" />
+          <ScalarProperty Name="TaxId" ColumnName="GRLTAID" />
+          <ScalarProperty Name="Product" ColumnName="GRLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="GRLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="GRLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="GRLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="GRLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="GRLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="GRLLQUA" />
+          <ScalarProperty Name="GoodsReceiptId" ColumnName="GRLLIGR" />
+          <ScalarProperty Name="LineId" ColumnName="GRLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.GoodsReceiptLines">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertGoodsReceiptDetails">
+            <ScalarProperty Name="Product" ParameterName="ProductID" />
+            <ScalarProperty Name="TaxId" ParameterName="TaxeID" />
+            <ScalarProperty Name="Price" ParameterName="Price" />
+            <ScalarProperty Name="Quantity" ParameterName="Quantity" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateGoodsReceiptDetails">
+            <ScalarProperty Name="Product" ParameterName="ProductID" Version="Current" />
+            <ScalarProperty Name="TaxId" ParameterName="TaxeID" Version="Current" />
+            <ScalarProperty Name="Price" ParameterName="Price" Version="Current" />
+            <ScalarProperty Name="Quantity" ParameterName="Quantity" Version="Current" />
+            <ScalarProperty Name="LineId" ParameterName="GoodsReceiptDetailsID" Version="Current" />
+          </UpdateFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestForQuoteLines">
+      <EntityTypeMapping TypeName="CbaModel.RequestForQuoteLines">
+        <MappingFragment StoreEntitySet="RFL01">
+          <ScalarProperty Name="LineTotal" ColumnName="RFLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="RFLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="RFLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="RFLLLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="RFLTAID" />
+          <ScalarProperty Name="Product" ColumnName="RFLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="RFLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="RFLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="RFLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="RFLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="RFLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="RFLLQUA" />
+          <ScalarProperty Name="RequestForQuoteId" ColumnName="RFLRFQI" />
+          <ScalarProperty Name="LineId" ColumnName="RFLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestForQuote">
+      <EntityTypeMapping TypeName="CbaModel.RequestForQuote">
+        <MappingFragment StoreEntitySet="RFQ01">
+          <ScalarProperty Name="DocumentType" ColumnName="RFQDOTY" />
+          <ScalarProperty Name="Period" ColumnName="RFQPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="RFQBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="RFQLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="RFQRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="RFQRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="RFQRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="RFQRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="RFQNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="RFQTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="RFQDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="RFQGROS" />
+          <ScalarProperty Name="Note" ColumnName="RFQNOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="RFQSTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="RFQDATE" />
+          <ScalarProperty Name="DocumentId" ColumnName="RFQDOCN" />
+          <ScalarProperty Name="Id" ColumnName="RFQPKID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QuoteLines">
+      <EntityTypeMapping TypeName="CbaModel.QuoteLines">
+        <MappingFragment StoreEntitySet="QLI01">
+          <ScalarProperty Name="LineTotal" ColumnName="QLINETA" />
+          <ScalarProperty Name="LineTax" ColumnName="QLITAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="QLIDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="QLILLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="QLITAID" />
+          <ScalarProperty Name="Product" ColumnName="QLILPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="QLILIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="QLILIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="QLILDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="QLILUSR" />
+          <ScalarProperty Name="Price" ColumnName="QLILPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="QLILQUA" />
+          <ScalarProperty Name="QuoteId" ColumnName="QLILIBI" />
+          <ScalarProperty Name="LineId" ColumnName="QLILIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quote">
+      <EntityTypeMapping TypeName="CbaModel.Quote">
+        <MappingFragment StoreEntitySet="QUO01">
+          <ScalarProperty Name="DocumentType" ColumnName="QUODOTY" />
+          <ScalarProperty Name="Period" ColumnName="QUOPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="QUOBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="QUOLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="QUORNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="QUORNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="QUORNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="QUORNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="QUONETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="QUOTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="QUODISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="QUOGROS" />
+          <ScalarProperty Name="Note" ColumnName="QUONOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="QUOSTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="QUODODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="QUODOCN" />
+          <ScalarProperty Name="Id" ColumnName="QUOTEID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shipment">
+      <EntityTypeMapping TypeName="CbaModel.Shipment">
+        <MappingFragment StoreEntitySet="SHI01">
+          <ScalarProperty Name="DocumentType" ColumnName="SHIDOTY" />
+          <ScalarProperty Name="Period" ColumnName="SHIPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="SHIBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="SHILEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="SHIRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="SHIRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="SHIRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="SHIRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="SHINETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="SHITAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="SHIDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="SHIGROS" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="SHIORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="SHIORIG" />
+          <ScalarProperty Name="Note" ColumnName="SHINOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="SHISTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="SHIDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="SHIDOCN" />
+          <ScalarProperty Name="Id" ColumnName="SHIPMID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShipmentLines">
+      <EntityTypeMapping TypeName="CbaModel.ShipmentLines">
+        <MappingFragment StoreEntitySet="SHL01">
+          <ScalarProperty Name="LineTotal" ColumnName="SHLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="SHLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="SHLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="SHLLLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="SHLTAID" />
+          <ScalarProperty Name="Product" ColumnName="SHLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="SHLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="SHLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="SHLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="SHLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="SHLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="SHLLQUA" />
+          <ScalarProperty Name="ShipmentId" ColumnName="SHLINID" />
+          <ScalarProperty Name="LineId" ColumnName="SHLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessPartner">
+      <EntityTypeMapping TypeName="CbaModel.BusinessPartner">
+        <MappingFragment StoreEntitySet="BPA01">
+          <ScalarProperty Name="LegalEntity" ColumnName="BUSTLEG" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BUSIUDO" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BUSIUDB" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BUSIDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BUSIOUS" />
+          <ScalarProperty Name="Type" ColumnName="BUSITYP" />
+          <ScalarProperty Name="Name" ColumnName="BUSINAM" />
+          <ScalarProperty Name="Code" ColumnName="BUSICOD" />
+          <ScalarProperty Name="Id" ColumnName="BUSIPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.BusinessPartner">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertBusinessPartner">
+            <ScalarProperty Name="LegalEntity" ParameterName="BusinessPartnerLegalEntity" />
+            <ScalarProperty Name="Type" ParameterName="BusinessPartnerType" />
+            <ScalarProperty Name="Name" ParameterName="BusinessPartnerName" />
+            <ScalarProperty Name="Code" ParameterName="BusinessPartnerCode" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateBusinessPartner">
+            <ScalarProperty Name="LegalEntity" ParameterName="BusinessPartnerLegalEntity" Version="Current" />
+            <ScalarProperty Name="Type" ParameterName="BusinessPartnerType" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="BusinessPartnerName" Version="Current" />
+            <ScalarProperty Name="Code" ParameterName="BusinessPartnerCode" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="BusinessPartnerID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteBusinessPartner">
+            <ScalarProperty Name="Id" ParameterName="BusinessPartnerID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BusinessPartnerAddress">
+      <EntityTypeMapping TypeName="CbaModel.BusinessPartnerAddress">
+        <MappingFragment StoreEntitySet="BPD01">
+          <ScalarProperty Name="BusinessPartner" ColumnName="BPDRBPI" />
+          <ScalarProperty Name="Country" ColumnName="BPDRCOU" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BUSIUDO" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BUSIUDB" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BUSIDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BUSIOUS" />
+          <ScalarProperty Name="Type" ColumnName="BPDRTYP" />
+          <ScalarProperty Name="StateProvince" ColumnName="BPDRSTA" />
+          <ScalarProperty Name="Street" ColumnName="BPDRSTR" />
+          <ScalarProperty Name="City" ColumnName="BPDRCIT" />
+          <ScalarProperty Name="Id" ColumnName="BPDREID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.BusinessPartnerAddress">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertBusinessPartnerAddress">
+            <ScalarProperty Name="BusinessPartner" ParameterName="BusinessPartnerID" />
+            <ScalarProperty Name="Country" ParameterName="BusinessPartnerAddressCountry" />
+            <ScalarProperty Name="StateProvince" ParameterName="BusinessPartnerAddressStateRegion" />
+            <ScalarProperty Name="Street" ParameterName="BusinessPartnerAdressStreet" />
+            <ScalarProperty Name="City" ParameterName="BusinessPartnerAddressCity" />
+            <ScalarProperty Name="Type" ParameterName="BusinessPartnerAddressType" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateBusinessPartnerAddress">
+            <ScalarProperty Name="BusinessPartner" ParameterName="BusinessPartnerID" Version="Current" />
+            <ScalarProperty Name="Country" ParameterName="BusinessPartnerAddressCountry" Version="Current" />
+            <ScalarProperty Name="StateProvince" ParameterName="BusinessPartnerAddressStateRegion" Version="Current" />
+            <ScalarProperty Name="Street" ParameterName="BusinessPartnerAdressStreet" Version="Current" />
+            <ScalarProperty Name="City" ParameterName="BusinessPartnerAddressCity" Version="Current" />
+            <ScalarProperty Name="Type" ParameterName="BusinessPartnerAddressType" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="BusinessPartnerAddressID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteBusinessPartnerAddress">
+            <ScalarProperty Name="Id" ParameterName="BusinessPartnerAddressID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bank">
+      <EntityTypeMapping TypeName="CbaModel.Bank">
+        <MappingFragment StoreEntitySet="BAN01">
+          <ScalarProperty Name="Country" ColumnName="BANKTER" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="BANKUAT" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="BANKUUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="BANKDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="BANKUSR" />
+          <ScalarProperty Name="Name" ColumnName="BANKNAM" />
+          <ScalarProperty Name="Code" ColumnName="BANKCOD" />
+          <ScalarProperty Name="Id" ColumnName="BANKSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Bank">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertBank">
+            <ScalarProperty Name="Country" ParameterName="BankTerritory" />
+            <ScalarProperty Name="Name" ParameterName="BankName" />
+            <ScalarProperty Name="Code" ParameterName="BankCode" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateBank">
+            <ScalarProperty Name="Country" ParameterName="BankTerritory" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="BankName" Version="Current" />
+            <ScalarProperty Name="Code" ParameterName="BankCode" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="BankID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteBank">
+            <ScalarProperty Name="Id" ParameterName="BankID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LegalEntity">
+      <EntityTypeMapping TypeName="CbaModel.LegalEntity">
+        <MappingFragment StoreEntitySet="LEG01">
+          <ScalarProperty Name="Headquarters" ColumnName="LEGALHE" />
+          <ScalarProperty Name="Chart" ColumnName="LEGALCA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="LEGALPD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="LEGALPU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="LEGALAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="LEGALSR" />
+          <ScalarProperty Name="FiscalId" ColumnName="LEGALIS" />
+          <ScalarProperty Name="RegistrationId" ColumnName="LEGALEG" />
+          <ScalarProperty Name="Name" ColumnName="LEGALNA" />
+          <ScalarProperty Name="Id" ColumnName="LEGALID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.LegalEntity">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertLegalEntity">
+            <ScalarProperty Name="Headquarters" ParameterName="LegalEntityHeadQuarters" />
+            <ScalarProperty Name="Chart" ParameterName="LegalEntityChart" />
+            <ScalarProperty Name="FiscalId" ParameterName="LegalEntityFiscalID" />
+            <ScalarProperty Name="RegistrationId" ParameterName="LegalEntityRegistrationID" />
+            <ScalarProperty Name="Name" ParameterName="LegalEntityName" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateLegalEntity">
+            <ScalarProperty Name="Headquarters" ParameterName="LegalEntityHeadQuarters" Version="Current" />
+            <ScalarProperty Name="Chart" ParameterName="LegalEntityChart" Version="Current" />
+            <ScalarProperty Name="FiscalId" ParameterName="LegalEntityFiscalID" Version="Current" />
+            <ScalarProperty Name="RegistrationId" ParameterName="LegalEntityRegistrationID" Version="Current" />
+            <ScalarProperty Name="Name" ParameterName="LegalEntityName" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="LegalEntityID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteLegalEntity">
+            <ScalarProperty Name="Id" ParameterName="LegalEntityID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Warehouse">
+      <EntityTypeMapping TypeName="CbaModel.Warehouse">
+        <MappingFragment StoreEntitySet="WAR01">
+          <ScalarProperty Name="UpdatedOn" ColumnName="WARLUDO" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="WARLUDB" />
+          <ScalarProperty Name="CreatedOn" ColumnName="WARDATE" />
+          <ScalarProperty Name="CreatedBy" ColumnName="WAREHUS" />
+          <ScalarProperty Name="Name" ColumnName="WAREDES" />
+          <ScalarProperty Name="Id" ColumnName="WAREHID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteBill" FunctionName="Cba_Model.Store.DeleteBill" />
+    <FunctionImportMapping FunctionImportName="DeleteBillDetail" FunctionName="Cba_Model.Store.DeleteBillDetail" />
+    <FunctionImportMapping FunctionImportName="DeleteGoodsReceipt" FunctionName="Cba_Model.Store.DeleteGoodsReceipt" />
+    <FunctionImportMapping FunctionImportName="DeletePurchaseOrder" FunctionName="Cba_Model.Store.DeletePurchaseOrder" />
+    <FunctionImportMapping FunctionImportName="DeletePurchaseOrderDetail" FunctionName="Cba_Model.Store.DeletePurchaseOrderDetail" />
+    <FunctionImportMapping FunctionImportName="DeleteRequestForQuote" FunctionName="Cba_Model.Store.DeleteRequestForQuote" />
+    <FunctionImportMapping FunctionImportName="DeleteRequestForQuoteDetail" FunctionName="Cba_Model.Store.DeleteRequestForQuoteDetail" />
+    <FunctionImportMapping FunctionImportName="InsertBill" FunctionName="Cba_Model.Store.InsertBill" />
+    <FunctionImportMapping FunctionImportName="InsertBillDetails" FunctionName="Cba_Model.Store.InsertBillDetails" />
+    <FunctionImportMapping FunctionImportName="InsertGoodsReceipt" FunctionName="Cba_Model.Store.InsertGoodsReceipt" />
+    <FunctionImportMapping FunctionImportName="InsertGoodsReceiptDetails" FunctionName="Cba_Model.Store.InsertGoodsReceiptDetails" />
+    <FunctionImportMapping FunctionImportName="InsertPurchaseOrder" FunctionName="Cba_Model.Store.InsertPurchaseOrder" />
+    <FunctionImportMapping FunctionImportName="InsertPurchaseOrderDetails" FunctionName="Cba_Model.Store.InsertPurchaseOrderDetails" />
+    <FunctionImportMapping FunctionImportName="InsertRequestForQuote" FunctionName="Cba_Model.Store.InsertRequestForQuote" />
+    <FunctionImportMapping FunctionImportName="InsertRequestForQuoteDetails" FunctionName="Cba_Model.Store.InsertRequestForQuoteDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateBill" FunctionName="Cba_Model.Store.UpdateBill" />
+    <FunctionImportMapping FunctionImportName="UpdateBillDetails" FunctionName="Cba_Model.Store.UpdateBillDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateGoodsReceipt" FunctionName="Cba_Model.Store.UpdateGoodsReceipt" />
+    <FunctionImportMapping FunctionImportName="UpdateGoodsReceiptDetails" FunctionName="Cba_Model.Store.UpdateGoodsReceiptDetails" />
+    <FunctionImportMapping FunctionImportName="UpdatePurchaseOrder" FunctionName="Cba_Model.Store.UpdatePurchaseOrder" />
+    <FunctionImportMapping FunctionImportName="UpdatePurchaseOrderDetails" FunctionName="Cba_Model.Store.UpdatePurchaseOrderDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateRequestForQuote" FunctionName="Cba_Model.Store.UpdateRequestForQuote" />
+    <FunctionImportMapping FunctionImportName="UpdateRequestForQuoteDetails" FunctionName="Cba_Model.Store.UpdateRequestForQuoteDetails" />
+    <FunctionImportMapping FunctionImportName="DeleteQuote" FunctionName="Cba_Model.Store.DeleteQuote" />
+    <FunctionImportMapping FunctionImportName="DeleteQuoteDetail" FunctionName="Cba_Model.Store.DeleteQuoteDetail" />
+    <FunctionImportMapping FunctionImportName="InsertQuote" FunctionName="Cba_Model.Store.InsertQuote" />
+    <FunctionImportMapping FunctionImportName="InsertQuoteDetails" FunctionName="Cba_Model.Store.InsertQuoteDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateQuote" FunctionName="Cba_Model.Store.UpdateQuote" />
+    <FunctionImportMapping FunctionImportName="UpdateQuoteDetails" FunctionName="Cba_Model.Store.UpdateQuoteDetails" />
+    <FunctionImportMapping FunctionImportName="InsertBudgetDetails" FunctionName="Cba_Model.Store.InsertBudgetDetails" />
+    <FunctionImportMapping FunctionImportName="InsertJournalDetails" FunctionName="Cba_Model.Store.InsertJournalDetails" />
+    <EntitySetMapping Name="InvoiceLines">
+      <EntityTypeMapping TypeName="CbaModel.InvoiceLines">
+        <MappingFragment StoreEntitySet="INL01">
+          <ScalarProperty Name="LineTotal" ColumnName="INLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="INLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="INLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="INLLLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="INLTAID" />
+          <ScalarProperty Name="Product" ColumnName="INLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="INLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="INLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="INLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="INLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="INLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="INLLQUA" />
+          <ScalarProperty Name="InvoiceId" ColumnName="INLINID" />
+          <ScalarProperty Name="LineId" ColumnName="INLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice">
+      <EntityTypeMapping TypeName="CbaModel.Invoice">
+        <MappingFragment StoreEntitySet="INV01">
+          <ScalarProperty Name="DocumentType" ColumnName="INVDOTY" />
+          <ScalarProperty Name="Period" ColumnName="INVPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="INVBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="INVLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="INVRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="INVRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="INVRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="INVRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="INVNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="INVTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="INVDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="INVGROS" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="INVORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="INVORIG" />
+          <ScalarProperty Name="Note" ColumnName="INVNOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="INVSTAT" />
+          <ScalarProperty Name="DueDate" ColumnName="INVDUDA" />
+          <ScalarProperty Name="DocumentDate" ColumnName="INVDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="INVDOCN" />
+          <ScalarProperty Name="Id" ColumnName="INVOIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="CbaModel.Address">
+        <MappingFragment StoreEntitySet="ADD01">
+          <ScalarProperty Name="Country" ColumnName="ADDRCOU" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="ADDRUAT" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="ADDRUUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="ADDRDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="ADDRUSR" />
+          <ScalarProperty Name="Type" ColumnName="ADDRTYP" />
+          <ScalarProperty Name="StateRegion" ColumnName="ADDRSTA" />
+          <ScalarProperty Name="Street" ColumnName="ADDRSTR" />
+          <ScalarProperty Name="City" ColumnName="ADDRCIT" />
+          <ScalarProperty Name="Id" ColumnName="ADDREID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+      <EntityTypeMapping TypeName="CbaModel.Address">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="Cba_Model.Store.InsertAddress">
+            <ScalarProperty Name="Country" ParameterName="AddressCountry" />
+            <ScalarProperty Name="StateRegion" ParameterName="AddressStateRegion" />
+            <ScalarProperty Name="Street" ParameterName="AdressStreet" />
+            <ScalarProperty Name="City" ParameterName="AddressCity" />
+            <ScalarProperty Name="Type" ParameterName="AddressType" />
+          </InsertFunction>
+          <UpdateFunction FunctionName="Cba_Model.Store.UpdateAddress">
+            <ScalarProperty Name="Country" ParameterName="AddressCountry" Version="Current" />
+            <ScalarProperty Name="StateRegion" ParameterName="AddressStateRegion" Version="Current" />
+            <ScalarProperty Name="Street" ParameterName="AdressStreet" Version="Current" />
+            <ScalarProperty Name="City" ParameterName="AddressCity" Version="Current" />
+            <ScalarProperty Name="Type" ParameterName="AddressType" Version="Current" />
+            <ScalarProperty Name="Id" ParameterName="AddressID" Version="Current" />
+          </UpdateFunction>
+          <DeleteFunction FunctionName="Cba_Model.Store.DeleteAddress">
+            <ScalarProperty Name="Id" ParameterName="AddressID" />
+          </DeleteFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Territory">
+      <EntityTypeMapping TypeName="CbaModel.Territory">
+        <MappingFragment StoreEntitySet="TER01">
+          <ScalarProperty Name="SourceLanguage" ColumnName="TERRSLA" />
+          <ScalarProperty Name="Language" ColumnName="TERRLAN" />
+          <ScalarProperty Name="Name" ColumnName="TERRNAM" />
+          <ScalarProperty Name="Id" ColumnName="TERRCOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrderLines">
+      <EntityTypeMapping TypeName="CbaModel.PurchaseOrderLines">
+        <MappingFragment StoreEntitySet="POL01">
+          <ScalarProperty Name="LineTotal" ColumnName="POLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="POLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="POLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="POLLLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="POLTAID" />
+          <ScalarProperty Name="Product" ColumnName="POLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="POLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="POLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="POLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="POLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="POLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="POLLQUA" />
+          <ScalarProperty Name="PurchaseOrderId" ColumnName="POLLIPO" />
+          <ScalarProperty Name="LineId" ColumnName="POLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PurchaseOrder">
+      <EntityTypeMapping TypeName="CbaModel.PurchaseOrder">
+        <MappingFragment StoreEntitySet="POR01">
+          <ScalarProperty Name="Documenttype" ColumnName="PORDOTY" />
+          <ScalarProperty Name="Period" ColumnName="PORPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="PORBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="PORLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="PORRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="PORRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="PORRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="PORRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="PORNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="PORTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="PORDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="PORGROS" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="PORORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="PORORIG" />
+          <ScalarProperty Name="Note" ColumnName="PORNOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="PORSTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="PORDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="PORDOCN" />
+          <ScalarProperty Name="Id" ColumnName="PORRNID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleOrderLines">
+      <EntityTypeMapping TypeName="CbaModel.SaleOrderLines">
+        <MappingFragment StoreEntitySet="SOL01">
+          <ScalarProperty Name="LineTotal" ColumnName="SOLNETA" />
+          <ScalarProperty Name="LineTax" ColumnName="SOLTAXE" />
+          <ScalarProperty Name="LineDiscount" ColumnName="SOLDISC" />
+          <ScalarProperty Name="LineGross" ColumnName="SOLLLTO" />
+          <ScalarProperty Name="TaxId" ColumnName="SOLTAID" />
+          <ScalarProperty Name="Product" ColumnName="SOLLPRO" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="SOLLIDA" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="SOLLIUS" />
+          <ScalarProperty Name="CreatedOn" ColumnName="SOLLDAT" />
+          <ScalarProperty Name="CreatedBy" ColumnName="SOLLUSR" />
+          <ScalarProperty Name="Price" ColumnName="SOLLPRI" />
+          <ScalarProperty Name="Quantity" ColumnName="SOLLQUA" />
+          <ScalarProperty Name="SaleOrderId" ColumnName="SOLLISO" />
+          <ScalarProperty Name="LineId" ColumnName="SOLLIID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SaleOrder">
+      <EntityTypeMapping TypeName="CbaModel.SaleOrder">
+        <MappingFragment StoreEntitySet="SOR01">
+          <ScalarProperty Name="DocumentType" ColumnName="SORDOTY" />
+          <ScalarProperty Name="Period" ColumnName="SORPERI" />
+          <ScalarProperty Name="BusinessPartner" ColumnName="SORBPAR" />
+          <ScalarProperty Name="LegalEntity" ColumnName="SORLEGA" />
+          <ScalarProperty Name="UpdatedOn" ColumnName="SORRNUD" />
+          <ScalarProperty Name="UpdatedBy" ColumnName="SORRNUU" />
+          <ScalarProperty Name="CreatedOn" ColumnName="SORRNDA" />
+          <ScalarProperty Name="CreatedBy" ColumnName="SORRNUS" />
+          <ScalarProperty Name="NetTotal" ColumnName="SORNETA" />
+          <ScalarProperty Name="TaxTotal" ColumnName="SORTAXE" />
+          <ScalarProperty Name="DiscountTotal" ColumnName="SORDISC" />
+          <ScalarProperty Name="GrossTotal" ColumnName="SORGROS" />
+          <ScalarProperty Name="DocumentOriginType" ColumnName="SORORTY" />
+          <ScalarProperty Name="DocumentOrigin" ColumnName="SORORIG" />
+          <ScalarProperty Name="Note" ColumnName="SORNOTE" />
+          <ScalarProperty Name="DocumentStatus" ColumnName="SORSTAT" />
+          <ScalarProperty Name="DocumentDate" ColumnName="SORDODA" />
+          <ScalarProperty Name="DocumentId" ColumnName="SORDOCN" />
+          <ScalarProperty Name="Id" ColumnName="SORDRID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="DeleteBusinessPartner" FunctionName="Cba_Model.Store.DeleteBusinessPartner" />
+    <FunctionImportMapping FunctionImportName="DeleteBusinessPartnerAddress" FunctionName="Cba_Model.Store.DeleteBusinessPartnerAddress" />
+    <FunctionImportMapping FunctionImportName="InsertBusinessPartner" FunctionName="Cba_Model.Store.InsertBusinessPartner" />
+    <FunctionImportMapping FunctionImportName="InsertBusinessPartnerAddress" FunctionName="Cba_Model.Store.InsertBusinessPartnerAddress" />
+    <FunctionImportMapping FunctionImportName="UpdateBusinessPartner" FunctionName="Cba_Model.Store.UpdateBusinessPartner" />
+    <FunctionImportMapping FunctionImportName="UpdateBusinessPartnerAddress" FunctionName="Cba_Model.Store.UpdateBusinessPartnerAddress" />
+    <FunctionImportMapping FunctionImportName="DeleteAddress" FunctionName="Cba_Model.Store.DeleteAddress" />
+    <FunctionImportMapping FunctionImportName="DeleteBank" FunctionName="Cba_Model.Store.DeleteBank" />
+    <FunctionImportMapping FunctionImportName="DeleteLegalEntity" FunctionName="Cba_Model.Store.DeleteLegalEntity" />
+    <FunctionImportMapping FunctionImportName="InsertAddress" FunctionName="Cba_Model.Store.InsertAddress" />
+    <FunctionImportMapping FunctionImportName="InsertBank" FunctionName="Cba_Model.Store.InsertBank" />
+    <FunctionImportMapping FunctionImportName="InsertLegalEntity" FunctionName="Cba_Model.Store.InsertLegalEntity" />
+    <FunctionImportMapping FunctionImportName="UpdateAddress" FunctionName="Cba_Model.Store.UpdateAddress" />
+    <FunctionImportMapping FunctionImportName="UpdateBank" FunctionName="Cba_Model.Store.UpdateBank" />
+    <FunctionImportMapping FunctionImportName="UpdateLegalEntity" FunctionName="Cba_Model.Store.UpdateLegalEntity" />
+    <FunctionImportMapping FunctionImportName="DeleteInvoice" FunctionName="Cba_Model.Store.DeleteInvoice" />
+    <FunctionImportMapping FunctionImportName="DeleteInvoiceDetail" FunctionName="Cba_Model.Store.DeleteInvoiceDetail" />
+    <FunctionImportMapping FunctionImportName="DeleteSaleOrder" FunctionName="Cba_Model.Store.DeleteSaleOrder" />
+    <FunctionImportMapping FunctionImportName="DeleteSaleOrderDetail" FunctionName="Cba_Model.Store.DeleteSaleOrderDetail" />
+    <FunctionImportMapping FunctionImportName="DeleteShipping" FunctionName="Cba_Model.Store.DeleteShipping" />
+    <FunctionImportMapping FunctionImportName="DeleteShippingDetail" FunctionName="Cba_Model.Store.DeleteShippingDetail" />
+    <FunctionImportMapping FunctionImportName="InsertInvoice" FunctionName="Cba_Model.Store.InsertInvoice" />
+    <FunctionImportMapping FunctionImportName="InsertInvoiceDetails" FunctionName="Cba_Model.Store.InsertInvoiceDetails" />
+    <FunctionImportMapping FunctionImportName="InsertSaleOrder" FunctionName="Cba_Model.Store.InsertSaleOrder" />
+    <FunctionImportMapping FunctionImportName="InsertSaleOrderDetails" FunctionName="Cba_Model.Store.InsertSaleOrderDetails" />
+    <FunctionImportMapping FunctionImportName="InsertShipping" FunctionName="Cba_Model.Store.InsertShipping" />
+    <FunctionImportMapping FunctionImportName="InsertShippingDetails" FunctionName="Cba_Model.Store.InsertShippingDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateInvoice" FunctionName="Cba_Model.Store.UpdateInvoice" />
+    <FunctionImportMapping FunctionImportName="UpdateInvoiceDetails" FunctionName="Cba_Model.Store.UpdateInvoiceDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateSaleOrder" FunctionName="Cba_Model.Store.UpdateSaleOrder" />
+    <FunctionImportMapping FunctionImportName="UpdateSaleOrderDetails" FunctionName="Cba_Model.Store.UpdateSaleOrderDetails" />
+    <FunctionImportMapping FunctionImportName="UpdateShipping" FunctionName="Cba_Model.Store.UpdateShipping" />
+    <FunctionImportMapping FunctionImportName="UpdateShippingDetails" FunctionName="Cba_Model.Store.UpdateShippingDetails" />
+  </EntityContainerMapping>
+</Mapping>

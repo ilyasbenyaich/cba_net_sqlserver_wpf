@@ -1,0 +1,94 @@
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe.config
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Microsoft.Windows.Shell.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\RibbonControlsLibrary.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Microsoft.Windows.Shell.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\Microsoft.Windows.Shell.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\RibbonControlsLibrary.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Release\RibbonControlsLibrary.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\CbaView.csprojResolveAssemblyReference.cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Currencies.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Ledgers.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Main.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Currencies.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Ledgers.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Main.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\App.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba_MarkupCompile.cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.g.resources
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.Properties.Resources.resources
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\CbaView.csproj.GenerateResource.Cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.TrustInfo.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe.config
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe.manifest
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.xbap
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.exe
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\Cba.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Release\CbaModel.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\CbaView.csprojResolveAssemblyReference.cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Addresses.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Invoices.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Shipments.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\SaleOrders.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Quotes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Budgets.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Calendars.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Charts.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Currencies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\BusinessPartners.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Bills.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Journals.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Banks.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Main.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\LegalEntities.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\ProductFamilies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Products.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\ProductSubFamilies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\GoodsReceipts.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\RequestForQuotes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\PurchaseOrders.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Rates.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Taxes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Addresses.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Invoices.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Shipments.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\SaleOrders.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Quotes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Budgets.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Calendars.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Charts.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Currencies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\BusinessPartners.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Bills.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Journals.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Banks.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Main.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\LegalEntities.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\ProductFamilies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Products.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\ProductSubFamilies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\GoodsReceipts.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\RequestForQuotes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\PurchaseOrders.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Rates.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Taxes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\App.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba_MarkupCompile.cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.g.resources
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.Properties.Resources.resources
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\CbaView.csproj.GenerateResource.Cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.TrustInfo.xml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.exe.manifest
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.xbap
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.exe
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Release\Cba.pdb

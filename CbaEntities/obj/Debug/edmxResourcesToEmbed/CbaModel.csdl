@@ -1,0 +1,2427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CbaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CbaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Currency" EntityType="CbaModel.Currency" />
+    <EntitySet Name="Calendar" EntityType="CbaModel.Calendar" />
+    <EntitySet Name="Rate" EntityType="CbaModel.Rate" />
+    <AssociationSet Name="RAT01_CUR01_FROM_FK" Association="CbaModel.RAT01_CUR01_FROM_FK">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="RAT01" EntitySet="Rate" />
+    </AssociationSet>
+    <AssociationSet Name="RAT01_CUR01_TO_FK" Association="CbaModel.RAT01_CUR01_TO_FK">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="RAT01" EntitySet="Rate" />
+    </AssociationSet>
+    <EntitySet Name="Period" EntityType="CbaModel.Period" />
+    <AssociationSet Name="PER01_CAL01_FK" Association="CbaModel.PER01_CAL01_FK">
+      <End Role="Calendar" EntitySet="Calendar" />
+      <End Role="PER01" EntitySet="Period" />
+    </AssociationSet>
+    <EntitySet Name="Chart" EntityType="CbaModel.Chart" />
+    <EntitySet Name="Segment" EntityType="CbaModel.Segment" />
+    <AssociationSet Name="ACS01_CHA01_FK" Association="CbaModel.ACS01_CHA01_FK">
+      <End Role="Chart" EntitySet="Chart" />
+      <End Role="ACS01" EntitySet="Segment" />
+    </AssociationSet>
+    <EntitySet Name="Account" EntityType="CbaModel.Account" />
+    <AssociationSet Name="ACC01_CHA01_FK" Association="CbaModel.ACC01_CHA01_FK">
+      <End Role="Chart" EntitySet="Chart" />
+      <End Role="ACC01" EntitySet="Account" />
+    </AssociationSet>
+    <EntitySet Name="Tax" EntityType="CbaModel.Tax" />
+    <EntitySet Name="Balance" EntityType="CbaModel.Balance" />
+    <AssociationSet Name="BAL01_CUR01_FK" Association="CbaModel.BAL01_CUR01_FK">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="BAL01" EntitySet="Balance" />
+    </AssociationSet>
+    <AssociationSet Name="BAL01_PER01_FK" Association="CbaModel.BAL01_PER01_FK">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="BAL01" EntitySet="Balance" />
+    </AssociationSet>
+    <EntitySet Name="Journal" EntityType="CbaModel.Journal" />
+    <EntitySet Name="JournalLines" EntityType="CbaModel.JournalLines" />
+    <AssociationSet Name="JHE01_CUR01_FK" Association="CbaModel.JHE01_CUR01_FK">
+      <End Role="Currency" EntitySet="Currency" />
+      <End Role="JHE01" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="JHE01_PER01_FK" Association="CbaModel.JHE01_PER01_FK">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="JHE01" EntitySet="Journal" />
+    </AssociationSet>
+    <AssociationSet Name="JLI01_JHE01_FK" Association="CbaModel.JLI01_JHE01_FK">
+      <End Role="JHE01" EntitySet="Journal" />
+      <End Role="JLI01" EntitySet="JournalLines" />
+    </AssociationSet>
+    <AssociationSet Name="JLI01_ACC01_FK" Association="CbaModel.JLI01_ACC01_FK">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="JournalLines" EntitySet="JournalLines" />
+    </AssociationSet>
+    <AssociationSet Name="BAL01_ACC01_FK" Association="CbaModel.BAL01_ACC01_FK">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Balance" EntitySet="Balance" />
+    </AssociationSet>
+    <EntitySet Name="Budget" EntityType="CbaModel.Budget" />
+    <EntitySet Name="BudgetLines" EntityType="CbaModel.BudgetLines" />
+    <AssociationSet Name="BUL01_ACC01_FK" Association="CbaModel.BUL01_ACC01_FK">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="BUL01" EntitySet="BudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="BUD01_CAL01_FK" Association="CbaModel.BUD01_CAL01_FK">
+      <End Role="Calendar" EntitySet="Calendar" />
+      <End Role="BUD01" EntitySet="Budget" />
+    </AssociationSet>
+    <AssociationSet Name="BUL01_BUD01_FK" Association="CbaModel.BUL01_BUD01_FK">
+      <End Role="BUD01" EntitySet="Budget" />
+      <End Role="BUL01" EntitySet="BudgetLines" />
+    </AssociationSet>
+    <AssociationSet Name="BUL01_PER01_FK" Association="CbaModel.BUL01_PER01_FK">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="BUL01" EntitySet="BudgetLines" />
+    </AssociationSet>
+    <EntitySet Name="ProductFamily" EntityType="CbaModel.ProductFamily" />
+    <EntitySet Name="ProductSubFamily" EntityType="CbaModel.ProductSubFamily" />
+    <AssociationSet Name="PSF01_PFA01_FK" Association="CbaModel.PSF01_PFA01_FK">
+      <End Role="PFA01" EntitySet="ProductFamily" />
+      <End Role="PSF01" EntitySet="ProductSubFamily" />
+    </AssociationSet>
+    <EntitySet Name="Product" EntityType="CbaModel.Product" />
+    <AssociationSet Name="PRO01_PSF01_FK" Association="CbaModel.PRO01_PSF01_FK">
+      <End Role="ProductSubFamily" EntitySet="ProductSubFamily" />
+      <End Role="PRO01" EntitySet="Product" />
+    </AssociationSet>
+    <EntitySet Name="BIL01" EntityType="CbaModel.Bill" />
+    <EntitySet Name="BLI01" EntityType="CbaModel.BillLines" />
+    <EntitySet Name="GOR01" EntityType="CbaModel.GoodsReceipt" />
+    <EntitySet Name="GRL01" EntityType="CbaModel.GoodsReceiptLines" />
+    <EntitySet Name="RFL01" EntityType="CbaModel.RequestForQuoteLines" />
+    <EntitySet Name="RFQ01" EntityType="CbaModel.RequestForQuote" />
+    <EntitySet Name="QLI01" EntityType="CbaModel.QuoteLines" />
+    <EntitySet Name="QUO01" EntityType="CbaModel.Quote" />
+    <EntitySet Name="SHI01" EntityType="CbaModel.Shipment" />
+    <EntitySet Name="SHL01" EntityType="CbaModel.ShipmentLines" />
+    <EntitySet Name="BPA01" EntityType="CbaModel.BusinessPartner" />
+    <EntitySet Name="BPD01" EntityType="CbaModel.BusinessPartnerAddress" />
+    <EntitySet Name="BAN01" EntityType="CbaModel.Bank" />
+    <EntitySet Name="LEG01" EntityType="CbaModel.LegalEntity" />
+    <EntitySet Name="Warehouse" EntityType="CbaModel.Warehouse" />
+    <AssociationSet Name="FK_BIL01_BPA01" Association="CbaModel.FK_BIL01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BIL01_LEG01" Association="CbaModel.FK_BIL01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BIL01_PER01" Association="CbaModel.FK_BIL01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_BIL01" Association="CbaModel.FK_BLI01_BIL01">
+      <End Role="BIL01" EntitySet="BIL01" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_PRO01" Association="CbaModel.FK_BLI01_PRO01">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_TAX01" Association="CbaModel.FK_BLI01_TAX01">
+      <End Role="Tax" EntitySet="Tax" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_BPA01" Association="CbaModel.FK_GOR01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_LEG01" Association="CbaModel.FK_GOR01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_PER01" Association="CbaModel.FK_GOR01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="GRL01_GOR01_FK" Association="CbaModel.GRL01_GOR01_FK">
+      <End Role="GOR01" EntitySet="GOR01" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GRL01_WAR01" Association="CbaModel.FK_GRL01_WAR01">
+      <End Role="WAR01" EntitySet="Warehouse" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="GRL01_PRO01_FK" Association="CbaModel.GRL01_PRO01_FK">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="RFL01_PRO01_FK" Association="CbaModel.RFL01_PRO01_FK">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="RFL01" EntitySet="RFL01" />
+    </AssociationSet>
+    <AssociationSet Name="RFL01_RFQ01_FK" Association="CbaModel.RFL01_RFQ01_FK">
+      <End Role="RFQ01" EntitySet="RFQ01" />
+      <End Role="RFL01" EntitySet="RFL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_BPA01" Association="CbaModel.FK_RFQ01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_LEG01" Association="CbaModel.FK_RFQ01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_PER01" Association="CbaModel.FK_RFQ01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_PRO01" Association="CbaModel.FK_QLI01_PRO01">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_QUO01" Association="CbaModel.FK_QLI01_QUO01">
+      <End Role="QUO01" EntitySet="QUO01" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_TAX01" Association="CbaModel.FK_QLI01_TAX01">
+      <End Role="Tax" EntitySet="Tax" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_BPA01" Association="CbaModel.FK_QUO01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_LEG01" Association="CbaModel.FK_QUO01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_PER01" Association="CbaModel.FK_QUO01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BPD01_BPA01" Association="CbaModel.FK_BPD01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="BPD01" EntitySet="BPD01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JHE01_LEG01" Association="CbaModel.FK_JHE01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="Journal" EntitySet="Journal" />
+    </AssociationSet>
+    <FunctionImport Name="DeleteBill">
+      <Parameter Name="BillID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteBillDetail">
+      <Parameter Name="BillDetailID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteGoodsReceipt">
+      <Parameter Name="GoodsReceiptID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeletePurchaseOrder">
+      <Parameter Name="PurchaseOrderID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeletePurchaseOrderDetail">
+      <Parameter Name="PurchaseOrderDetailID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteRequestForQuote">
+      <Parameter Name="RequestForQuoteID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteRequestForQuoteDetail">
+      <Parameter Name="RequestForQuoteDetailsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBill">
+      <Parameter Name="BillDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BillDueDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BillStatus" Mode="In" Type="String" />
+      <Parameter Name="BillNote" Mode="In" Type="String" />
+      <Parameter Name="BillLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="BillBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="BillPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="BillDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBillDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertGoodsReceipt">
+      <Parameter Name="GoodsReceiptDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="GoodsReceiptStatus" Mode="In" Type="String" />
+      <Parameter Name="GoodsReceiptNote" Mode="In" Type="String" />
+      <Parameter Name="GoodsReceiptLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertGoodsReceiptDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertPurchaseOrder">
+      <Parameter Name="PurchaseOrderDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PurchaseOrderStatus" Mode="In" Type="String" />
+      <Parameter Name="PurchaseOrderNote" Mode="In" Type="String" />
+      <Parameter Name="PurchaseOrderLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertPurchaseOrderDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertRequestForQuote">
+      <Parameter Name="RequestForQuoteDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="RequestForQuoteStatus" Mode="In" Type="String" />
+      <Parameter Name="RequestForQuoteNote" Mode="In" Type="String" />
+      <Parameter Name="RequestForQuoteLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuoteBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuotePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuoteDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertRequestForQuoteDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateBill">
+      <Parameter Name="BillID" Mode="In" Type="Int32" />
+      <Parameter Name="BillDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BillDueDate" Mode="In" Type="DateTime" />
+      <Parameter Name="BillStatus" Mode="In" Type="String" />
+      <Parameter Name="BillNote" Mode="In" Type="String" />
+      <Parameter Name="BillLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="BillBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="BillPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="BillDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateBillDetails">
+      <Parameter Name="BillDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateGoodsReceipt">
+      <Parameter Name="GoodsReceiptID" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="GoodsReceiptStatus" Mode="In" Type="String" />
+      <Parameter Name="GoodsReceiptNote" Mode="In" Type="String" />
+      <Parameter Name="GoodsReceiptLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="GoodsReceiptDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateGoodsReceiptDetails">
+      <Parameter Name="GoodsReceiptDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdatePurchaseOrder">
+      <Parameter Name="PurchaseOrderID" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="PurchaseOrderStatus" Mode="In" Type="String" />
+      <Parameter Name="PurchaseOrderNote" Mode="In" Type="String" />
+      <Parameter Name="PurchaseOrderLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="PurchaseOrderDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdatePurchaseOrderDetails">
+      <Parameter Name="PurchaseOrderDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateRequestForQuote">
+      <Parameter Name="RequestForQuoteID" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuoteDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="RequestForQuoteStatus" Mode="In" Type="String" />
+      <Parameter Name="RequestForQuoteNote" Mode="In" Type="String" />
+      <Parameter Name="RequestForQuoteLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuoteBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuotePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="RequestForQuoteDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateRequestForQuoteDetails">
+      <Parameter Name="RequestForQuoteDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteQuote">
+      <Parameter Name="QuoteID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteQuoteDetail">
+      <Parameter Name="QuoteDetailsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertQuote">
+      <Parameter Name="QuoteDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="QuoteStatus" Mode="In" Type="String" />
+      <Parameter Name="QuoteNote" Mode="In" Type="String" />
+      <Parameter Name="QuoteLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="QuoteBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="QuotePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="QuoteDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertQuoteDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateQuote">
+      <Parameter Name="QuoteID" Mode="In" Type="Int32" />
+      <Parameter Name="QuoteDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="QuoteStatus" Mode="In" Type="String" />
+      <Parameter Name="QuoteNote" Mode="In" Type="String" />
+      <Parameter Name="QuoteLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="QuoteBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="QuotePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="QuoteDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateQuoteDetails">
+      <Parameter Name="QuoteDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBudgetDetails">
+      <Parameter Name="BudgetID" Mode="In" Type="Int32" />
+      <Parameter Name="Amount" Mode="In" Type="Decimal" />
+      <Parameter Name="Account" Mode="In" Type="Int32" />
+      <Parameter Name="Period" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertJournalDetails">
+      <Parameter Name="JournalID" Mode="In" Type="Int32" />
+      <Parameter Name="DebitCreditFlag" Mode="In" Type="String" />
+      <Parameter Name="Amount" Mode="In" Type="Decimal" />
+      <Parameter Name="Account" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <AssociationSet Name="FK_SHI01_BPA01" Association="CbaModel.FK_SHI01_BPA01">
+      <End Role="BusinessPartner" EntitySet="BPA01" />
+      <End Role="Shipment" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHI01_LEG01" Association="CbaModel.FK_SHI01_LEG01">
+      <End Role="LegalEntity" EntitySet="LEG01" />
+      <End Role="Shipment" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHI01_PER01" Association="CbaModel.FK_SHI01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="Shipment" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_SHI01" Association="CbaModel.FK_SHL01_SHI01">
+      <End Role="Shipment" EntitySet="SHI01" />
+      <End Role="ShipmentLines" EntitySet="SHL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_PRO01" Association="CbaModel.FK_SHL01_PRO01">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ShipmentLines" EntitySet="SHL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_TAX01" Association="CbaModel.FK_SHL01_TAX01">
+      <End Role="Tax" EntitySet="Tax" />
+      <End Role="ShipmentLines" EntitySet="SHL01" />
+    </AssociationSet>
+    <EntitySet Name="INL01" EntityType="CbaModel.InvoiceLines" />
+    <EntitySet Name="INV01" EntityType="CbaModel.Invoice" />
+    <AssociationSet Name="FK_INL01_INV01" Association="CbaModel.FK_INL01_INV01">
+      <End Role="INV01" EntitySet="INV01" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INL01_PRO01" Association="CbaModel.FK_INL01_PRO01">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INL01_TAX01" Association="CbaModel.FK_INL01_TAX01">
+      <End Role="Tax" EntitySet="Tax" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_BPA01" Association="CbaModel.FK_INV01_BPA01">
+      <End Role="BusinessPartner" EntitySet="BPA01" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_LEG01" Association="CbaModel.FK_INV01_LEG01">
+      <End Role="LegalEntity" EntitySet="LEG01" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_PER01" Association="CbaModel.FK_INV01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LEG01_CHA01" Association="CbaModel.FK_LEG01_CHA01">
+      <End Role="Chart" EntitySet="Chart" />
+      <End Role="LegalEntity" EntitySet="LEG01" />
+    </AssociationSet>
+    <EntitySet Name="ADD01" EntityType="CbaModel.Address" />
+    <EntitySet Name="TER01" EntityType="CbaModel.Territory" />
+    <AssociationSet Name="FK_BPA01_LEG01" Association="CbaModel.FK_BPA01_LEG01">
+      <End Role="LegalEntity" EntitySet="LEG01" />
+      <End Role="BusinessPartner" EntitySet="BPA01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BPD01_TER01" Association="CbaModel.FK_BPD01_TER01">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="BusinessPartnerAddress" EntitySet="BPD01" />
+    </AssociationSet>
+    <AssociationSet Name="ADD01_TER01_FK" Association="CbaModel.ADD01_TER01_FK">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="ADD01" EntitySet="ADD01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LEG01_ADD01" Association="CbaModel.FK_LEG01_ADD01">
+      <End Role="ADD01" EntitySet="ADD01" />
+      <End Role="LegalEntity" EntitySet="LEG01" />
+    </AssociationSet>
+    <AssociationSet Name="BAN01_TER01_FK" Association="CbaModel.BAN01_TER01_FK">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="Bank" EntitySet="BAN01" />
+    </AssociationSet>
+    <EntitySet Name="POL01" EntityType="CbaModel.PurchaseOrderLines" />
+    <EntitySet Name="POR01" EntityType="CbaModel.PurchaseOrder" />
+    <AssociationSet Name="POL01_POR01_FK" Association="CbaModel.POL01_POR01_FK">
+      <End Role="POR01" EntitySet="POR01" />
+      <End Role="POL01" EntitySet="POL01" />
+    </AssociationSet>
+    <AssociationSet Name="POL01_PRO01_FK" Association="CbaModel.POL01_PRO01_FK">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="POL01" EntitySet="POL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_BPA01" Association="CbaModel.FK_POR01_BPA01">
+      <End Role="BusinessPartner" EntitySet="BPA01" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_LEG01" Association="CbaModel.FK_POR01_LEG01">
+      <End Role="LegalEntity" EntitySet="LEG01" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_PER01" Association="CbaModel.FK_POR01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <EntitySet Name="SOL01" EntityType="CbaModel.SaleOrderLines" />
+    <EntitySet Name="SOR01" EntityType="CbaModel.SaleOrder" />
+    <AssociationSet Name="SOL01_PRO01_FK" Association="CbaModel.SOL01_PRO01_FK">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="SOL01" EntitySet="SOL01" />
+    </AssociationSet>
+    <AssociationSet Name="SOL01_SOR01_FK" Association="CbaModel.SOL01_SOR01_FK">
+      <End Role="SOR01" EntitySet="SOR01" />
+      <End Role="SOL01" EntitySet="SOL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_BPA01" Association="CbaModel.FK_SOR01_BPA01">
+      <End Role="BusinessPartner" EntitySet="BPA01" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_LEG01" Association="CbaModel.FK_SOR01_LEG01">
+      <End Role="LegalEntity" EntitySet="LEG01" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_PER01" Association="CbaModel.FK_SOR01_PER01">
+      <End Role="Period" EntitySet="Period" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <FunctionImport Name="DeleteBusinessPartner">
+      <Parameter Name="BusinessPartnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteBusinessPartnerAddress">
+      <Parameter Name="BusinessPartnerAddressID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBusinessPartner">
+      <Parameter Name="BusinessPartnerCode" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerName" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerType" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerLegalEntity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBusinessPartnerAddress">
+      <Parameter Name="BusinessPartnerAddressType" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressCity" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAdressStreet" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressStateRegion" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressCountry" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateBusinessPartner">
+      <Parameter Name="BusinessPartnerID" Mode="In" Type="Int32" />
+      <Parameter Name="BusinessPartnerCode" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerName" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerType" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerLegalEntity" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateBusinessPartnerAddress">
+      <Parameter Name="BusinessPartnerAddressID" Mode="In" Type="Int32" />
+      <Parameter Name="BusinessPartnerAddressType" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressCity" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAdressStreet" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressStateRegion" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerAddressCountry" Mode="In" Type="String" />
+      <Parameter Name="BusinessPartnerID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteAddress">
+      <Parameter Name="AddressID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteBank">
+      <Parameter Name="BankID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteLegalEntity">
+      <Parameter Name="LegalEntityID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertAddress">
+      <Parameter Name="AddressType" Mode="In" Type="String" />
+      <Parameter Name="AddressCity" Mode="In" Type="String" />
+      <Parameter Name="AdressStreet" Mode="In" Type="String" />
+      <Parameter Name="AddressStateRegion" Mode="In" Type="String" />
+      <Parameter Name="AddressCountry" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertBank">
+      <Parameter Name="BankCode" Mode="In" Type="String" />
+      <Parameter Name="BankName" Mode="In" Type="String" />
+      <Parameter Name="BankTerritory" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="InsertLegalEntity">
+      <Parameter Name="LegalEntityName" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityRegistrationID" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityFiscalID" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityChart" Mode="In" Type="Int32" />
+      <Parameter Name="LegalEntityHeadQuarters" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateAddress">
+      <Parameter Name="AddressID" Mode="In" Type="Int32" />
+      <Parameter Name="AddressType" Mode="In" Type="String" />
+      <Parameter Name="AddressCity" Mode="In" Type="String" />
+      <Parameter Name="AdressStreet" Mode="In" Type="String" />
+      <Parameter Name="AddressStateRegion" Mode="In" Type="String" />
+      <Parameter Name="AddressCountry" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateBank">
+      <Parameter Name="BankID" Mode="In" Type="Int32" />
+      <Parameter Name="BankCode" Mode="In" Type="String" />
+      <Parameter Name="BankName" Mode="In" Type="String" />
+      <Parameter Name="BankTerritory" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateLegalEntity">
+      <Parameter Name="LegalEntityID" Mode="In" Type="Int32" />
+      <Parameter Name="LegalEntityName" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityRegistrationID" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityFiscalID" Mode="In" Type="String" />
+      <Parameter Name="LegalEntityChart" Mode="In" Type="Int32" />
+      <Parameter Name="LegalEntityHeadQuarters" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteInvoice">
+      <Parameter Name="InvoiceID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteInvoiceDetail">
+      <Parameter Name="InvoiceDetailsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSaleOrder">
+      <Parameter Name="SaleOrderID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteSaleOrderDetail">
+      <Parameter Name="SaleOrderDetailsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteShipping">
+      <Parameter Name="ShippingID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="DeleteShippingDetail">
+      <Parameter Name="ShippingDetailsID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertInvoice">
+      <Parameter Name="InvoiceDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceStatus" Mode="In" Type="String" />
+      <Parameter Name="InvoiceNote" Mode="In" Type="String" />
+      <Parameter Name="InvoiceLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="InvoicePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertInvoiceDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertSaleOrder">
+      <Parameter Name="SaleOrderDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SaleOrderStatus" Mode="In" Type="String" />
+      <Parameter Name="SaleOrderNote" Mode="In" Type="String" />
+      <Parameter Name="SaleOrderLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertSaleOrderDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertShipping">
+      <Parameter Name="ShippingDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ShippingStatus" Mode="In" Type="String" />
+      <Parameter Name="ShippingNote" Mode="In" Type="String" />
+      <Parameter Name="ShippingLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingrPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="InsertShippingDetails">
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateInvoice">
+      <Parameter Name="InvoiceID" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="InvoiceStatus" Mode="In" Type="String" />
+      <Parameter Name="InvoiceNote" Mode="In" Type="String" />
+      <Parameter Name="InvoiceLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="InvoicePeriod" Mode="In" Type="Int32" />
+      <Parameter Name="InvoiceDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateInvoiceDetails">
+      <Parameter Name="InvoiceDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSaleOrder">
+      <Parameter Name="SaleOrderID" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="SaleOrderStatus" Mode="In" Type="String" />
+      <Parameter Name="SaleOrderNote" Mode="In" Type="String" />
+      <Parameter Name="SaleOrderLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="SaleOrderDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateSaleOrderDetails">
+      <Parameter Name="SaleOrderDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateShipping">
+      <Parameter Name="ShippingID" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingDocumentDate" Mode="In" Type="DateTime" />
+      <Parameter Name="ShippingStatus" Mode="In" Type="String" />
+      <Parameter Name="ShippingNote" Mode="In" Type="String" />
+      <Parameter Name="ShippingLegalEntity" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingBusinessPartner" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingPeriod" Mode="In" Type="Int32" />
+      <Parameter Name="ShippingDocumentType" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="UpdateShippingDetails">
+      <Parameter Name="ShippingDetailsID" Mode="In" Type="Int32" />
+      <Parameter Name="Quantity" Mode="In" Type="Int32" />
+      <Parameter Name="Price" Mode="In" Type="Decimal" />
+      <Parameter Name="TaxeID" Mode="In" Type="Int32" />
+      <Parameter Name="ProductID" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Currency">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Name" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Symbol" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="StartDate" Type="DateTime" Precision="0" />
+    <Property Name="EndDate" Type="DateTime" Precision="0" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="CurrencyRateFrom" Relationship="CbaModel.RAT01_CUR01_FROM_FK" FromRole="Currency" ToRole="RAT01" />
+    <NavigationProperty Name="CurrencyRateTo" Relationship="CbaModel.RAT01_CUR01_TO_FK" FromRole="Currency" ToRole="RAT01" />
+    <NavigationProperty Name="CurrencyBalance" Relationship="CbaModel.BAL01_CUR01_FK" FromRole="Currency" ToRole="BAL01" />
+    <NavigationProperty Name="CurrencyJournal" Relationship="CbaModel.JHE01_CUR01_FK" FromRole="Currency" ToRole="JHE01" />
+  </EntityType>
+  <EntityType Name="Calendar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <NavigationProperty Name="CalendarPeriods" Relationship="CbaModel.PER01_CAL01_FK" FromRole="Calendar" ToRole="PER01" />
+    <NavigationProperty Name="CalendarBudget" Relationship="CbaModel.BUD01_CAL01_FK" FromRole="Calendar" ToRole="BUD01" />
+  </EntityType>
+  <EntityType Name="Rate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Single" Name="ExchangeRate" />
+    <Property Type="DateTime" Name="StartDate" Precision="0" />
+    <Property Type="DateTime" Name="EndDate" Precision="0" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="CurrencyFrom" Nullable="true" />
+    <Property Type="Int32" Name="CurrencyTo" />
+    <NavigationProperty Name="ExchangeFrom" Relationship="CbaModel.RAT01_CUR01_FROM_FK" FromRole="RAT01" ToRole="Currency" />
+    <NavigationProperty Name="ExchangeTo" Relationship="CbaModel.RAT01_CUR01_TO_FK" FromRole="RAT01" ToRole="Currency" />
+  </EntityType>
+  <Association Name="RAT01_CUR01_FROM_FK">
+    <End Type="CbaModel.Currency" Role="Currency" Multiplicity="0..1" />
+    <End Type="CbaModel.Rate" Role="RAT01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RAT01">
+        <PropertyRef Name="CurrencyFrom" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RAT01_CUR01_TO_FK">
+    <End Type="CbaModel.Currency" Role="Currency" Multiplicity="0..1" />
+    <End Type="CbaModel.Rate" Role="RAT01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RAT01">
+        <PropertyRef Name="CurrencyTo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Period">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" Precision="0" />
+    <Property Type="DateTime" Name="EndDate" Precision="0" />
+    <Property Type="String" Name="Adjustment" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Calendar" />
+    <NavigationProperty Name="PeriodCalendar" Relationship="CbaModel.PER01_CAL01_FK" FromRole="PER01" ToRole="Calendar" />
+    <NavigationProperty Name="PeriodBalance" Relationship="CbaModel.BAL01_PER01_FK" FromRole="Period" ToRole="BAL01" />
+    <NavigationProperty Name="PeriodJournal" Relationship="CbaModel.JHE01_PER01_FK" FromRole="Period" ToRole="JHE01" />
+    <NavigationProperty Name="PeriodBudget" Relationship="CbaModel.BUL01_PER01_FK" FromRole="Period" ToRole="BUL01" />
+    <NavigationProperty Name="PeriodBill" Relationship="CbaModel.FK_BIL01_PER01" FromRole="Period" ToRole="BIL01" />
+    <NavigationProperty Name="PeriodGoodsReceipt" Relationship="CbaModel.FK_GOR01_PER01" FromRole="Period" ToRole="GOR01" />
+    <NavigationProperty Name="PeriodRequestForQuote" Relationship="CbaModel.FK_RFQ01_PER01" FromRole="Period" ToRole="RFQ01" />
+    <NavigationProperty Name="PeriodQuote" Relationship="CbaModel.FK_QUO01_PER01" FromRole="Period" ToRole="QUO01" />
+    <NavigationProperty Name="PeriodShipping" Relationship="CbaModel.FK_SHI01_PER01" FromRole="Period" ToRole="Shipment" />
+    <NavigationProperty Name="PeriodInvoice" Relationship="CbaModel.FK_INV01_PER01" FromRole="Period" ToRole="INV01" />
+    <NavigationProperty Name="PeriodPurchaseOrder" Relationship="CbaModel.FK_POR01_PER01" FromRole="Period" ToRole="POR01" />
+    <NavigationProperty Name="PeriodSaleOrder" Relationship="CbaModel.FK_SOR01_PER01" FromRole="Period" ToRole="SOR01" />
+  </EntityType>
+  <Association Name="PER01_CAL01_FK">
+    <End Type="CbaModel.Calendar" Role="Calendar" Multiplicity="0..1" />
+    <End Type="CbaModel.Period" Role="PER01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Calendar">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PER01">
+        <PropertyRef Name="Calendar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Chart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ShortDescription" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Language" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UnpdatedOn" Precision="0" />
+    <NavigationProperty Name="ChartSegment" Relationship="CbaModel.ACS01_CHA01_FK" FromRole="Chart" ToRole="ACS01" />
+    <NavigationProperty Name="ChartAccount" Relationship="CbaModel.ACC01_CHA01_FK" FromRole="Chart" ToRole="ACC01" />
+    <NavigationProperty Name="ChartLegalEntity" Relationship="CbaModel.FK_LEG01_CHA01" FromRole="Chart" ToRole="LegalEntity" />
+  </EntityType>
+  <EntityType Name="Segment">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="Chart" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Chart" Nullable="false" />
+    <NavigationProperty Name="SegmentChart" Relationship="CbaModel.ACS01_CHA01_FK" FromRole="ACS01" ToRole="Chart" />
+  </EntityType>
+  <Association Name="ACS01_CHA01_FK">
+    <End Type="CbaModel.Chart" Role="Chart" Multiplicity="1" />
+    <End Type="CbaModel.Segment" Role="ACS01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chart">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ACS01">
+        <PropertyRef Name="Chart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Posting" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Budget" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Int32" Name="Level" />
+    <Property Type="Int32" Name="Group" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Chart" Nullable="false" />
+    <Property Type="String" Name="Parent" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="AccountChart" Relationship="CbaModel.ACC01_CHA01_FK" FromRole="ACC01" ToRole="Chart" />
+    <NavigationProperty Name="AccountLine" Relationship="CbaModel.JLI01_ACC01_FK" FromRole="Account" ToRole="JournalLines" />
+    <NavigationProperty Name="AccountBalance" Relationship="CbaModel.BAL01_ACC01_FK" FromRole="Account" ToRole="Balance" />
+    <NavigationProperty Name="AccountBudget" Relationship="CbaModel.BUL01_ACC01_FK" FromRole="Account" ToRole="BUL01" />
+  </EntityType>
+  <Association Name="ACC01_CHA01_FK">
+    <End Type="CbaModel.Chart" Role="Chart" Multiplicity="1" />
+    <End Type="CbaModel.Account" Role="ACC01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chart">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ACC01">
+        <PropertyRef Name="Chart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Tax">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="Rate" />
+    <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" Precision="0" />
+    <Property Type="DateTime" Name="EndDate" Precision="0" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Account" />
+    <Property Type="String" Name="Territory" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TaxBillLines" Relationship="CbaModel.FK_BLI01_TAX01" FromRole="Tax" ToRole="BLI01" />
+    <NavigationProperty Name="TaxQuoteLines" Relationship="CbaModel.FK_QLI01_TAX01" FromRole="Tax" ToRole="QLI01" />
+    <NavigationProperty Name="TaxShippingLines" Relationship="CbaModel.FK_SHL01_TAX01" FromRole="Tax" ToRole="ShipmentLines" />
+    <NavigationProperty Name="TaxInvoiceLines" Relationship="CbaModel.FK_INL01_TAX01" FromRole="Tax" ToRole="INL01" />
+  </EntityType>
+  <EntityType Name="Balance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Decimal" Name="DebitStart" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="CreditStart" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="PeriodDebit" Precision="19" Scale="2" />
+    <Property Type="Decimal" Name="PeriodCredit" Precision="19" Scale="2" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Account" />
+    <Property Type="Int32" Name="Journal" />
+    <Property Type="Int32" Name="Lignes" />
+    <Property Type="Int32" Name="Period" />
+    <Property Type="Int32" Name="Ledger" />
+    <Property Type="Int32" Name="Currency" />
+    <NavigationProperty Name="BalanceCurrency" Relationship="CbaModel.BAL01_CUR01_FK" FromRole="BAL01" ToRole="Currency" />
+    <NavigationProperty Name="BalancePeriod" Relationship="CbaModel.BAL01_PER01_FK" FromRole="BAL01" ToRole="Period" />
+    <NavigationProperty Name="BalanceAccount" Relationship="CbaModel.BAL01_ACC01_FK" FromRole="Balance" ToRole="Account" />
+  </EntityType>
+  <Association Name="BAL01_CUR01_FK">
+    <End Type="CbaModel.Currency" Role="Currency" Multiplicity="0..1" />
+    <End Type="CbaModel.Balance" Role="BAL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BAL01">
+        <PropertyRef Name="Currency" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAL01_PER01_FK">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Balance" Role="BAL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BAL01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Journal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Source" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ActualFlag" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="BalancedFlag" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="TotalCredit" Precision="19" Scale="4" DefaultValue="0.00" />
+    <Property Type="Decimal" Name="TotalDebit" Precision="19" Scale="4" DefaultValue="0.00" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Category" />
+    <Property Type="Int32" Name="Currency" />
+    <Property Type="Int32" Name="Ledger" />
+    <Property Type="Int32" Name="Period" />
+    <NavigationProperty Name="JournalCurrency" Relationship="CbaModel.JHE01_CUR01_FK" FromRole="JHE01" ToRole="Currency" />
+    <NavigationProperty Name="JournalPeriod" Relationship="CbaModel.JHE01_PER01_FK" FromRole="JHE01" ToRole="Period" />
+    <NavigationProperty Name="JournalLines" Relationship="CbaModel.JLI01_JHE01_FK" FromRole="JHE01" ToRole="JLI01" />
+    <NavigationProperty Name="JournalLegalEntity" Relationship="CbaModel.FK_JHE01_LEG01" FromRole="Journal" ToRole="LEG01" />
+  </EntityType>
+  <EntityType Name="JournalLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="JournalId" />
+    </Key>
+    <Property Type="Int32" Name="LineId" Nullable="false" />
+    <Property Type="Int32" Name="JournalId" Nullable="false" />
+    <Property Type="String" Name="DebitCreditFlag" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Precision="19" Scale="4" Nullable="false" DefaultValue="0.00" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Account" />
+    <NavigationProperty Name="LineJournal" Relationship="CbaModel.JLI01_JHE01_FK" FromRole="JLI01" ToRole="JHE01" />
+    <NavigationProperty Name="LineAccount" Relationship="CbaModel.JLI01_ACC01_FK" FromRole="JournalLines" ToRole="Account" />
+  </EntityType>
+  <Association Name="JHE01_CUR01_FK">
+    <End Type="CbaModel.Currency" Role="Currency" Multiplicity="0..1" />
+    <End Type="CbaModel.Journal" Role="JHE01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Currency">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JHE01">
+        <PropertyRef Name="Currency" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JHE01_PER01_FK">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Journal" Role="JHE01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JHE01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JLI01_JHE01_FK">
+    <End Type="CbaModel.Journal" Role="JHE01" Multiplicity="1" />
+    <End Type="CbaModel.JournalLines" Role="JLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JHE01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JLI01">
+        <PropertyRef Name="JournalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JLI01_ACC01_FK">
+    <End Type="CbaModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="CbaModel.JournalLines" Role="JournalLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JournalLines">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAL01_ACC01_FK">
+    <End Type="CbaModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="CbaModel.Balance" Role="Balance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Balance">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Budget">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Calendar" />
+    <Property Type="Int32" Name="Ledger" />
+    <NavigationProperty Name="BudgetCalendar" Relationship="CbaModel.BUD01_CAL01_FK" FromRole="BUD01" ToRole="Calendar" />
+    <NavigationProperty Name="BudgetLines" Relationship="CbaModel.BUL01_BUD01_FK" FromRole="BUD01" ToRole="BUL01" />
+  </EntityType>
+  <EntityType Name="BudgetLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="BudgetId" />
+    </Key>
+    <Property Type="Int32" Name="LineId" Nullable="false" />
+    <Property Type="Int32" Name="BudgetId" Nullable="false" />
+    <Property Type="Decimal" Name="Amount" Nullable="false" Precision="19" Scale="2" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Account" />
+    <Property Type="Int32" Name="Period" />
+    <NavigationProperty Name="LineAccount" Relationship="CbaModel.BUL01_ACC01_FK" FromRole="BUL01" ToRole="Account" />
+    <NavigationProperty Name="LineBudget" Relationship="CbaModel.BUL01_BUD01_FK" FromRole="BUL01" ToRole="BUD01" />
+    <NavigationProperty Name="LinePeriod" Relationship="CbaModel.BUL01_PER01_FK" FromRole="BUL01" ToRole="Period" />
+  </EntityType>
+  <Association Name="BUL01_ACC01_FK">
+    <End Type="CbaModel.Account" Role="Account" Multiplicity="0..1" />
+    <End Type="CbaModel.BudgetLines" Role="BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="Account" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUD01_CAL01_FK">
+    <End Type="CbaModel.Calendar" Role="Calendar" Multiplicity="0..1" />
+    <End Type="CbaModel.Budget" Role="BUD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Calendar">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BUD01">
+        <PropertyRef Name="Calendar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUL01_BUD01_FK">
+    <End Type="CbaModel.Budget" Role="BUD01" Multiplicity="1" />
+    <End Type="CbaModel.BudgetLines" Role="BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BUD01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="BudgetId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUL01_PER01_FK">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.BudgetLines" Role="BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ProductFamily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <NavigationProperty Name="Subfamily" Relationship="CbaModel.PSF01_PFA01_FK" FromRole="PFA01" ToRole="PSF01" />
+  </EntityType>
+  <EntityType Name="ProductSubFamily">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Family" />
+    <NavigationProperty Name="ProductFamily" Relationship="CbaModel.PSF01_PFA01_FK" FromRole="PSF01" ToRole="PFA01" />
+    <NavigationProperty Name="SubfamilyProducts" Relationship="CbaModel.PRO01_PSF01_FK" FromRole="ProductSubFamily" ToRole="PRO01" />
+  </EntityType>
+  <Association Name="PSF01_PFA01_FK">
+    <End Type="CbaModel.ProductFamily" Role="PFA01" Multiplicity="1" />
+    <End Type="CbaModel.ProductSubFamily" Role="PSF01" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PFA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PSF01">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Code" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="ListPrice" Precision="19" Scale="4" />
+    <Property Type="String" Name="Size" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SizeMeasure" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="Weight" />
+    <Property Type="String" Name="WeightMeasure" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Class" MaxLength="3" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Status" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="StartDate" Precision="0" />
+    <Property Type="DateTime" Name="EndDate" Precision="0" />
+    <Property Type="DateTime" Name="Discontinued" Precision="0" />
+    <Property Type="Int32" Name="CreatedBy" />
+    <Property Type="DateTime" Name="CreatedOn" Precision="0" />
+    <Property Type="Int32" Name="UpdatedBy" />
+    <Property Type="DateTime" Name="UpdatedOn" Precision="0" />
+    <Property Type="Int32" Name="Subfamily" />
+    <NavigationProperty Name="ProductSubfamily" Relationship="CbaModel.PRO01_PSF01_FK" FromRole="PRO01" ToRole="ProductSubFamily" />
+    <NavigationProperty Name="ProductBillLines" Relationship="CbaModel.FK_BLI01_PRO01" FromRole="Product" ToRole="BLI01" />
+    <NavigationProperty Name="ProductGoodsReceiptLines" Relationship="CbaModel.GRL01_PRO01_FK" FromRole="Product" ToRole="GRL01" />
+    <NavigationProperty Name="ProductRequestForQuoteLines" Relationship="CbaModel.RFL01_PRO01_FK" FromRole="Product" ToRole="RFL01" />
+    <NavigationProperty Name="ProductQuoteLines" Relationship="CbaModel.FK_QLI01_PRO01" FromRole="Product" ToRole="QLI01" />
+    <NavigationProperty Name="ProductShippingLines" Relationship="CbaModel.FK_SHL01_PRO01" FromRole="Product" ToRole="ShipmentLines" />
+    <NavigationProperty Name="ProductInvoiceLines" Relationship="CbaModel.FK_INL01_PRO01" FromRole="Product" ToRole="INL01" />
+    <NavigationProperty Name="ProductPurchaseOrder" Relationship="CbaModel.POL01_PRO01_FK" FromRole="Product" ToRole="POL01" />
+    <NavigationProperty Name="ProductSaleOrder" Relationship="CbaModel.SOL01_PRO01_FK" FromRole="Product" ToRole="SOL01" />
+  </EntityType>
+  <Association Name="PRO01_PSF01_FK">
+    <End Type="CbaModel.ProductSubFamily" Role="ProductSubFamily" Multiplicity="0..1" />
+    <End Type="CbaModel.Product" Role="PRO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductSubFamily">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PRO01">
+        <PropertyRef Name="Subfamily" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Bill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DueDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="BillBusinessPartner" Relationship="CbaModel.FK_BIL01_BPA01" FromRole="BIL01" ToRole="BPA01" />
+    <NavigationProperty Name="BillLegalEntity" Relationship="CbaModel.FK_BIL01_LEG01" FromRole="BIL01" ToRole="LEG01" />
+    <NavigationProperty Name="BillPeriod" Relationship="CbaModel.FK_BIL01_PER01" FromRole="BIL01" ToRole="Period" />
+    <NavigationProperty Name="BillLines" Relationship="CbaModel.FK_BLI01_BIL01" FromRole="BIL01" ToRole="BLI01" />
+  </EntityType>
+  <EntityType Name="BillLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="BillId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="BillId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineBill" Relationship="CbaModel.FK_BLI01_BIL01" FromRole="BLI01" ToRole="BIL01" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.FK_BLI01_PRO01" FromRole="BLI01" ToRole="Product" />
+    <NavigationProperty Name="LineTaxId" Relationship="CbaModel.FK_BLI01_TAX01" FromRole="BLI01" ToRole="Tax" />
+  </EntityType>
+  <EntityType Name="GoodsReceipt">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="GoodsReceiptBusinessPartner" Relationship="CbaModel.FK_GOR01_BPA01" FromRole="GOR01" ToRole="BPA01" />
+    <NavigationProperty Name="GoodsReceiptLegalEntity" Relationship="CbaModel.FK_GOR01_LEG01" FromRole="GOR01" ToRole="LEG01" />
+    <NavigationProperty Name="GoodsReceiptPeriod" Relationship="CbaModel.FK_GOR01_PER01" FromRole="GOR01" ToRole="Period" />
+    <NavigationProperty Name="GoodsReceiptLines" Relationship="CbaModel.GRL01_GOR01_FK" FromRole="GOR01" ToRole="GRL01" />
+  </EntityType>
+  <EntityType Name="GoodsReceiptLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="GoodsReceiptId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="GoodsReceiptId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="WarehouseId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineGoodsReceipt" Relationship="CbaModel.GRL01_GOR01_FK" FromRole="GRL01" ToRole="GOR01" />
+    <NavigationProperty Name="LineWarehouse" Relationship="CbaModel.FK_GRL01_WAR01" FromRole="GRL01" ToRole="WAR01" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.GRL01_PRO01_FK" FromRole="GRL01" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="RequestForQuoteLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="RequestForQuoteId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="RequestForQuoteId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.RFL01_PRO01_FK" FromRole="RFL01" ToRole="Product" />
+    <NavigationProperty Name="LineRequestForQuote" Relationship="CbaModel.RFL01_RFQ01_FK" FromRole="RFL01" ToRole="RFQ01" />
+  </EntityType>
+  <EntityType Name="RequestForQuote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="RequestForQuoteLines" Relationship="CbaModel.RFL01_RFQ01_FK" FromRole="RFQ01" ToRole="RFL01" />
+    <NavigationProperty Name="RequestForQuoteBusinessPartner" Relationship="CbaModel.FK_RFQ01_BPA01" FromRole="RFQ01" ToRole="BPA01" />
+    <NavigationProperty Name="RequestForLegalEntity" Relationship="CbaModel.FK_RFQ01_LEG01" FromRole="RFQ01" ToRole="LEG01" />
+    <NavigationProperty Name="RequestForQuotePeriod" Relationship="CbaModel.FK_RFQ01_PER01" FromRole="RFQ01" ToRole="Period" />
+  </EntityType>
+  <EntityType Name="QuoteLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="QuoteId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="QuoteId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.FK_QLI01_PRO01" FromRole="QLI01" ToRole="Product" />
+    <NavigationProperty Name="LineQuote" Relationship="CbaModel.FK_QLI01_QUO01" FromRole="QLI01" ToRole="QUO01" />
+    <NavigationProperty Name="LineTaxId" Relationship="CbaModel.FK_QLI01_TAX01" FromRole="QLI01" ToRole="Tax" />
+  </EntityType>
+  <EntityType Name="Quote">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GrossTotal" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DiscountTotal" Type="Int32" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="QuoteLines" Relationship="CbaModel.FK_QLI01_QUO01" FromRole="QUO01" ToRole="QLI01" />
+    <NavigationProperty Name="QuoteBusinessPartner" Relationship="CbaModel.FK_QUO01_BPA01" FromRole="QUO01" ToRole="BPA01" />
+    <NavigationProperty Name="QuoteLegalEntity" Relationship="CbaModel.FK_QUO01_LEG01" FromRole="QUO01" ToRole="LEG01" />
+    <NavigationProperty Name="QuotePeriod" Relationship="CbaModel.FK_QUO01_PER01" FromRole="QUO01" ToRole="Period" />
+  </EntityType>
+  <EntityType Name="Shipment">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="ShipmentBusinessPartner" Relationship="CbaModel.FK_SHI01_BPA01" FromRole="Shipment" ToRole="BusinessPartner" />
+    <NavigationProperty Name="ShipmentLegalEntity" Relationship="CbaModel.FK_SHI01_LEG01" FromRole="Shipment" ToRole="LegalEntity" />
+    <NavigationProperty Name="ShipmentPeriod" Relationship="CbaModel.FK_SHI01_PER01" FromRole="Shipment" ToRole="Period" />
+    <NavigationProperty Name="ShipmentLines" Relationship="CbaModel.FK_SHL01_SHI01" FromRole="Shipment" ToRole="ShipmentLines" />
+  </EntityType>
+  <EntityType Name="ShipmentLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="ShipmentId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="ShipmentId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineShipment" Relationship="CbaModel.FK_SHL01_SHI01" FromRole="ShipmentLines" ToRole="Shipment" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.FK_SHL01_PRO01" FromRole="ShipmentLines" ToRole="Product" />
+    <NavigationProperty Name="LineTaxId" Relationship="CbaModel.FK_SHL01_TAX01" FromRole="ShipmentLines" ToRole="Tax" />
+  </EntityType>
+  <EntityType Name="BusinessPartner">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="BusinessPartnerBill" Relationship="CbaModel.FK_BIL01_BPA01" FromRole="BPA01" ToRole="BIL01" />
+    <NavigationProperty Name="BusinessPartnerGoodsReceipt" Relationship="CbaModel.FK_GOR01_BPA01" FromRole="BPA01" ToRole="GOR01" />
+    <NavigationProperty Name="BusinessPartnerRequestForQuote" Relationship="CbaModel.FK_RFQ01_BPA01" FromRole="BPA01" ToRole="RFQ01" />
+    <NavigationProperty Name="BusinessPartnerQuote" Relationship="CbaModel.FK_QUO01_BPA01" FromRole="BPA01" ToRole="QUO01" />
+    <NavigationProperty Name="BusinessPartnerAddress" Relationship="CbaModel.FK_BPD01_BPA01" FromRole="BPA01" ToRole="BPD01" />
+    <NavigationProperty Name="BusinessPartnerShipping" Relationship="CbaModel.FK_SHI01_BPA01" FromRole="BusinessPartner" ToRole="Shipment" />
+    <NavigationProperty Name="BusinessPartnerInvoice" Relationship="CbaModel.FK_INV01_BPA01" FromRole="BusinessPartner" ToRole="INV01" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <NavigationProperty Name="BusinessPartnerLegalEntity" Relationship="CbaModel.FK_BPA01_LEG01" FromRole="BusinessPartner" ToRole="LegalEntity" />
+    <NavigationProperty Name="BusinessPartnerPurchaseOrder" Relationship="CbaModel.FK_POR01_BPA01" FromRole="BusinessPartner" ToRole="POR01" />
+    <NavigationProperty Name="BusinessPartnerSaleOrder" Relationship="CbaModel.FK_SOR01_BPA01" FromRole="BusinessPartner" ToRole="SOR01" />
+  </EntityType>
+  <EntityType Name="BusinessPartnerAddress">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateProvince" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <NavigationProperty Name="BusinessPartnerAddressBusinessPartner" Relationship="CbaModel.FK_BPD01_BPA01" FromRole="BPD01" ToRole="BPA01" />
+    <NavigationProperty Name="BusinessPartnerAddressTerritory" Relationship="CbaModel.FK_BPD01_TER01" FromRole="BusinessPartnerAddress" ToRole="TER01" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BankTerritory" Relationship="CbaModel.BAN01_TER01_FK" FromRole="Bank" ToRole="TER01" />
+  </EntityType>
+  <EntityType Name="LegalEntity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FiscalId" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="LegalEntityBills" Relationship="CbaModel.FK_BIL01_LEG01" FromRole="LEG01" ToRole="BIL01" />
+    <NavigationProperty Name="LegalEntityGoodsReceipt" Relationship="CbaModel.FK_GOR01_LEG01" FromRole="LEG01" ToRole="GOR01" />
+    <NavigationProperty Name="LegalEntityRequestForQuote" Relationship="CbaModel.FK_RFQ01_LEG01" FromRole="LEG01" ToRole="RFQ01" />
+    <NavigationProperty Name="LegalEntityQuote" Relationship="CbaModel.FK_QUO01_LEG01" FromRole="LEG01" ToRole="QUO01" />
+    <NavigationProperty Name="LegalEntityJournal" Relationship="CbaModel.FK_JHE01_LEG01" FromRole="LEG01" ToRole="Journal" />
+    <NavigationProperty Name="LegalEntityShippings" Relationship="CbaModel.FK_SHI01_LEG01" FromRole="LegalEntity" ToRole="Shipment" />
+    <NavigationProperty Name="LegalEntityInvoices" Relationship="CbaModel.FK_INV01_LEG01" FromRole="LegalEntity" ToRole="INV01" />
+    <Property Name="Chart" Type="Int32" />
+    <Property Name="Headquarters" Type="Int32" />
+    <NavigationProperty Name="LegalEntityChart" Relationship="CbaModel.FK_LEG01_CHA01" FromRole="LegalEntity" ToRole="Chart" />
+    <NavigationProperty Name="LegalEntityBusinessPartner" Relationship="CbaModel.FK_BPA01_LEG01" FromRole="LegalEntity" ToRole="BusinessPartner" />
+    <NavigationProperty Name="LegalEntityAddress" Relationship="CbaModel.FK_LEG01_ADD01" FromRole="LegalEntity" ToRole="ADD01" />
+    <NavigationProperty Name="LegalEntityPurchaseOrder" Relationship="CbaModel.FK_POR01_LEG01" FromRole="LegalEntity" ToRole="POR01" />
+    <NavigationProperty Name="LegalEntitySaleOrder" Relationship="CbaModel.FK_SOR01_LEG01" FromRole="LegalEntity" ToRole="SOR01" />
+  </EntityType>
+  <EntityType Name="Warehouse">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="WarehouseGoodsReceiptLines" Relationship="CbaModel.FK_GRL01_WAR01" FromRole="WAR01" ToRole="GRL01" />
+  </EntityType>
+  <Association Name="FK_BIL01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BPA01" Multiplicity="0..1" />
+    <End Type="CbaModel.Bill" Role="BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BIL01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LEG01" Multiplicity="0..1" />
+    <End Type="CbaModel.Bill" Role="BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BIL01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Bill" Role="BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_BIL01">
+    <End Type="CbaModel.Bill" Role="BIL01" Multiplicity="1" />
+    <End Type="CbaModel.BillLines" Role="BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BIL01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="BillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_PRO01">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.BillLines" Role="BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_TAX01">
+    <End Type="CbaModel.Tax" Role="Tax" Multiplicity="0..1" />
+    <End Type="CbaModel.BillLines" Role="BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tax">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="TaxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BPA01" Multiplicity="0..1" />
+    <End Type="CbaModel.GoodsReceipt" Role="GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LEG01" Multiplicity="0..1" />
+    <End Type="CbaModel.GoodsReceipt" Role="GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.GoodsReceipt" Role="GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRL01_GOR01_FK">
+    <End Type="CbaModel.GoodsReceipt" Role="GOR01" Multiplicity="1" />
+    <End Type="CbaModel.GoodsReceiptLines" Role="GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOR01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="GoodsReceiptId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GRL01_WAR01">
+    <End Type="CbaModel.Warehouse" Role="WAR01" Multiplicity="0..1" />
+    <End Type="CbaModel.GoodsReceiptLines" Role="GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WAR01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="WarehouseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRL01_PRO01_FK">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.GoodsReceiptLines" Role="GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RFL01_PRO01_FK">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.RequestForQuoteLines" Role="RFL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RFL01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RFL01_RFQ01_FK">
+    <End Type="CbaModel.RequestForQuote" Role="RFQ01" Multiplicity="1" />
+    <End Type="CbaModel.RequestForQuoteLines" Role="RFL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RFL01">
+        <PropertyRef Name="RequestForQuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BPA01" Multiplicity="0..1" />
+    <End Type="CbaModel.RequestForQuote" Role="RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LEG01" Multiplicity="0..1" />
+    <End Type="CbaModel.RequestForQuote" Role="RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.RequestForQuote" Role="RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_PRO01">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.QuoteLines" Role="QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_QUO01">
+    <End Type="CbaModel.Quote" Role="QUO01" Multiplicity="1" />
+    <End Type="CbaModel.QuoteLines" Role="QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUO01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="QuoteId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_TAX01">
+    <End Type="CbaModel.Tax" Role="Tax" Multiplicity="0..1" />
+    <End Type="CbaModel.QuoteLines" Role="QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tax">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="TaxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BPA01" Multiplicity="0..1" />
+    <End Type="CbaModel.Quote" Role="QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LEG01" Multiplicity="0..1" />
+    <End Type="CbaModel.Quote" Role="QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Quote" Role="QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BPD01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BPA01" Multiplicity="0..1" />
+    <End Type="CbaModel.BusinessPartnerAddress" Role="BPD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BPD01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JHE01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LEG01" Multiplicity="0..1" />
+    <End Type="CbaModel.Journal" Role="Journal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Journal">
+        <PropertyRef Name="Ledger" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BusinessPartner" Multiplicity="0..1" />
+    <End Type="CbaModel.Shipment" Role="Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessPartner">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="0..1" />
+    <End Type="CbaModel.Shipment" Role="Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LegalEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Shipment" Role="Shipment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Shipment">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_SHI01">
+    <End Type="CbaModel.Shipment" Role="Shipment" Multiplicity="1" />
+    <End Type="CbaModel.ShipmentLines" Role="ShipmentLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shipment">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShipmentLines">
+        <PropertyRef Name="ShipmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_PRO01">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.ShipmentLines" Role="ShipmentLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShipmentLines">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_TAX01">
+    <End Type="CbaModel.Tax" Role="Tax" Multiplicity="0..1" />
+    <End Type="CbaModel.ShipmentLines" Role="ShipmentLines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tax">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ShipmentLines">
+        <PropertyRef Name="TaxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="InvoiceLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="InvoiceId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineInvoice" Relationship="CbaModel.FK_INL01_INV01" FromRole="INL01" ToRole="INV01" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.FK_INL01_PRO01" FromRole="INL01" ToRole="Product" />
+    <NavigationProperty Name="LineTaxId" Relationship="CbaModel.FK_INL01_TAX01" FromRole="INL01" ToRole="Tax" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DueDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="InvoiceLines" Relationship="CbaModel.FK_INL01_INV01" FromRole="INV01" ToRole="INL01" />
+    <NavigationProperty Name="InvoiceBusinessPartner" Relationship="CbaModel.FK_INV01_BPA01" FromRole="INV01" ToRole="BusinessPartner" />
+    <NavigationProperty Name="InvoiceLegalEntity" Relationship="CbaModel.FK_INV01_LEG01" FromRole="INV01" ToRole="LegalEntity" />
+    <NavigationProperty Name="InvoicePeriod" Relationship="CbaModel.FK_INV01_PER01" FromRole="INV01" ToRole="Period" />
+  </EntityType>
+  <Association Name="FK_INL01_INV01">
+    <End Type="CbaModel.Invoice" Role="INV01" Multiplicity="1" />
+    <End Type="CbaModel.InvoiceLines" Role="INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INV01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="InvoiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INL01_PRO01">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.InvoiceLines" Role="INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INL01_TAX01">
+    <End Type="CbaModel.Tax" Role="Tax" Multiplicity="0..1" />
+    <End Type="CbaModel.InvoiceLines" Role="INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tax">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="TaxId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BusinessPartner" Multiplicity="0..1" />
+    <End Type="CbaModel.Invoice" Role="INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessPartner">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="0..1" />
+    <End Type="CbaModel.Invoice" Role="INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LegalEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.Invoice" Role="INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LEG01_CHA01">
+    <End Type="CbaModel.Chart" Role="Chart" Multiplicity="0..1" />
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Chart">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LegalEntity">
+        <PropertyRef Name="Chart" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StateRegion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AddressCountry" Relationship="CbaModel.ADD01_TER01_FK" FromRole="ADD01" ToRole="TER01" />
+    <NavigationProperty Name="AddressLegalEntity" Relationship="CbaModel.FK_LEG01_ADD01" FromRole="ADD01" ToRole="LegalEntity" />
+  </EntityType>
+  <EntityType Name="Territory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SourceLanguage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TerritoryBusinessPartnerAddress" Relationship="CbaModel.FK_BPD01_TER01" FromRole="TER01" ToRole="BusinessPartnerAddress" />
+    <NavigationProperty Name="TerritoryAddress" Relationship="CbaModel.ADD01_TER01_FK" FromRole="TER01" ToRole="ADD01" />
+    <NavigationProperty Name="TerritoryBank" Relationship="CbaModel.BAN01_TER01_FK" FromRole="TER01" ToRole="Bank" />
+  </EntityType>
+  <Association Name="FK_BPA01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="0..1" />
+    <End Type="CbaModel.BusinessPartner" Role="BusinessPartner" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LegalEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BusinessPartner">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BPD01_TER01">
+    <End Type="CbaModel.Territory" Role="TER01" Multiplicity="0..1" />
+    <End Type="CbaModel.BusinessPartnerAddress" Role="BusinessPartnerAddress" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BusinessPartnerAddress">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADD01_TER01_FK">
+    <End Type="CbaModel.Territory" Role="TER01" Multiplicity="0..1" />
+    <End Type="CbaModel.Address" Role="ADD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ADD01">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LEG01_ADD01">
+    <End Type="CbaModel.Address" Role="ADD01" Multiplicity="0..1" />
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADD01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="LegalEntity">
+        <PropertyRef Name="Headquarters" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAN01_TER01_FK">
+    <End Type="CbaModel.Territory" Role="TER01" Multiplicity="0..1" />
+    <End Type="CbaModel.Bank" Role="Bank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Bank">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PurchaseOrderLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="PurchaseOrderId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="PurchaseOrderId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LinePurchaseOrder" Relationship="CbaModel.POL01_POR01_FK" FromRole="POL01" ToRole="POR01" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.POL01_PRO01_FK" FromRole="POL01" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PurchaseOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="Documenttype" Type="Int32" />
+    <NavigationProperty Name="PurchaseOrderLines" Relationship="CbaModel.POL01_POR01_FK" FromRole="POR01" ToRole="POL01" />
+    <NavigationProperty Name="PurchaseOrderBusinessPartner" Relationship="CbaModel.FK_POR01_BPA01" FromRole="POR01" ToRole="BusinessPartner" />
+    <NavigationProperty Name="PurchaseOrderLegalEntity" Relationship="CbaModel.FK_POR01_LEG01" FromRole="POR01" ToRole="LegalEntity" />
+    <NavigationProperty Name="PurchaseOrderPeriod" Relationship="CbaModel.FK_POR01_PER01" FromRole="POR01" ToRole="Period" />
+  </EntityType>
+  <Association Name="POL01_POR01_FK">
+    <End Type="CbaModel.PurchaseOrder" Role="POR01" Multiplicity="1" />
+    <End Type="CbaModel.PurchaseOrderLines" Role="POL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POR01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POL01">
+        <PropertyRef Name="PurchaseOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="POL01_PRO01_FK">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.PurchaseOrderLines" Role="POL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POL01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BusinessPartner" Multiplicity="0..1" />
+    <End Type="CbaModel.PurchaseOrder" Role="POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessPartner">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="0..1" />
+    <End Type="CbaModel.PurchaseOrder" Role="POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LegalEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.PurchaseOrder" Role="POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="SaleOrderLines">
+    <Key>
+      <PropertyRef Name="LineId" />
+      <PropertyRef Name="SaleOrderId" />
+    </Key>
+    <Property Name="LineId" Type="Int32" Nullable="false" />
+    <Property Name="SaleOrderId" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="Product" Type="Int32" />
+    <Property Name="TaxId" Type="Int32" />
+    <Property Name="LineGross" Type="Decimal" Nullable="false" Precision="19" Scale="4" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LineDiscount" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTax" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="LineTotal" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="LineProduct" Relationship="CbaModel.SOL01_PRO01_FK" FromRole="SOL01" ToRole="Product" />
+    <NavigationProperty Name="LineSaleOrder" Relationship="CbaModel.SOL01_SOR01_FK" FromRole="SOL01" ToRole="SOR01" />
+  </EntityType>
+  <EntityType Name="SaleOrder">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="DocumentId" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="DocumentDate" Type="DateTime" Precision="0" />
+    <Property Name="DocumentStatus" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOrigin" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DocumentOriginType" Type="Int32" />
+    <Property Name="GrossTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="DiscountTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="TaxTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="NetTotal" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="0" />
+    <Property Name="UpdatedBy" Type="Int32" />
+    <Property Name="UpdatedOn" Type="DateTime" Precision="0" />
+    <Property Name="LegalEntity" Type="Int32" />
+    <Property Name="BusinessPartner" Type="Int32" />
+    <Property Name="Period" Type="Int32" />
+    <Property Name="DocumentType" Type="Int32" />
+    <NavigationProperty Name="SaleOrderLines" Relationship="CbaModel.SOL01_SOR01_FK" FromRole="SOR01" ToRole="SOL01" />
+    <NavigationProperty Name="SaleOrderBusinessPartner" Relationship="CbaModel.FK_SOR01_BPA01" FromRole="SOR01" ToRole="BusinessPartner" />
+    <NavigationProperty Name="SaleOrderLegalEntity" Relationship="CbaModel.FK_SOR01_LEG01" FromRole="SOR01" ToRole="LegalEntity" />
+    <NavigationProperty Name="SaleOrderPeriod" Relationship="CbaModel.FK_SOR01_PER01" FromRole="SOR01" ToRole="Period" />
+  </EntityType>
+  <Association Name="SOL01_PRO01_FK">
+    <End Type="CbaModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="CbaModel.SaleOrderLines" Role="SOL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOL01">
+        <PropertyRef Name="Product" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOL01_SOR01_FK">
+    <End Type="CbaModel.SaleOrder" Role="SOR01" Multiplicity="1" />
+    <End Type="CbaModel.SaleOrderLines" Role="SOL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOR01">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOL01">
+        <PropertyRef Name="SaleOrderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_BPA01">
+    <End Type="CbaModel.BusinessPartner" Role="BusinessPartner" Multiplicity="0..1" />
+    <End Type="CbaModel.SaleOrder" Role="SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessPartner">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="BusinessPartner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_LEG01">
+    <End Type="CbaModel.LegalEntity" Role="LegalEntity" Multiplicity="0..1" />
+    <End Type="CbaModel.SaleOrder" Role="SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LegalEntity">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="LegalEntity" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_PER01">
+    <End Type="CbaModel.Period" Role="Period" Multiplicity="0..1" />
+    <End Type="CbaModel.SaleOrder" Role="SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Period">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="Period" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

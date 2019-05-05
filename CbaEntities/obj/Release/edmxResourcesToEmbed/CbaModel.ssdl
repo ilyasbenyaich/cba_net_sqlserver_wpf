@@ -1,0 +1,2539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Cba_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="BIL01">
+    <Key>
+      <PropertyRef Name="BILLSID" />
+    </Key>
+    <Property Name="BILLSID" Type="int" Nullable="false" />
+    <Property Name="BILDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="BILDODA" Type="date" />
+    <Property Name="BILDUDA" Type="date" />
+    <Property Name="BILSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="BILORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="BILORTY" Type="int" />
+    <Property Name="BILNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="BILGROS" Type="money" />
+    <Property Name="BILDISC" Type="money" />
+    <Property Name="BILTAXE" Type="money" />
+    <Property Name="BILNETA" Type="money" />
+    <Property Name="BILRNUS" Type="int" />
+    <Property Name="BILRNDA" Type="date" />
+    <Property Name="BILRNUU" Type="int" />
+    <Property Name="BILRNUD" Type="date" />
+    <Property Name="BILLEGA" Type="int" />
+    <Property Name="BILBPAR" Type="int" />
+    <Property Name="BILPERI" Type="int" />
+    <Property Name="BILDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="BLI01">
+    <Key>
+      <PropertyRef Name="BLILIID" />
+      <PropertyRef Name="BLILIBI" />
+    </Key>
+    <Property Name="BLILIID" Type="int" Nullable="false" />
+    <Property Name="BLILIBI" Type="int" Nullable="false" />
+    <Property Name="BLILQUA" Type="int" />
+    <Property Name="BLILPRI" Type="money" />
+    <Property Name="BLILUSR" Type="int" />
+    <Property Name="BLILDAT" Type="date" />
+    <Property Name="BLILIUS" Type="int" />
+    <Property Name="BLILIDA" Type="date" />
+    <Property Name="BLILPRO" Type="int" />
+    <Property Name="BLITAID" Type="int" />
+    <Property Name="BLILLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="BLIDISC" Type="money" />
+    <Property Name="BLITAXE" Type="money" />
+    <Property Name="BLINETA" Type="money" />
+  </EntityType>
+  <EntityType Name="GOR01">
+    <Key>
+      <PropertyRef Name="GORERID" />
+    </Key>
+    <Property Name="GORERID" Type="int" Nullable="false" />
+    <Property Name="GORDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="GORDODA" Type="date" />
+    <Property Name="GORSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="GORORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="GORORTY" Type="int" />
+    <Property Name="GORNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="GORGROS" Type="money" />
+    <Property Name="GORDISC" Type="money" />
+    <Property Name="GORTAXE" Type="money" />
+    <Property Name="GORNETA" Type="money" />
+    <Property Name="GORRNUS" Type="int" />
+    <Property Name="GORRNDA" Type="date" />
+    <Property Name="GORRNUU" Type="int" />
+    <Property Name="GORRNUD" Type="date" />
+    <Property Name="GORLEGA" Type="int" />
+    <Property Name="GORBPAR" Type="int" />
+    <Property Name="GORPERI" Type="int" />
+    <Property Name="GORDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="GRL01">
+    <Key>
+      <PropertyRef Name="GRLLIID" />
+      <PropertyRef Name="GRLLIGR" />
+    </Key>
+    <Property Name="GRLLIID" Type="int" Nullable="false" />
+    <Property Name="GRLLIGR" Type="int" Nullable="false" />
+    <Property Name="GRLLQUA" Type="int" />
+    <Property Name="GRLLPRI" Type="money" />
+    <Property Name="GRLLUSR" Type="int" />
+    <Property Name="GRLLDAT" Type="date" />
+    <Property Name="GRLLIUS" Type="int" />
+    <Property Name="GRLLIDA" Type="date" />
+    <Property Name="GRLLPRO" Type="int" />
+    <Property Name="GRLTAID" Type="int" />
+    <Property Name="GRLLWAR" Type="int" />
+    <Property Name="GRLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="GRLDISC" Type="money" />
+    <Property Name="GRLTAXE" Type="money" />
+    <Property Name="GRLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="POL01">
+    <Key>
+      <PropertyRef Name="POLLIID" />
+      <PropertyRef Name="POLLIPO" />
+    </Key>
+    <Property Name="POLLIID" Type="int" Nullable="false" />
+    <Property Name="POLLIPO" Type="int" Nullable="false" />
+    <Property Name="POLLQUA" Type="int" Nullable="false" />
+    <Property Name="POLLPRI" Type="money" Nullable="false" />
+    <Property Name="POLLUSR" Type="int" />
+    <Property Name="POLLDAT" Type="date" />
+    <Property Name="POLLIUS" Type="int" />
+    <Property Name="POLLIDA" Type="date" />
+    <Property Name="POLLPRO" Type="int" />
+    <Property Name="POLTAID" Type="int" />
+    <Property Name="POLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="POLDISC" Type="money" />
+    <Property Name="POLTAXE" Type="money" />
+    <Property Name="POLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="POR01">
+    <Key>
+      <PropertyRef Name="PORRNID" />
+    </Key>
+    <Property Name="PORRNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PORDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="PORDODA" Type="date" />
+    <Property Name="PORSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="PORNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="PORORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="PORORTY" Type="int" />
+    <Property Name="PORGROS" Type="money" />
+    <Property Name="PORDISC" Type="money" />
+    <Property Name="PORTAXE" Type="money" />
+    <Property Name="PORNETA" Type="money" />
+    <Property Name="PORRNUS" Type="int" />
+    <Property Name="PORRNDA" Type="date" />
+    <Property Name="PORRNUU" Type="int" />
+    <Property Name="PORRNUD" Type="date" />
+    <Property Name="PORLEGA" Type="int" />
+    <Property Name="PORBPAR" Type="int" />
+    <Property Name="PORPERI" Type="int" />
+    <Property Name="PORDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="RFL01">
+    <Key>
+      <PropertyRef Name="RFLLIID" />
+      <PropertyRef Name="RFLRFQI" />
+    </Key>
+    <Property Name="RFLLIID" Type="int" Nullable="false" />
+    <Property Name="RFLRFQI" Type="int" Nullable="false" />
+    <Property Name="RFLLQUA" Type="int" />
+    <Property Name="RFLLPRI" Type="money" />
+    <Property Name="RFLLUSR" Type="int" />
+    <Property Name="RFLLDAT" Type="date" />
+    <Property Name="RFLLIUS" Type="int" />
+    <Property Name="RFLLIDA" Type="date" />
+    <Property Name="RFLLPRO" Type="int" />
+    <Property Name="RFLTAID" Type="int" />
+    <Property Name="RFLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="RFLDISC" Type="money" />
+    <Property Name="RFLTAXE" Type="money" />
+    <Property Name="RFLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="RFQ01">
+    <Key>
+      <PropertyRef Name="RFQPKID" />
+    </Key>
+    <Property Name="RFQPKID" Type="int" Nullable="false" />
+    <Property Name="RFQDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="RFQDATE" Type="date" />
+    <Property Name="RFQSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="RFQNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="RFQGROS" Type="money" />
+    <Property Name="RFQDISC" Type="money" />
+    <Property Name="RFQTAXE" Type="money" />
+    <Property Name="RFQNETA" Type="money" />
+    <Property Name="RFQRNUS" Type="int" />
+    <Property Name="RFQRNDA" Type="date" />
+    <Property Name="RFQRNUU" Type="int" />
+    <Property Name="RFQRNUD" Type="date" />
+    <Property Name="RFQLEGA" Type="int" />
+    <Property Name="RFQBPAR" Type="int" />
+    <Property Name="RFQPERI" Type="int" />
+    <Property Name="RFQDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="INL01">
+    <Key>
+      <PropertyRef Name="INLLIID" />
+      <PropertyRef Name="INLINID" />
+    </Key>
+    <Property Name="INLLIID" Type="int" Nullable="false" />
+    <Property Name="INLINID" Type="int" Nullable="false" />
+    <Property Name="INLLQUA" Type="int" Nullable="false" />
+    <Property Name="INLLPRI" Type="money" Nullable="false" />
+    <Property Name="INLLUSR" Type="int" />
+    <Property Name="INLLDAT" Type="date" />
+    <Property Name="INLLIUS" Type="int" />
+    <Property Name="INLLIDA" Type="date" />
+    <Property Name="INLLPRO" Type="int" />
+    <Property Name="INLTAID" Type="int" />
+    <Property Name="INLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="INLDISC" Type="money" />
+    <Property Name="INLTAXE" Type="money" />
+    <Property Name="INLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="INV01">
+    <Key>
+      <PropertyRef Name="INVOIID" />
+    </Key>
+    <Property Name="INVOIID" Type="int" Nullable="false" />
+    <Property Name="INVDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="INVDODA" Type="date" />
+    <Property Name="INVDUDA" Type="date" />
+    <Property Name="INVSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="INVNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="INVORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="INVORTY" Type="int" />
+    <Property Name="INVGROS" Type="money" />
+    <Property Name="INVDISC" Type="money" />
+    <Property Name="INVTAXE" Type="money" />
+    <Property Name="INVNETA" Type="money" />
+    <Property Name="INVRNUS" Type="int" />
+    <Property Name="INVRNDA" Type="date" />
+    <Property Name="INVRNUU" Type="int" />
+    <Property Name="INVRNUD" Type="date" />
+    <Property Name="INVLEGA" Type="int" />
+    <Property Name="INVBPAR" Type="int" />
+    <Property Name="INVPERI" Type="int" />
+    <Property Name="INVDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="QLI01">
+    <Key>
+      <PropertyRef Name="QLILIID" />
+      <PropertyRef Name="QLILIBI" />
+    </Key>
+    <Property Name="QLILIID" Type="int" Nullable="false" />
+    <Property Name="QLILIBI" Type="int" Nullable="false" />
+    <Property Name="QLILQUA" Type="int" />
+    <Property Name="QLILPRI" Type="money" />
+    <Property Name="QLILUSR" Type="int" />
+    <Property Name="QLILDAT" Type="date" />
+    <Property Name="QLILIUS" Type="int" />
+    <Property Name="QLILIDA" Type="date" />
+    <Property Name="QLILPRO" Type="int" />
+    <Property Name="QLITAID" Type="int" />
+    <Property Name="QLILLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="QLIDISC" Type="money" />
+    <Property Name="QLITAXE" Type="money" />
+    <Property Name="QLINETA" Type="money" />
+  </EntityType>
+  <EntityType Name="QUO01">
+    <Key>
+      <PropertyRef Name="QUOTEID" />
+    </Key>
+    <Property Name="QUOTEID" Type="int" Nullable="false" />
+    <Property Name="QUODOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="QUODODA" Type="date" />
+    <Property Name="QUOSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="QUONOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="QUOGROS" Type="nvarchar" MaxLength="20" />
+    <Property Name="QUODISC" Type="int" />
+    <Property Name="QUOTAXE" Type="money" />
+    <Property Name="QUONETA" Type="money" />
+    <Property Name="QUORNUS" Type="int" />
+    <Property Name="QUORNDA" Type="date" />
+    <Property Name="QUORNUU" Type="int" />
+    <Property Name="QUORNUD" Type="date" />
+    <Property Name="QUOLEGA" Type="int" />
+    <Property Name="QUOBPAR" Type="int" />
+    <Property Name="QUOPERI" Type="int" />
+    <Property Name="QUODOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="SHI01">
+    <Key>
+      <PropertyRef Name="SHIPMID" />
+    </Key>
+    <Property Name="SHIPMID" Type="int" Nullable="false" />
+    <Property Name="SHIDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="SHIDODA" Type="date" />
+    <Property Name="SHISTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="SHINOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SHIORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="SHIORTY" Type="int" />
+    <Property Name="SHIGROS" Type="money" />
+    <Property Name="SHIDISC" Type="money" />
+    <Property Name="SHITAXE" Type="money" />
+    <Property Name="SHINETA" Type="money" />
+    <Property Name="SHIRNUS" Type="int" />
+    <Property Name="SHIRNDA" Type="date" />
+    <Property Name="SHIRNUU" Type="int" />
+    <Property Name="SHIRNUD" Type="date" />
+    <Property Name="SHILEGA" Type="int" />
+    <Property Name="SHIBPAR" Type="int" />
+    <Property Name="SHIPERI" Type="int" />
+    <Property Name="SHIDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="SHL01">
+    <Key>
+      <PropertyRef Name="SHLLIID" />
+      <PropertyRef Name="SHLINID" />
+    </Key>
+    <Property Name="SHLLIID" Type="int" Nullable="false" />
+    <Property Name="SHLINID" Type="int" Nullable="false" />
+    <Property Name="SHLLQUA" Type="int" Nullable="false" />
+    <Property Name="SHLLPRI" Type="money" Nullable="false" />
+    <Property Name="SHLLUSR" Type="int" />
+    <Property Name="SHLLDAT" Type="date" />
+    <Property Name="SHLLIUS" Type="int" />
+    <Property Name="SHLLIDA" Type="date" />
+    <Property Name="SHLLPRO" Type="int" />
+    <Property Name="SHLTAID" Type="int" />
+    <Property Name="SHLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="SHLDISC" Type="money" />
+    <Property Name="SHLTAXE" Type="money" />
+    <Property Name="SHLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="SOL01">
+    <Key>
+      <PropertyRef Name="SOLLIID" />
+      <PropertyRef Name="SOLLISO" />
+    </Key>
+    <Property Name="SOLLIID" Type="int" Nullable="false" />
+    <Property Name="SOLLISO" Type="int" Nullable="false" />
+    <Property Name="SOLLQUA" Type="int" Nullable="false" />
+    <Property Name="SOLLPRI" Type="money" Nullable="false" />
+    <Property Name="SOLLUSR" Type="int" />
+    <Property Name="SOLLDAT" Type="date" />
+    <Property Name="SOLLIUS" Type="int" />
+    <Property Name="SOLLIDA" Type="date" />
+    <Property Name="SOLLPRO" Type="int" />
+    <Property Name="SOLTAID" Type="int" />
+    <Property Name="SOLLLTO" Type="money" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="SOLDISC" Type="money" />
+    <Property Name="SOLTAXE" Type="money" />
+    <Property Name="SOLNETA" Type="money" />
+  </EntityType>
+  <EntityType Name="SOR01">
+    <Key>
+      <PropertyRef Name="SORDRID" />
+    </Key>
+    <Property Name="SORDRID" Type="int" Nullable="false" />
+    <Property Name="SORDOCN" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="SORDODA" Type="date" />
+    <Property Name="SORSTAT" Type="nvarchar" MaxLength="20" />
+    <Property Name="SORNOTE" Type="nvarchar" MaxLength="255" />
+    <Property Name="SORORIG" Type="nvarchar" MaxLength="20" />
+    <Property Name="SORORTY" Type="int" />
+    <Property Name="SORGROS" Type="money" />
+    <Property Name="SORDISC" Type="money" />
+    <Property Name="SORTAXE" Type="money" />
+    <Property Name="SORNETA" Type="money" />
+    <Property Name="SORRNUS" Type="int" />
+    <Property Name="SORRNDA" Type="date" />
+    <Property Name="SORRNUU" Type="int" />
+    <Property Name="SORRNUD" Type="date" />
+    <Property Name="SORLEGA" Type="int" />
+    <Property Name="SORBPAR" Type="int" />
+    <Property Name="SORPERI" Type="int" />
+    <Property Name="SORDOTY" Type="int" />
+  </EntityType>
+  <EntityType Name="BPA01">
+    <Key>
+      <PropertyRef Name="BUSIPID" />
+    </Key>
+    <Property Name="BUSIPID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUSICOD" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BUSINAM" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="BUSITYP" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="BUSIOUS" Type="int" />
+    <Property Name="BUSIDAT" Type="date" />
+    <Property Name="BUSIUDB" Type="int" />
+    <Property Name="BUSIUDO" Type="date" />
+    <Property Name="BUSTLEG" Type="int" />
+  </EntityType>
+  <EntityType Name="BPD01">
+    <Key>
+      <PropertyRef Name="BPDREID" />
+    </Key>
+    <Property Name="BPDREID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BPDRCIT" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BPDRSTR" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BPDRSTA" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="BPDRTYP" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BUSIOUS" Type="int" />
+    <Property Name="BUSIDAT" Type="date" />
+    <Property Name="BUSIUDB" Type="int" />
+    <Property Name="BUSIUDO" Type="date" />
+    <Property Name="BPDRCOU" Type="nvarchar" MaxLength="50" />
+    <Property Name="BPDRBPI" Type="int" />
+  </EntityType>
+  <EntityType Name="ADD01">
+    <Key>
+      <PropertyRef Name="ADDREID" />
+    </Key>
+    <Property Name="ADDREID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ADDRCIT" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRSTR" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRSTA" Type="nvarchar" MaxLength="200" />
+    <Property Name="ADDRTYP" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADDRUSR" Type="int" />
+    <Property Name="ADDRDAT" Type="date" />
+    <Property Name="ADDRUUS" Type="int" />
+    <Property Name="ADDRUAT" Type="date" />
+    <Property Name="ADDRCOU" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="BAN01">
+    <Key>
+      <PropertyRef Name="BANKSID" />
+    </Key>
+    <Property Name="BANKSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BANKCOD" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKNAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="BANKUSR" Type="int" />
+    <Property Name="BANKDAT" Type="date" />
+    <Property Name="BANKUUS" Type="int" />
+    <Property Name="BANKUAT" Type="date" />
+    <Property Name="BANKTER" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LEG01">
+    <Key>
+      <PropertyRef Name="LEGALID" />
+    </Key>
+    <Property Name="LEGALID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LEGALNA" Type="nvarchar" MaxLength="80" />
+    <Property Name="LEGALEG" Type="nvarchar" MaxLength="255" />
+    <Property Name="LEGALIS" Type="nvarchar" MaxLength="255" />
+    <Property Name="LEGALSR" Type="int" />
+    <Property Name="LEGALAT" Type="date" />
+    <Property Name="LEGALPU" Type="int" />
+    <Property Name="LEGALPD" Type="date" />
+    <Property Name="LEGALCA" Type="int" />
+    <Property Name="LEGALHE" Type="int" />
+  </EntityType>
+  <EntityType Name="TER01">
+    <Key>
+      <PropertyRef Name="TERRCOD" />
+    </Key>
+    <Property Name="TERRCOD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TERRNAM" Type="nvarchar" MaxLength="50" />
+    <Property Name="TERRLAN" Type="nvarchar" MaxLength="50" />
+    <Property Name="TERRSLA" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ACC01">
+    <Key>
+      <PropertyRef Name="ACCNTCD" />
+    </Key>
+    <Property Name="ACCNTCD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCNTNB" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ACCNTNM" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ACCNTDE" Type="nvarchar" MaxLength="255" />
+    <Property Name="ACCNTTP" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACCNTPO" Type="char" MaxLength="1" />
+    <Property Name="ACCNTBU" Type="char" MaxLength="1" />
+    <Property Name="ACCNTST" Type="char" MaxLength="1" />
+    <Property Name="ACCNTLE" Type="int" />
+    <Property Name="ACCNTGR" Type="int" />
+    <Property Name="ACCNTUS" Type="int" />
+    <Property Name="ACCNTDT" Type="date" />
+    <Property Name="ACCNTUP" Type="int" />
+    <Property Name="ACCNTUD" Type="date" />
+    <Property Name="ACCNTCA" Type="int" Nullable="false" />
+    <Property Name="ACCNTPA" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ACS01">
+    <Key>
+      <PropertyRef Name="ACSTSID" />
+      <PropertyRef Name="ACSCOID" />
+    </Key>
+    <Property Name="ACSTSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACSNAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="ACSDESC" Type="nvarchar" MaxLength="255" />
+    <Property Name="ACSLENG" Type="nvarchar" MaxLength="50" />
+    <Property Name="ACSNTUS" Type="int" />
+    <Property Name="ACSDATE" Type="date" />
+    <Property Name="ACSNTUP" Type="int" />
+    <Property Name="ACSNTUD" Type="date" />
+    <Property Name="ACSCOID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BAL01">
+    <Key>
+      <PropertyRef Name="BALANCI" />
+    </Key>
+    <Property Name="BALANCI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BALANBD" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="BALANBC" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="BALANPD" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="BALANPC" Type="numeric" Precision="19" Scale="2" />
+    <Property Name="BALANUP" Type="int" />
+    <Property Name="BALANUD" Type="date" />
+    <Property Name="BALANAC" Type="int" />
+    <Property Name="BALANJL" Type="int" />
+    <Property Name="BALANJI" Type="int" />
+    <Property Name="BALANPE" Type="int" />
+    <Property Name="BALANLE" Type="int" />
+    <Property Name="BALANCU" Type="int" />
+  </EntityType>
+  <EntityType Name="BUD01">
+    <Key>
+      <PropertyRef Name="BUDGETI" />
+    </Key>
+    <Property Name="BUDGETI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BUDGETN" Type="nvarchar" MaxLength="80" />
+    <Property Name="BUDGETD" Type="nvarchar" MaxLength="255" />
+    <Property Name="BUDGETS" Type="nvarchar" MaxLength="20" />
+    <Property Name="BUDGETU" Type="int" />
+    <Property Name="BUDGETA" Type="date" />
+    <Property Name="BUDGEDU" Type="int" />
+    <Property Name="BUDGEUD" Type="date" />
+    <Property Name="BUDGECA" Type="int" />
+    <Property Name="BUDGETL" Type="int" />
+  </EntityType>
+  <EntityType Name="BUL01">
+    <Key>
+      <PropertyRef Name="BULLILI" />
+      <PropertyRef Name="BULLIBU" />
+    </Key>
+    <Property Name="BULLILI" Type="int" Nullable="false" />
+    <Property Name="BULLIBU" Type="int" Nullable="false" />
+    <Property Name="BULLIAM" Type="decimal" Precision="19" Scale="2" Nullable="false" />
+    <Property Name="BULLUSR" Type="int" />
+    <Property Name="BULLDAT" Type="date" />
+    <Property Name="BULLIUS" Type="int" />
+    <Property Name="BULLIDA" Type="date" />
+    <Property Name="BULLACC" Type="int" />
+    <Property Name="BULLPER" Type="int" />
+  </EntityType>
+  <EntityType Name="CAL01">
+    <Key>
+      <PropertyRef Name="CALENID" />
+    </Key>
+    <Property Name="CALENID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CALENDN" Type="nvarchar" MaxLength="80" />
+    <Property Name="CALENDS" Type="char" MaxLength="1" />
+    <Property Name="CALENDU" Type="int" />
+    <Property Name="CALENDT" Type="date" />
+    <Property Name="CALENDP" Type="int" />
+    <Property Name="CALENLU" Type="date" />
+  </EntityType>
+  <EntityType Name="CHA01">
+    <Key>
+      <PropertyRef Name="COASIDS" />
+    </Key>
+    <Property Name="COASIDS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COANAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="COASDES" Type="nvarchar" MaxLength="80" />
+    <Property Name="COADESC" Type="nvarchar" MaxLength="255" />
+    <Property Name="COALANG" Type="char" MaxLength="4" />
+    <Property Name="COAUSER" Type="int" />
+    <Property Name="COADATE" Type="date" />
+    <Property Name="COAUPUS" Type="int" />
+    <Property Name="COAUPDD" Type="date" />
+  </EntityType>
+  <EntityType Name="CUR01">
+    <Key>
+      <PropertyRef Name="CURRENI" />
+    </Key>
+    <Property Name="CURRENI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CURRENC" Type="nvarchar" MaxLength="80" />
+    <Property Name="CURRENN" Type="nvarchar" MaxLength="80" />
+    <Property Name="CURRENS" Type="nvarchar" MaxLength="80" />
+    <Property Name="CURRENG" Type="char" MaxLength="1" />
+    <Property Name="CURREND" Type="date" />
+    <Property Name="CURRENE" Type="date" />
+    <Property Name="CURRENU" Type="int" />
+    <Property Name="CURRENA" Type="date" />
+    <Property Name="CURRENL" Type="int" />
+    <Property Name="CURRENB" Type="date" />
+    <Property Name="CURRENF" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="JHE01">
+    <Key>
+      <PropertyRef Name="JOURNID" />
+    </Key>
+    <Property Name="JOURNID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JOURNNA" Type="nvarchar" MaxLength="255" />
+    <Property Name="JOURNDE" Type="nvarchar" MaxLength="255" />
+    <Property Name="JOURNSO" Type="nvarchar" MaxLength="50" />
+    <Property Name="JOURNST" Type="nvarchar" MaxLength="50" />
+    <Property Name="JOURNAF" Type="char" MaxLength="1" />
+    <Property Name="JOURNBF" Type="char" MaxLength="1" />
+    <Property Name="JOURNTC" Type="money" />
+    <Property Name="JOURNTD" Type="money" />
+    <Property Name="JOURNUS" Type="int" />
+    <Property Name="JOURNDA" Type="date" />
+    <Property Name="JOURNUU" Type="int" />
+    <Property Name="JOURNUD" Type="date" />
+    <Property Name="JOURNCA" Type="int" />
+    <Property Name="JOURNCU" Type="int" />
+    <Property Name="JOURNLE" Type="int" />
+    <Property Name="JOURNPE" Type="int" />
+  </EntityType>
+  <EntityType Name="JLI01">
+    <Key>
+      <PropertyRef Name="JRNLILI" />
+      <PropertyRef Name="JRNLIJI" />
+    </Key>
+    <Property Name="JRNLILI" Type="int" Nullable="false" />
+    <Property Name="JRNLIJI" Type="int" Nullable="false" />
+    <Property Name="JRNLIDC" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="JRNLIAM" Type="money" Nullable="false" />
+    <Property Name="JRNLUSR" Type="int" />
+    <Property Name="JRNLDAT" Type="date" />
+    <Property Name="JRNLIUS" Type="int" />
+    <Property Name="JRNLIDA" Type="date" />
+    <Property Name="JRNLACC" Type="int" />
+  </EntityType>
+  <EntityType Name="PER01">
+    <Key>
+      <PropertyRef Name="PERIODI" />
+    </Key>
+    <Property Name="PERIODI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PERIODN" Type="nvarchar" MaxLength="80" />
+    <Property Name="PERIODS" Type="date" />
+    <Property Name="PERIODE" Type="date" />
+    <Property Name="PERIODA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PERIODT" Type="char" MaxLength="1" />
+    <Property Name="PERIODU" Type="int" />
+    <Property Name="PERIODD" Type="date" />
+    <Property Name="PERIODL" Type="int" />
+    <Property Name="PERIODM" Type="date" />
+    <Property Name="PERIODC" Type="int" />
+  </EntityType>
+  <EntityType Name="RAT01">
+    <Key>
+      <PropertyRef Name="RATEIDS" />
+    </Key>
+    <Property Name="RATEIDS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RATEDVA" Type="real" />
+    <Property Name="RATESDA" Type="date" />
+    <Property Name="RATEEDA" Type="date" />
+    <Property Name="RATEUSR" Type="int" />
+    <Property Name="RATEDAT" Type="date" />
+    <Property Name="RATEUPU" Type="int" />
+    <Property Name="RATEUPD" Type="date" />
+    <Property Name="RATECUF" Type="int" />
+    <Property Name="RATECUT" Type="int" />
+  </EntityType>
+  <EntityType Name="TAX01">
+    <Key>
+      <PropertyRef Name="TAXCODE" />
+    </Key>
+    <Property Name="TAXCODE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TAXNAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="TAXRATE" Type="real" />
+    <Property Name="TAXTYPE" Type="nvarchar" MaxLength="50" />
+    <Property Name="TAXSTAR" Type="date" />
+    <Property Name="TAXEEND" Type="date" />
+    <Property Name="TAXUSER" Type="int" />
+    <Property Name="TAXDATE" Type="date" />
+    <Property Name="TAXUUPD" Type="int" />
+    <Property Name="TAXUATE" Type="date" />
+    <Property Name="TAXACCT" Type="int" />
+    <Property Name="TAXTERR" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PFA01">
+    <Key>
+      <PropertyRef Name="PFATSID" />
+    </Key>
+    <Property Name="PFATSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PFANAME" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="PFADESC" Type="nvarchar" MaxLength="80" />
+    <Property Name="PFANTUS" Type="int" />
+    <Property Name="PFADATE" Type="date" />
+    <Property Name="PFALUDB" Type="int" />
+    <Property Name="PFALUDO" Type="date" />
+  </EntityType>
+  <EntityType Name="PRO01">
+    <Key>
+      <PropertyRef Name="PRODUCD" />
+    </Key>
+    <Property Name="PRODUCD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PRODNUB" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="PRODTNM" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="PRODTDE" Type="nvarchar" MaxLength="80" />
+    <Property Name="PRODTLP" Type="money" />
+    <Property Name="PRODSIZ" Type="nvarchar" MaxLength="5" />
+    <Property Name="PRODSUM" Type="nvarchar" MaxLength="3" />
+    <Property Name="PRODWEI" Type="int" />
+    <Property Name="PRODWUM" Type="nvarchar" MaxLength="3" />
+    <Property Name="PRODCLA" Type="nvarchar" MaxLength="3" />
+    <Property Name="PRODTST" Type="nvarchar" MaxLength="1" />
+    <Property Name="PRODSSD" Type="date" />
+    <Property Name="PRODSED" Type="date" />
+    <Property Name="PRODDAT" Type="date" />
+    <Property Name="PRODTUS" Type="int" />
+    <Property Name="PRODTDT" Type="date" />
+    <Property Name="PRODTUP" Type="int" />
+    <Property Name="PRODTUD" Type="date" />
+    <Property Name="PRODTSF" Type="int" />
+  </EntityType>
+  <EntityType Name="PSF01">
+    <Key>
+      <PropertyRef Name="PSFTSID" />
+    </Key>
+    <Property Name="PSFTSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PSFNAME" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="PSFDESC" Type="nvarchar" MaxLength="80" />
+    <Property Name="PSFCBUS" Type="int" />
+    <Property Name="PSFDATE" Type="date" />
+    <Property Name="PSFLUDB" Type="int" />
+    <Property Name="PSFLUDO" Type="date" />
+    <Property Name="PSFPFFK" Type="int" />
+  </EntityType>
+  <EntityType Name="WAR01">
+    <Key>
+      <PropertyRef Name="WAREHID" />
+    </Key>
+    <Property Name="WAREHID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WAREDES" Type="nvarchar" MaxLength="80" Nullable="false" />
+    <Property Name="WAREHUS" Type="int" />
+    <Property Name="WARDATE" Type="date" />
+    <Property Name="WARLUDB" Type="int" />
+    <Property Name="WARLUDO" Type="date" />
+  </EntityType>
+  <Association Name="ACC01_CHA01_FK">
+    <End Role="CHA01" Type="Self.CHA01" Multiplicity="1" />
+    <End Role="ACC01" Type="Self.ACC01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHA01">
+        <PropertyRef Name="COASIDS" />
+      </Principal>
+      <Dependent Role="ACC01">
+        <PropertyRef Name="ACCNTCA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ACS01_CHA01_FK">
+    <End Role="CHA01" Type="Self.CHA01" Multiplicity="1" />
+    <End Role="ACS01" Type="Self.ACS01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHA01">
+        <PropertyRef Name="COASIDS" />
+      </Principal>
+      <Dependent Role="ACS01">
+        <PropertyRef Name="ACSCOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ADD01_TER01_FK">
+    <End Role="TER01" Type="Self.TER01" Multiplicity="0..1" />
+    <End Role="ADD01" Type="Self.ADD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="TERRCOD" />
+      </Principal>
+      <Dependent Role="ADD01">
+        <PropertyRef Name="ADDRCOU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAL01_ACC01_FK">
+    <End Role="ACC01" Type="Self.ACC01" Multiplicity="0..1" />
+    <End Role="BAL01" Type="Self.BAL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACC01">
+        <PropertyRef Name="ACCNTCD" />
+      </Principal>
+      <Dependent Role="BAL01">
+        <PropertyRef Name="BALANAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAL01_CUR01_FK">
+    <End Role="CUR01" Type="Self.CUR01" Multiplicity="0..1" />
+    <End Role="BAL01" Type="Self.BAL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUR01">
+        <PropertyRef Name="CURRENI" />
+      </Principal>
+      <Dependent Role="BAL01">
+        <PropertyRef Name="BALANCU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAL01_PER01_FK">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="BAL01" Type="Self.BAL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="BAL01">
+        <PropertyRef Name="BALANPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BAN01_TER01_FK">
+    <End Role="TER01" Type="Self.TER01" Multiplicity="0..1" />
+    <End Role="BAN01" Type="Self.BAN01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="TERRCOD" />
+      </Principal>
+      <Dependent Role="BAN01">
+        <PropertyRef Name="BANKTER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUD01_CAL01_FK">
+    <End Role="CAL01" Type="Self.CAL01" Multiplicity="0..1" />
+    <End Role="BUD01" Type="Self.BUD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAL01">
+        <PropertyRef Name="CALENID" />
+      </Principal>
+      <Dependent Role="BUD01">
+        <PropertyRef Name="BUDGECA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUL01_ACC01_FK">
+    <End Role="ACC01" Type="Self.ACC01" Multiplicity="0..1" />
+    <End Role="BUL01" Type="Self.BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACC01">
+        <PropertyRef Name="ACCNTCD" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="BULLACC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUL01_BUD01_FK">
+    <End Role="BUD01" Type="Self.BUD01" Multiplicity="1" />
+    <End Role="BUL01" Type="Self.BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BUD01">
+        <PropertyRef Name="BUDGETI" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="BULLIBU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BUL01_PER01_FK">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="BUL01" Type="Self.BUL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="BUL01">
+        <PropertyRef Name="BULLPER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BIL01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="BIL01" Type="Self.BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="BILBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BIL01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="BIL01" Type="Self.BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="BILLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BIL01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="BIL01" Type="Self.BIL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="BIL01">
+        <PropertyRef Name="BILPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_BIL01">
+    <End Role="BIL01" Type="Self.BIL01" Multiplicity="1" />
+    <End Role="BLI01" Type="Self.BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BIL01">
+        <PropertyRef Name="BILLSID" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="BLILIBI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_PRO01">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="BLI01" Type="Self.BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="BLILPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BLI01_TAX01">
+    <End Role="TAX01" Type="Self.TAX01" Multiplicity="0..1" />
+    <End Role="BLI01" Type="Self.BLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAX01">
+        <PropertyRef Name="TAXCODE" />
+      </Principal>
+      <Dependent Role="BLI01">
+        <PropertyRef Name="BLITAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BPA01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="BPA01">
+        <PropertyRef Name="BUSTLEG" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BPD01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="BPD01" Type="Self.BPD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="BPD01">
+        <PropertyRef Name="BPDRBPI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BPD01_TER01">
+    <End Role="TER01" Type="Self.TER01" Multiplicity="0..1" />
+    <End Role="BPD01" Type="Self.BPD01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TER01">
+        <PropertyRef Name="TERRCOD" />
+      </Principal>
+      <Dependent Role="BPD01">
+        <PropertyRef Name="BPDRCOU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="GOR01" Type="Self.GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="GORBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="GOR01" Type="Self.GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="GORLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GOR01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="GOR01" Type="Self.GOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="GOR01">
+        <PropertyRef Name="GORPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_GRL01_WAR01">
+    <End Role="WAR01" Type="Self.WAR01" Multiplicity="0..1" />
+    <End Role="GRL01" Type="Self.GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WAR01">
+        <PropertyRef Name="WAREHID" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="GRLLWAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INL01_INV01">
+    <End Role="INV01" Type="Self.INV01" Multiplicity="1" />
+    <End Role="INL01" Type="Self.INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INV01">
+        <PropertyRef Name="INVOIID" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="INLINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INL01_PRO01">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="INL01" Type="Self.INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="INLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INL01_TAX01">
+    <End Role="TAX01" Type="Self.TAX01" Multiplicity="0..1" />
+    <End Role="INL01" Type="Self.INL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAX01">
+        <PropertyRef Name="TAXCODE" />
+      </Principal>
+      <Dependent Role="INL01">
+        <PropertyRef Name="INLTAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="INV01" Type="Self.INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="INVBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="INV01" Type="Self.INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="INVLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INV01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="INV01" Type="Self.INV01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="INV01">
+        <PropertyRef Name="INVPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JHE01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="JHE01" Type="Self.JHE01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="JHE01">
+        <PropertyRef Name="JOURNLE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LEG01_ADD01">
+    <End Role="ADD01" Type="Self.ADD01" Multiplicity="0..1" />
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADD01">
+        <PropertyRef Name="ADDREID" />
+      </Principal>
+      <Dependent Role="LEG01">
+        <PropertyRef Name="LEGALHE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LEG01_CHA01">
+    <End Role="CHA01" Type="Self.CHA01" Multiplicity="0..1" />
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CHA01">
+        <PropertyRef Name="COASIDS" />
+      </Principal>
+      <Dependent Role="LEG01">
+        <PropertyRef Name="LEGALCA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="POR01" Type="Self.POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="PORBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="POR01" Type="Self.POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="PORLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_POR01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="POR01" Type="Self.POR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="POR01">
+        <PropertyRef Name="PORPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_PRO01">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="QLI01" Type="Self.QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="QLILPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_QUO01">
+    <End Role="QUO01" Type="Self.QUO01" Multiplicity="1" />
+    <End Role="QLI01" Type="Self.QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="QUO01">
+        <PropertyRef Name="QUOTEID" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="QLILIBI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QLI01_TAX01">
+    <End Role="TAX01" Type="Self.TAX01" Multiplicity="0..1" />
+    <End Role="QLI01" Type="Self.QLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAX01">
+        <PropertyRef Name="TAXCODE" />
+      </Principal>
+      <Dependent Role="QLI01">
+        <PropertyRef Name="QLITAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="QUO01" Type="Self.QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="QUOBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="QUO01" Type="Self.QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="QUOLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_QUO01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="QUO01" Type="Self.QUO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="QUO01">
+        <PropertyRef Name="QUOPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="RFQ01" Type="Self.RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="RFQBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="RFQ01" Type="Self.RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="RFQLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RFQ01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="RFQ01" Type="Self.RFQ01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="RFQ01">
+        <PropertyRef Name="RFQPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="SHI01" Type="Self.SHI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="SHI01">
+        <PropertyRef Name="SHIBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="SHI01" Type="Self.SHI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="SHI01">
+        <PropertyRef Name="SHILEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHI01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="SHI01" Type="Self.SHI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="SHI01">
+        <PropertyRef Name="SHIPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_PRO01">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="SHL01" Type="Self.SHL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="SHL01">
+        <PropertyRef Name="SHLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_SHI01">
+    <End Role="SHI01" Type="Self.SHI01" Multiplicity="1" />
+    <End Role="SHL01" Type="Self.SHL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHI01">
+        <PropertyRef Name="SHIPMID" />
+      </Principal>
+      <Dependent Role="SHL01">
+        <PropertyRef Name="SHLINID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SHL01_TAX01">
+    <End Role="TAX01" Type="Self.TAX01" Multiplicity="0..1" />
+    <End Role="SHL01" Type="Self.SHL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TAX01">
+        <PropertyRef Name="TAXCODE" />
+      </Principal>
+      <Dependent Role="SHL01">
+        <PropertyRef Name="SHLTAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_BPA01">
+    <End Role="BPA01" Type="Self.BPA01" Multiplicity="0..1" />
+    <End Role="SOR01" Type="Self.SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BPA01">
+        <PropertyRef Name="BUSIPID" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="SORBPAR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_LEG01">
+    <End Role="LEG01" Type="Self.LEG01" Multiplicity="0..1" />
+    <End Role="SOR01" Type="Self.SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LEG01">
+        <PropertyRef Name="LEGALID" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="SORLEGA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SOR01_PER01">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="SOR01" Type="Self.SOR01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="SOR01">
+        <PropertyRef Name="SORPERI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRL01_GOR01_FK">
+    <End Role="GOR01" Type="Self.GOR01" Multiplicity="1" />
+    <End Role="GRL01" Type="Self.GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GOR01">
+        <PropertyRef Name="GORERID" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="GRLLIGR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRL01_PRO01_FK">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="GRL01" Type="Self.GRL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="GRL01">
+        <PropertyRef Name="GRLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JHE01_CUR01_FK">
+    <End Role="CUR01" Type="Self.CUR01" Multiplicity="0..1" />
+    <End Role="JHE01" Type="Self.JHE01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUR01">
+        <PropertyRef Name="CURRENI" />
+      </Principal>
+      <Dependent Role="JHE01">
+        <PropertyRef Name="JOURNCU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JHE01_PER01_FK">
+    <End Role="PER01" Type="Self.PER01" Multiplicity="0..1" />
+    <End Role="JHE01" Type="Self.JHE01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PER01">
+        <PropertyRef Name="PERIODI" />
+      </Principal>
+      <Dependent Role="JHE01">
+        <PropertyRef Name="JOURNPE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JLI01_ACC01_FK">
+    <End Role="ACC01" Type="Self.ACC01" Multiplicity="0..1" />
+    <End Role="JLI01" Type="Self.JLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ACC01">
+        <PropertyRef Name="ACCNTCD" />
+      </Principal>
+      <Dependent Role="JLI01">
+        <PropertyRef Name="JRNLACC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="JLI01_JHE01_FK">
+    <End Role="JHE01" Type="Self.JHE01" Multiplicity="1" />
+    <End Role="JLI01" Type="Self.JLI01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JHE01">
+        <PropertyRef Name="JOURNID" />
+      </Principal>
+      <Dependent Role="JLI01">
+        <PropertyRef Name="JRNLIJI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PER01_CAL01_FK">
+    <End Role="CAL01" Type="Self.CAL01" Multiplicity="0..1" />
+    <End Role="PER01" Type="Self.PER01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CAL01">
+        <PropertyRef Name="CALENID" />
+      </Principal>
+      <Dependent Role="PER01">
+        <PropertyRef Name="PERIODC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="POL01_POR01_FK">
+    <End Role="POR01" Type="Self.POR01" Multiplicity="1" />
+    <End Role="POL01" Type="Self.POL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="POR01">
+        <PropertyRef Name="PORRNID" />
+      </Principal>
+      <Dependent Role="POL01">
+        <PropertyRef Name="POLLIPO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="POL01_PRO01_FK">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="POL01" Type="Self.POL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="POL01">
+        <PropertyRef Name="POLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PRO01_PSF01_FK">
+    <End Role="PSF01" Type="Self.PSF01" Multiplicity="0..1" />
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PSF01">
+        <PropertyRef Name="PSFTSID" />
+      </Principal>
+      <Dependent Role="PRO01">
+        <PropertyRef Name="PRODTSF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PSF01_PFA01_FK">
+    <End Role="PFA01" Type="Self.PFA01" Multiplicity="1" />
+    <End Role="PSF01" Type="Self.PSF01" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="PFA01">
+        <PropertyRef Name="PFATSID" />
+      </Principal>
+      <Dependent Role="PSF01">
+        <PropertyRef Name="PSFTSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RAT01_CUR01_FROM_FK">
+    <End Role="CUR01" Type="Self.CUR01" Multiplicity="0..1" />
+    <End Role="RAT01" Type="Self.RAT01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUR01">
+        <PropertyRef Name="CURRENI" />
+      </Principal>
+      <Dependent Role="RAT01">
+        <PropertyRef Name="RATECUF" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RAT01_CUR01_TO_FK">
+    <End Role="CUR01" Type="Self.CUR01" Multiplicity="0..1" />
+    <End Role="RAT01" Type="Self.RAT01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUR01">
+        <PropertyRef Name="CURRENI" />
+      </Principal>
+      <Dependent Role="RAT01">
+        <PropertyRef Name="RATECUT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RFL01_PRO01_FK">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="RFL01" Type="Self.RFL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="RFL01">
+        <PropertyRef Name="RFLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="RFL01_RFQ01_FK">
+    <End Role="RFQ01" Type="Self.RFQ01" Multiplicity="1" />
+    <End Role="RFL01" Type="Self.RFL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RFQ01">
+        <PropertyRef Name="RFQPKID" />
+      </Principal>
+      <Dependent Role="RFL01">
+        <PropertyRef Name="RFLRFQI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOL01_PRO01_FK">
+    <End Role="PRO01" Type="Self.PRO01" Multiplicity="0..1" />
+    <End Role="SOL01" Type="Self.SOL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRO01">
+        <PropertyRef Name="PRODUCD" />
+      </Principal>
+      <Dependent Role="SOL01">
+        <PropertyRef Name="SOLLPRO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SOL01_SOR01_FK">
+    <End Role="SOR01" Type="Self.SOR01" Multiplicity="1" />
+    <End Role="SOL01" Type="Self.SOL01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SOR01">
+        <PropertyRef Name="SORDRID" />
+      </Principal>
+      <Dependent Role="SOL01">
+        <PropertyRef Name="SOLLISO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="DeleteBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="BillID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteBillDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="BillDetailID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteGoodsReceipt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="GoodsReceiptID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletePurchaseOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="PurchaseOrderID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletePurchaseOrderDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="PurchaseOrderDetailID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteRequestForQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="RequestForQuoteID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteRequestForQuoteDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="RequestForQuoteDetailsID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="VendorID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="BillDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="BillDueDate" Type="date" Mode="In" />
+    <Parameter Name="BillStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="BillNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="BillLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="BillBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="BillPeriod" Type="int" Mode="In" />
+    <Parameter Name="BillDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertBillDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertGoodsReceipt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="GoodsReceiptDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="GoodsReceiptStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="GoodsReceiptNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="GoodsReceiptLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptPeriod" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertGoodsReceiptDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertPurchaseOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="PurchaseOrderDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="PurchaseOrderStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="PurchaseOrderNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="PurchaseOrderLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderPeriod" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertPurchaseOrderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertRequestForQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="RequestForQuoteDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="RequestForQuoteStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestForQuoteNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestForQuoteLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuoteBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuotePeriod" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuoteDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertRequestForQuoteDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="VendorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="VendorName" Type="nvarchar" Mode="In" />
+    <Parameter Name="VendorAccount" Type="int" Mode="In" />
+    <Parameter Name="VendorOrganization" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateBill" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="BillID" Type="int" Mode="In" />
+    <Parameter Name="BillDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="BillDueDate" Type="date" Mode="In" />
+    <Parameter Name="BillStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="BillNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="BillLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="BillBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="BillPeriod" Type="int" Mode="In" />
+    <Parameter Name="BillDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateBillDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="BillDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateGoodsReceipt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="GoodsReceiptID" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="GoodsReceiptStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="GoodsReceiptNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="GoodsReceiptLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptPeriod" Type="int" Mode="In" />
+    <Parameter Name="GoodsReceiptDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateGoodsReceiptDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="GoodsReceiptDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdatePurchaseOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="PurchaseOrderID" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="PurchaseOrderStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="PurchaseOrderNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="PurchaseOrderLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderPeriod" Type="int" Mode="In" />
+    <Parameter Name="PurchaseOrderDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdatePurchaseOrderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="PurchaseOrderDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateRequestForQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="RequestForQuoteID" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuoteDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="RequestForQuoteStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestForQuoteNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="RequestForQuoteLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuoteBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuotePeriod" Type="int" Mode="In" />
+    <Parameter Name="RequestForQuoteDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateRequestForQuoteDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="RequestForQuoteDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateVendor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AP">
+    <Parameter Name="VendorID" Type="int" Mode="In" />
+    <Parameter Name="VendorCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="VendorName" Type="nvarchar" Mode="In" />
+    <Parameter Name="VendorAccount" Type="int" Mode="In" />
+    <Parameter Name="VendorOrganization" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="InvoiceID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteInvoiceDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="InvoiceDetailsID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="QuoteID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteQuoteDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="QuoteDetailsID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSaleOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="SaleOrderID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSaleOrderDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="SaleOrderDetailsID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteShipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="ShippingID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteShippingDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="ShippingDetailsID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="InvoiceDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="InvoiceStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="InvoiceNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="InvoiceLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="InvoiceBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="InvoicePeriod" Type="int" Mode="In" />
+    <Parameter Name="InvoiceDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertInvoiceDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="QuoteDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="QuoteStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="QuoteNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="QuoteLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="QuoteBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="QuotePeriod" Type="int" Mode="In" />
+    <Parameter Name="QuoteDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertQuoteDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertSaleOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="SaleOrderDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="SaleOrderStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaleOrderNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaleOrderLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderPeriod" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertSaleOrderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertShipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="ShippingDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="ShippingStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="ShippingBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="ShippingrPeriod" Type="int" Mode="In" />
+    <Parameter Name="ShippingDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertShippingDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="InvoiceID" Type="int" Mode="In" />
+    <Parameter Name="InvoiceDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="InvoiceStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="InvoiceNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="InvoiceLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="InvoiceBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="InvoicePeriod" Type="int" Mode="In" />
+    <Parameter Name="InvoiceDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateInvoiceDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="InvoiceDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateQuote" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="QuoteID" Type="int" Mode="In" />
+    <Parameter Name="QuoteDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="QuoteStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="QuoteNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="QuoteLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="QuoteBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="QuotePeriod" Type="int" Mode="In" />
+    <Parameter Name="QuoteDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateQuoteDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="QuoteDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateSaleOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="SaleOrderID" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="SaleOrderStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaleOrderNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="SaleOrderLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderPeriod" Type="int" Mode="In" />
+    <Parameter Name="SaleOrderDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateSaleOrderDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="SaleOrderDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateShipping" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="ShippingID" Type="int" Mode="In" />
+    <Parameter Name="ShippingDocumentDate" Type="date" Mode="In" />
+    <Parameter Name="ShippingStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingNote" Type="nvarchar" Mode="In" />
+    <Parameter Name="ShippingLegalEntity" Type="int" Mode="In" />
+    <Parameter Name="ShippingBusinessPartner" Type="int" Mode="In" />
+    <Parameter Name="ShippingPeriod" Type="int" Mode="In" />
+    <Parameter Name="ShippingDocumentType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateShippingDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AR">
+    <Parameter Name="ShippingDetailsID" Type="int" Mode="In" />
+    <Parameter Name="Quantity" Type="int" Mode="In" />
+    <Parameter Name="Price" Type="money" Mode="In" />
+    <Parameter Name="TaxeID" Type="int" Mode="In" />
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteBusinessPartner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteBusinessPartnerAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerAddressID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertBusinessPartner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerType" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerLegalEntity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertBusinessPartnerAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerAddressType" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressCity" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAdressStreet" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressStateRegion" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressCountry" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateBusinessPartner" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerID" Type="int" Mode="In" />
+    <Parameter Name="BusinessPartnerCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerType" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerLegalEntity" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateBusinessPartnerAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="BP">
+    <Parameter Name="BusinessPartnerAddressID" Type="int" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressType" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressCity" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAdressStreet" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressStateRegion" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerAddressCountry" Type="nvarchar" Mode="In" />
+    <Parameter Name="BusinessPartnerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="AddressID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteBank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="BankID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteLegalEntity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="LegalEntityID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="AddressType" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressCity" Type="nvarchar" Mode="In" />
+    <Parameter Name="AdressStreet" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressStateRegion" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressCountry" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertBank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="BankCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankTerritory" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertLegalEntity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="LegalEntityName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityRegistrationID" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityFiscalID" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityChart" Type="int" Mode="In" />
+    <Parameter Name="LegalEntityHeadQuarters" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="AddressID" Type="int" Mode="In" />
+    <Parameter Name="AddressType" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressCity" Type="nvarchar" Mode="In" />
+    <Parameter Name="AdressStreet" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressStateRegion" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddressCountry" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateBank" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="BankID" Type="int" Mode="In" />
+    <Parameter Name="BankCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BankTerritory" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateLegalEntity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CO">
+    <Parameter Name="LegalEntityID" Type="int" Mode="In" />
+    <Parameter Name="LegalEntityName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityRegistrationID" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityFiscalID" Type="nvarchar" Mode="In" />
+    <Parameter Name="LegalEntityChart" Type="int" Mode="In" />
+    <Parameter Name="LegalEntityHeadQuarters" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteBudget" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="BudgetID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteCalendar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="CalendarId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="ChartID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteJournal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="JournalID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteLedger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="LedgerID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteOrganization" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="OrganizationID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeletePeriod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="PeriodID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="RateId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSegment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="SegmentId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="TaxID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="AccountChart" Type="int" Mode="In" />
+    <Parameter Name="AccountCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccountName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccountType" Type="nvarchar" Mode="In" />
+    <Parameter Name="AccountPosting" Type="char" Mode="In" />
+    <Parameter Name="AccountBudgeting" Type="char" Mode="In" />
+    <Parameter Name="AccountStatus" Type="char" Mode="In" />
+    <Parameter Name="AccountLevel" Type="int" Mode="In" />
+    <Parameter Name="AccountParent" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertBudget" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="BudgetName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetCalendar" Type="int" Mode="In" />
+    <Parameter Name="BudgetLedger" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertBudgetDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="BudgetID" Type="int" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Account" Type="int" Mode="In" />
+    <Parameter Name="Period" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertCalendar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="CalendarName" Type="varchar" Mode="In" />
+    <Parameter Name="CalendarStatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="ChartName" Type="varchar" Mode="In" />
+    <Parameter Name="ChartDescription" Type="varchar" Mode="In" />
+    <Parameter Name="ChartShortDescription" Type="varchar" Mode="In" />
+    <Parameter Name="ChartBaseLanguage" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="InsertJournal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="JournalName" Type="nvarchar" Mode="In" />
+    <Parameter Name="JournalDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="ActualFlag" Type="char" Mode="In" />
+    <Parameter Name="JournalCurrency" Type="int" Mode="In" />
+    <Parameter Name="JournalLedger" Type="int" Mode="In" />
+    <Parameter Name="JournalPeriod" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertJournalDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="JournalID" Type="int" Mode="In" />
+    <Parameter Name="DebitCreditFlag" Type="char" Mode="In" />
+    <Parameter Name="Amount" Type="money" Mode="In" />
+    <Parameter Name="Account" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertLedger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="LedgerName" Type="varchar" Mode="In" />
+    <Parameter Name="LedgerDescription" Type="varchar" Mode="In" />
+    <Parameter Name="LedgerCurrency" Type="int" Mode="In" />
+    <Parameter Name="LedgerCalendar" Type="int" Mode="In" />
+    <Parameter Name="LedgerChart" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertOrganization" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="OrganizationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationRegistrationID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationFiscalID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationSector" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationType" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationLedger" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertPeriod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="PeriodName" Type="varchar" Mode="In" />
+    <Parameter Name="PeriodStart" Type="date" Mode="In" />
+    <Parameter Name="PeriodEnd" Type="date" Mode="In" />
+    <Parameter Name="PeriodAdj" Type="varchar" Mode="In" />
+    <Parameter Name="PeriodCalendar" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="CurrencyFrom" Type="int" Mode="In" />
+    <Parameter Name="CurrenyTo" Type="int" Mode="In" />
+    <Parameter Name="RateStartDate" Type="date" Mode="In" />
+    <Parameter Name="RateEndDate" Type="date" Mode="In" />
+    <Parameter Name="ExchageRate" Type="real" Mode="In" />
+  </Function>
+  <Function Name="InsertSegment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="SegmentName" Type="varchar" Mode="In" />
+    <Parameter Name="SegmentDescription" Type="varchar" Mode="In" />
+    <Parameter Name="SegmentChart" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="TaxName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxRate" Type="real" Mode="In" />
+    <Parameter Name="TaxType" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxStartDate" Type="date" Mode="In" />
+    <Parameter Name="TaxEndDate" Type="date" Mode="In" />
+    <Parameter Name="TaxTerritory" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxAccount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateAccount" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="AccountID" Type="int" Mode="In" />
+    <Parameter Name="AccountCode" Type="varchar" Mode="In" />
+    <Parameter Name="AccountName" Type="varchar" Mode="In" />
+    <Parameter Name="AccountType" Type="varchar" Mode="In" />
+    <Parameter Name="AccountPosting" Type="varchar" Mode="In" />
+    <Parameter Name="AccountBudgeting" Type="varchar" Mode="In" />
+    <Parameter Name="AccountStatus" Type="varchar" Mode="In" />
+    <Parameter Name="AccountLevel" Type="int" Mode="In" />
+    <Parameter Name="AccountParent" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateBudget" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="BudgetID" Type="int" Mode="In" />
+    <Parameter Name="BudgetName" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetStatus" Type="nvarchar" Mode="In" />
+    <Parameter Name="BudgetCalendar" Type="int" Mode="In" />
+    <Parameter Name="BudgetLedger" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateCalendar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="CalendarID" Type="int" Mode="In" />
+    <Parameter Name="CalendarStatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateChart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="ChartId" Type="int" Mode="In" />
+    <Parameter Name="ChartName" Type="varchar" Mode="In" />
+    <Parameter Name="ChartDescription" Type="varchar" Mode="In" />
+    <Parameter Name="ChartShortDescription" Type="varchar" Mode="In" />
+    <Parameter Name="ChartBaseLanguage" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateCurrency" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="currencyId" Type="int" Mode="In" />
+    <Parameter Name="status" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateJournal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="JournalID" Type="int" Mode="In" />
+    <Parameter Name="JournalName" Type="nvarchar" Mode="In" />
+    <Parameter Name="JournalDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateLedger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="LedgerID" Type="int" Mode="In" />
+    <Parameter Name="LedgerName" Type="varchar" Mode="In" />
+    <Parameter Name="LedgerDescription" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateOrganization" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="OrganizationID" Type="int" Mode="In" />
+    <Parameter Name="OrganizationName" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationRegistrationID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationFiscalID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationSector" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationType" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrganizationLedger" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdatePeriod" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="PeriodID" Type="int" Mode="In" />
+    <Parameter Name="PeriodStatus" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateRate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="RateId" Type="int" Mode="In" />
+    <Parameter Name="CurrencyFrom" Type="int" Mode="In" />
+    <Parameter Name="CurrenyTo" Type="int" Mode="In" />
+    <Parameter Name="RateStartDate" Type="date" Mode="In" />
+    <Parameter Name="RateEndDate" Type="date" Mode="In" />
+    <Parameter Name="ExchageRate" Type="real" Mode="In" />
+  </Function>
+  <Function Name="UpdateSegment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="SegmentId" Type="int" Mode="In" />
+    <Parameter Name="SegmentName" Type="nvarchar" Mode="In" />
+    <Parameter Name="SegmentDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateTax" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="GL">
+    <Parameter Name="TaxID" Type="int" Mode="In" />
+    <Parameter Name="TaxName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxRate" Type="real" Mode="In" />
+    <Parameter Name="TaxType" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxStartDate" Type="date" Mode="In" />
+    <Parameter Name="TaxEndDate" Type="date" Mode="In" />
+    <Parameter Name="TaxTerritory" Type="nvarchar" Mode="In" />
+    <Parameter Name="TaxAccount" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteProductFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductFamilyID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DeleteSubProductFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductSubFamilyID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="InsertProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductSubFamily" Type="int" Mode="In" />
+    <Parameter Name="ProductCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductListPrice" Type="money" Mode="In" />
+  </Function>
+  <Function Name="InsertProductFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductFamilyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductFamilyDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="InsertProductSubFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductFamily" Type="int" Mode="In" />
+    <Parameter Name="ProductSubFamilyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductSubFamilyDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductID" Type="int" Mode="In" />
+    <Parameter Name="ProductCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductListPrice" Type="money" Mode="In" />
+    <Parameter Name="ProductSubFamily" Type="int" Mode="In" />
+  </Function>
+  <Function Name="UpdateProductFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductFamilyID" Type="int" Mode="In" />
+    <Parameter Name="ProductFamilyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductFamilyDescription" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="UpdateProductSubFamily" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="PR">
+    <Parameter Name="ProductSubFamilyID" Type="int" Mode="In" />
+    <Parameter Name="ProductSubFamilyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductSubFamilyDescription" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProductFamily" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="Cba_ModelStoreContainer">
+    <EntitySet Name="BIL01" EntityType="Self.BIL01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="BLI01" EntityType="Self.BLI01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="GOR01" EntityType="Self.GOR01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="GRL01" EntityType="Self.GRL01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="POL01" EntityType="Self.POL01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="POR01" EntityType="Self.POR01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="RFL01" EntityType="Self.RFL01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="RFQ01" EntityType="Self.RFQ01" Schema="AP" store:Type="Tables" />
+    <EntitySet Name="INL01" EntityType="Self.INL01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="INV01" EntityType="Self.INV01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="QLI01" EntityType="Self.QLI01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="QUO01" EntityType="Self.QUO01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="SHI01" EntityType="Self.SHI01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="SHL01" EntityType="Self.SHL01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="SOL01" EntityType="Self.SOL01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="SOR01" EntityType="Self.SOR01" Schema="AR" store:Type="Tables" />
+    <EntitySet Name="BPA01" EntityType="Self.BPA01" Schema="BP" store:Type="Tables" />
+    <EntitySet Name="BPD01" EntityType="Self.BPD01" Schema="BP" store:Type="Tables" />
+    <EntitySet Name="ADD01" EntityType="Self.ADD01" Schema="CO" store:Type="Tables" />
+    <EntitySet Name="BAN01" EntityType="Self.BAN01" Schema="CO" store:Type="Tables" />
+    <EntitySet Name="LEG01" EntityType="Self.LEG01" Schema="CO" store:Type="Tables" />
+    <EntitySet Name="TER01" EntityType="Self.TER01" Schema="CO" store:Type="Tables" />
+    <EntitySet Name="ACC01" EntityType="Self.ACC01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="ACS01" EntityType="Self.ACS01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="BAL01" EntityType="Self.BAL01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="BUD01" EntityType="Self.BUD01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="BUL01" EntityType="Self.BUL01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="CAL01" EntityType="Self.CAL01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="CHA01" EntityType="Self.CHA01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="CUR01" EntityType="Self.CUR01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="JHE01" EntityType="Self.JHE01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="JLI01" EntityType="Self.JLI01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="PER01" EntityType="Self.PER01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="RAT01" EntityType="Self.RAT01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="TAX01" EntityType="Self.TAX01" Schema="GL" store:Type="Tables" />
+    <EntitySet Name="PFA01" EntityType="Self.PFA01" Schema="PR" store:Type="Tables" />
+    <EntitySet Name="PRO01" EntityType="Self.PRO01" Schema="PR" store:Type="Tables" />
+    <EntitySet Name="PSF01" EntityType="Self.PSF01" Schema="PR" store:Type="Tables" />
+    <EntitySet Name="WAR01" EntityType="Self.WAR01" Schema="PR" store:Type="Tables" />
+    <AssociationSet Name="ACC01_CHA01_FK" Association="Self.ACC01_CHA01_FK">
+      <End Role="CHA01" EntitySet="CHA01" />
+      <End Role="ACC01" EntitySet="ACC01" />
+    </AssociationSet>
+    <AssociationSet Name="ACS01_CHA01_FK" Association="Self.ACS01_CHA01_FK">
+      <End Role="CHA01" EntitySet="CHA01" />
+      <End Role="ACS01" EntitySet="ACS01" />
+    </AssociationSet>
+    <AssociationSet Name="ADD01_TER01_FK" Association="Self.ADD01_TER01_FK">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="ADD01" EntitySet="ADD01" />
+    </AssociationSet>
+    <AssociationSet Name="BAL01_ACC01_FK" Association="Self.BAL01_ACC01_FK">
+      <End Role="ACC01" EntitySet="ACC01" />
+      <End Role="BAL01" EntitySet="BAL01" />
+    </AssociationSet>
+    <AssociationSet Name="BAL01_CUR01_FK" Association="Self.BAL01_CUR01_FK">
+      <End Role="CUR01" EntitySet="CUR01" />
+      <End Role="BAL01" EntitySet="BAL01" />
+    </AssociationSet>
+    <AssociationSet Name="BAL01_PER01_FK" Association="Self.BAL01_PER01_FK">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="BAL01" EntitySet="BAL01" />
+    </AssociationSet>
+    <AssociationSet Name="BAN01_TER01_FK" Association="Self.BAN01_TER01_FK">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="BAN01" EntitySet="BAN01" />
+    </AssociationSet>
+    <AssociationSet Name="BUD01_CAL01_FK" Association="Self.BUD01_CAL01_FK">
+      <End Role="CAL01" EntitySet="CAL01" />
+      <End Role="BUD01" EntitySet="BUD01" />
+    </AssociationSet>
+    <AssociationSet Name="BUL01_ACC01_FK" Association="Self.BUL01_ACC01_FK">
+      <End Role="ACC01" EntitySet="ACC01" />
+      <End Role="BUL01" EntitySet="BUL01" />
+    </AssociationSet>
+    <AssociationSet Name="BUL01_BUD01_FK" Association="Self.BUL01_BUD01_FK">
+      <End Role="BUD01" EntitySet="BUD01" />
+      <End Role="BUL01" EntitySet="BUL01" />
+    </AssociationSet>
+    <AssociationSet Name="BUL01_PER01_FK" Association="Self.BUL01_PER01_FK">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="BUL01" EntitySet="BUL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BIL01_BPA01" Association="Self.FK_BIL01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BIL01_LEG01" Association="Self.FK_BIL01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BIL01_PER01" Association="Self.FK_BIL01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="BIL01" EntitySet="BIL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_BIL01" Association="Self.FK_BLI01_BIL01">
+      <End Role="BIL01" EntitySet="BIL01" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_PRO01" Association="Self.FK_BLI01_PRO01">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BLI01_TAX01" Association="Self.FK_BLI01_TAX01">
+      <End Role="TAX01" EntitySet="TAX01" />
+      <End Role="BLI01" EntitySet="BLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BPA01_LEG01" Association="Self.FK_BPA01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="BPA01" EntitySet="BPA01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BPD01_BPA01" Association="Self.FK_BPD01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="BPD01" EntitySet="BPD01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BPD01_TER01" Association="Self.FK_BPD01_TER01">
+      <End Role="TER01" EntitySet="TER01" />
+      <End Role="BPD01" EntitySet="BPD01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_BPA01" Association="Self.FK_GOR01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_LEG01" Association="Self.FK_GOR01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GOR01_PER01" Association="Self.FK_GOR01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="GOR01" EntitySet="GOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_GRL01_WAR01" Association="Self.FK_GRL01_WAR01">
+      <End Role="WAR01" EntitySet="WAR01" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INL01_INV01" Association="Self.FK_INL01_INV01">
+      <End Role="INV01" EntitySet="INV01" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INL01_PRO01" Association="Self.FK_INL01_PRO01">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INL01_TAX01" Association="Self.FK_INL01_TAX01">
+      <End Role="TAX01" EntitySet="TAX01" />
+      <End Role="INL01" EntitySet="INL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_BPA01" Association="Self.FK_INV01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_LEG01" Association="Self.FK_INV01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INV01_PER01" Association="Self.FK_INV01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="INV01" EntitySet="INV01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JHE01_LEG01" Association="Self.FK_JHE01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="JHE01" EntitySet="JHE01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LEG01_ADD01" Association="Self.FK_LEG01_ADD01">
+      <End Role="ADD01" EntitySet="ADD01" />
+      <End Role="LEG01" EntitySet="LEG01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LEG01_CHA01" Association="Self.FK_LEG01_CHA01">
+      <End Role="CHA01" EntitySet="CHA01" />
+      <End Role="LEG01" EntitySet="LEG01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_BPA01" Association="Self.FK_POR01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_LEG01" Association="Self.FK_POR01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_POR01_PER01" Association="Self.FK_POR01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="POR01" EntitySet="POR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_PRO01" Association="Self.FK_QLI01_PRO01">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_QUO01" Association="Self.FK_QLI01_QUO01">
+      <End Role="QUO01" EntitySet="QUO01" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QLI01_TAX01" Association="Self.FK_QLI01_TAX01">
+      <End Role="TAX01" EntitySet="TAX01" />
+      <End Role="QLI01" EntitySet="QLI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_BPA01" Association="Self.FK_QUO01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_LEG01" Association="Self.FK_QUO01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_QUO01_PER01" Association="Self.FK_QUO01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="QUO01" EntitySet="QUO01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_BPA01" Association="Self.FK_RFQ01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_LEG01" Association="Self.FK_RFQ01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RFQ01_PER01" Association="Self.FK_RFQ01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="RFQ01" EntitySet="RFQ01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHI01_BPA01" Association="Self.FK_SHI01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="SHI01" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHI01_LEG01" Association="Self.FK_SHI01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="SHI01" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHI01_PER01" Association="Self.FK_SHI01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="SHI01" EntitySet="SHI01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_PRO01" Association="Self.FK_SHL01_PRO01">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="SHL01" EntitySet="SHL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_SHI01" Association="Self.FK_SHL01_SHI01">
+      <End Role="SHI01" EntitySet="SHI01" />
+      <End Role="SHL01" EntitySet="SHL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SHL01_TAX01" Association="Self.FK_SHL01_TAX01">
+      <End Role="TAX01" EntitySet="TAX01" />
+      <End Role="SHL01" EntitySet="SHL01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_BPA01" Association="Self.FK_SOR01_BPA01">
+      <End Role="BPA01" EntitySet="BPA01" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_LEG01" Association="Self.FK_SOR01_LEG01">
+      <End Role="LEG01" EntitySet="LEG01" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SOR01_PER01" Association="Self.FK_SOR01_PER01">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="SOR01" EntitySet="SOR01" />
+    </AssociationSet>
+    <AssociationSet Name="GRL01_GOR01_FK" Association="Self.GRL01_GOR01_FK">
+      <End Role="GOR01" EntitySet="GOR01" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="GRL01_PRO01_FK" Association="Self.GRL01_PRO01_FK">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="GRL01" EntitySet="GRL01" />
+    </AssociationSet>
+    <AssociationSet Name="JHE01_CUR01_FK" Association="Self.JHE01_CUR01_FK">
+      <End Role="CUR01" EntitySet="CUR01" />
+      <End Role="JHE01" EntitySet="JHE01" />
+    </AssociationSet>
+    <AssociationSet Name="JHE01_PER01_FK" Association="Self.JHE01_PER01_FK">
+      <End Role="PER01" EntitySet="PER01" />
+      <End Role="JHE01" EntitySet="JHE01" />
+    </AssociationSet>
+    <AssociationSet Name="JLI01_ACC01_FK" Association="Self.JLI01_ACC01_FK">
+      <End Role="ACC01" EntitySet="ACC01" />
+      <End Role="JLI01" EntitySet="JLI01" />
+    </AssociationSet>
+    <AssociationSet Name="JLI01_JHE01_FK" Association="Self.JLI01_JHE01_FK">
+      <End Role="JHE01" EntitySet="JHE01" />
+      <End Role="JLI01" EntitySet="JLI01" />
+    </AssociationSet>
+    <AssociationSet Name="PER01_CAL01_FK" Association="Self.PER01_CAL01_FK">
+      <End Role="CAL01" EntitySet="CAL01" />
+      <End Role="PER01" EntitySet="PER01" />
+    </AssociationSet>
+    <AssociationSet Name="POL01_POR01_FK" Association="Self.POL01_POR01_FK">
+      <End Role="POR01" EntitySet="POR01" />
+      <End Role="POL01" EntitySet="POL01" />
+    </AssociationSet>
+    <AssociationSet Name="POL01_PRO01_FK" Association="Self.POL01_PRO01_FK">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="POL01" EntitySet="POL01" />
+    </AssociationSet>
+    <AssociationSet Name="PRO01_PSF01_FK" Association="Self.PRO01_PSF01_FK">
+      <End Role="PSF01" EntitySet="PSF01" />
+      <End Role="PRO01" EntitySet="PRO01" />
+    </AssociationSet>
+    <AssociationSet Name="PSF01_PFA01_FK" Association="Self.PSF01_PFA01_FK">
+      <End Role="PFA01" EntitySet="PFA01" />
+      <End Role="PSF01" EntitySet="PSF01" />
+    </AssociationSet>
+    <AssociationSet Name="RAT01_CUR01_FROM_FK" Association="Self.RAT01_CUR01_FROM_FK">
+      <End Role="CUR01" EntitySet="CUR01" />
+      <End Role="RAT01" EntitySet="RAT01" />
+    </AssociationSet>
+    <AssociationSet Name="RAT01_CUR01_TO_FK" Association="Self.RAT01_CUR01_TO_FK">
+      <End Role="CUR01" EntitySet="CUR01" />
+      <End Role="RAT01" EntitySet="RAT01" />
+    </AssociationSet>
+    <AssociationSet Name="RFL01_PRO01_FK" Association="Self.RFL01_PRO01_FK">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="RFL01" EntitySet="RFL01" />
+    </AssociationSet>
+    <AssociationSet Name="RFL01_RFQ01_FK" Association="Self.RFL01_RFQ01_FK">
+      <End Role="RFQ01" EntitySet="RFQ01" />
+      <End Role="RFL01" EntitySet="RFL01" />
+    </AssociationSet>
+    <AssociationSet Name="SOL01_PRO01_FK" Association="Self.SOL01_PRO01_FK">
+      <End Role="PRO01" EntitySet="PRO01" />
+      <End Role="SOL01" EntitySet="SOL01" />
+    </AssociationSet>
+    <AssociationSet Name="SOL01_SOR01_FK" Association="Self.SOL01_SOR01_FK">
+      <End Role="SOR01" EntitySet="SOR01" />
+      <End Role="SOL01" EntitySet="SOL01" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

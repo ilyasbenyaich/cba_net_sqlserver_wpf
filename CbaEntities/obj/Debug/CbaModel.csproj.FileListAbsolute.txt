@@ -1,0 +1,18 @@
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\bin\Debug\CBA_Data.mdf
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\bin\Debug\CBA_Data_log.ldf
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\bin\Debug\CbaModel.dll.config
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\bin\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\bin\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\obj\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\ClassLibrary1\obj\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.dll.config
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\obj\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\obj\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaEntities\obj\Debug\CbaModel.csprojResolveAssemblyReference.cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.dll.config
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\bin\Debug\CbaModel.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\obj\Debug\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaEntities\obj\Debug\CbaModel.pdb

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48605D40-0774-4239-806D-5BCC136EB9D3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cba</RootNamespace>
+    <AssemblyName>Cba</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <EnableSecurityDebugging>true</EnableSecurityDebugging>
+    <Install>False</Install>
+    <StartAction>URL</StartAction>
+    <HostInBrowser>true</HostInBrowser>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <TargetZone>Internet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="RibbonControlsLibrary, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Addresses.xaml.cs">
+      <DependentUpon>Addresses.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AddressesCollection.cs" />
+    <Compile Include="Invoices.xaml.cs">
+      <DependentUpon>Invoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvoicesCollection.cs" />
+    <Compile Include="ShipmentsCollection.cs" />
+    <Compile Include="Shipments.xaml.cs">
+      <DependentUpon>Shipments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SaleOrdersCollection.cs" />
+    <Compile Include="SaleOrders.xaml.cs">
+      <DependentUpon>SaleOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="QuotesCollection.cs" />
+    <Compile Include="Quotes.xaml.cs">
+      <DependentUpon>Quotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Budgets.xaml.cs">
+      <DependentUpon>Budgets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BudgetsCollection.cs" />
+    <Compile Include="Charts.xaml.cs">
+      <DependentUpon>Charts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsCollection.cs" />
+    <Compile Include="BusinessPartners.xaml.cs">
+      <DependentUpon>BusinessPartners.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessPartnersCollection.cs" />
+    <Compile Include="Bills.xaml.cs">
+      <DependentUpon>Bills.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BillsCollection.cs" />
+    <Compile Include="Journals.xaml.cs">
+      <DependentUpon>Journals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="JournalsCollection.cs" />
+    <Compile Include="Banks.xaml.cs">
+      <DependentUpon>Banks.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BanksCollection.cs" />
+    <Compile Include="LegalEntities.xaml.cs">
+      <DependentUpon>LegalEntities.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LegalEntitiesCollection.cs" />
+    <Compile Include="ProductFamilies.xaml.cs">
+      <DependentUpon>ProductFamilies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductFamiliesCollection.cs" />
+    <Compile Include="Products.xaml.cs">
+      <DependentUpon>Products.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsCollection.cs" />
+    <Compile Include="ProductSubFamilies.xaml.cs">
+      <DependentUpon>ProductSubFamilies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSubFamilyCollection.cs" />
+    <Compile Include="GoodsReceipts.xaml.cs">
+      <DependentUpon>GoodsReceipts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsReceiptsCollection.cs" />
+    <Compile Include="RequestForQuotesCollection.cs" />
+    <Compile Include="RequestForQuotes.xaml.cs">
+      <DependentUpon>RequestForQuotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseOrdersCollection.cs" />
+    <Compile Include="PurchaseOrders.xaml.cs">
+      <DependentUpon>PurchaseOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Rates.xaml.cs">
+      <DependentUpon>Rates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RatesCollection.cs" />
+    <Compile Include="Taxes.xaml.cs">
+      <DependentUpon>Taxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TaxesCollection.cs" />
+    <Page Include="Addresses.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Invoices.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Shipments.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SaleOrders.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Quotes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Budgets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Calendars.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Charts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Currencies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BusinessPartners.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Bills.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Journals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Banks.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Main.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Calendars.xaml.cs">
+      <DependentUpon>Calendars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarsCollection.cs" />
+    <Compile Include="Currencies.xaml.cs">
+      <DependentUpon>Currencies.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CurrenciesCollection.cs" />
+    <Compile Include="Main.xaml.cs">
+      <DependentUpon>Main.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="LegalEntities.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ProductFamilies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Products.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ProductSubFamilies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GoodsReceipts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="RequestForQuotes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PurchaseOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Rates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Taxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <AppDesigner Include="Properties\" />
+    <None Include="WpfBrowserApplication1_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CbaEntities\CbaModel.csproj">
+      <Project>{A5E20188-ED0B-4638-A66D-7801C1DCB28A}</Project>
+      <Name>CbaModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <StartArguments />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WpfBrowserApplication1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D8934F42C0C37E997D94378FA8E2780D3FCDF9BB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CbaView.App</StartupObject>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

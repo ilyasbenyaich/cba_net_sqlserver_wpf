@@ -1,0 +1,154 @@
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\App.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\CbaView.csproj.GenerateResource.Cache
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\CBA_Data.mdf
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\CBA_Data_log.ldf
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\CbaView.csprojResolveAssemblyReference.cache
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Main.baml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Main.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Currencies.baml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Currencies.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Cba.exe.config
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Cba.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba_MarkupCompile.cache
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.g.resources
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.Properties.Resources.resources
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.TrustInfo.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Cba.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\CbaView.csprojResolveAssemblyReference.cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Currencies.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Main.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Currencies.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Main.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\App.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba_MarkupCompile.cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.g.resources
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.Properties.Resources.resources
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\CbaView.csproj.GenerateResource.Cache
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe.config
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\CbaModel.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Microsoft.Windows.Shell.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\RibbonControlsLibrary.dll
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\CbaModel.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Microsoft.Windows.Shell.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Microsoft.Windows.Shell.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\RibbonControlsLibrary.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\bin\Debug\RibbonControlsLibrary.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.TrustInfo.xml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Ledgers.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Ledgers.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Calendars.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Calendars.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Taxes.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Taxes.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Charts.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Charts.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Journals.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Journals.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Addresses.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Addresses.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Organizations.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Organizations.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Rates.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Rates.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Budgets.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Budgets.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductFamilies.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductSubFamilies.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductFamilies.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductSubFamilies.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Products.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Products.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Purchases.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Vendors.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Purchases.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Vendors.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Customers.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Sales.baml
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Customers.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Sales.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\CbaView.csprojResolveAssemblyReference.cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Addresses.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Budgets.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Calendars.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Charts.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Currencies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Journals.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Main.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductFamilies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Products.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductSubFamilies.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Rates.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Taxes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Addresses.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Budgets.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Calendars.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Charts.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Currencies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Journals.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Main.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductFamilies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Products.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\ProductSubFamilies.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Rates.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Taxes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\App.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba_MarkupCompile.cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.g.resources
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.Properties.Resources.resources
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\CbaView.csproj.GenerateResource.Cache
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.TrustInfo.xml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.exe
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe.config
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe.manifest
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.xbap
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.exe
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\Cba.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\CbaModel.dll
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\bin\Debug\CbaModel.pdb
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.exe.manifest
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Cba.xbap
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\LegalEntities.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\LegalEntities.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\SaleOrders.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Quotes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\BusinessPartners.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Bills.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Banks.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\GoodsReceipts.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\RequestForQuotes.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\PurchaseOrders.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\SaleOrders.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Quotes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\BusinessPartners.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Bills.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Banks.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\GoodsReceipts.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\RequestForQuotes.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\PurchaseOrders.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Invoices.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Shipments.baml
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Invoices.g.cs
+I:\Documents\vs_2010\Projects\C#\Cba\CbaBrowser\obj\Debug\Shipments.g.cs

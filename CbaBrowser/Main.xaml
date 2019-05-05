@@ -1,0 +1,51 @@
+﻿<Page xmlns:my="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"  x:Class="CbaView.Main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" Title="CBA" Name="Home">
+    <DockPanel Name="MainDock" Loaded="MainDock_Loaded">
+        <my:Ribbon DockPanel.Dock="Top" Height="Auto">
+           <my:RibbonTab Header="Quick Navigation">
+                <my:RibbonGroup Header="Financials">
+                    <my:RibbonButton Name="JournalsRBT" Label="journals" Click="JournalsRBT_Click" />
+                    <my:RibbonButton Name="BudgetRBT" Label="budgets" Click="BudgetRBT_Click" />
+                </my:RibbonGroup>
+                <my:RibbonGroup Header="BusinessPartners">
+                    <my:RibbonButton Name="BusinessPartnerRBT" Label="business partner" Click="BusinessPartnerRBT_Click" />
+                </my:RibbonGroup>
+                <my:RibbonGroup Header="Inventory">
+                    <my:RibbonButton Name="ProductFamilyRBT" Label="product family" Click="ProductFamilyRBT_Click" />
+                    <my:RibbonButton Name="ProductSubFamilyRBT" Label="product sub family" Click="ProductSubFamilyRBT_Click" />
+                    <my:RibbonButton Name="ProductRBT" Label="products" Click="ProductRBT_Click" />
+                </my:RibbonGroup>
+                <my:RibbonGroup Header="Purchasing">
+                    <my:RibbonButton Name="RequestForQuoteRBT" Label="request for quotes" Click="RequestForQuoteRBT_Click" />
+                    <my:RibbonButton Name="PurchaseOrderRBT" Label="purchase orders" Click="PurchaseOrderRBT_Click" />
+                    <my:RibbonButton Name="GoodsReceiptRBT" Label="goods receipts" Click="GoodsReceiptRBT_Click" />
+                    <my:RibbonButton Name="BillRBT" Label="bills" Click="BillRBT_Click" />
+                </my:RibbonGroup>
+                <my:RibbonGroup Header="Sales">
+                   <my:RibbonButton Name="QuoteBT" Label="quotes" Click="QuoteRBT_Click" />
+                   <my:RibbonButton Name="SaleOrderRBT" Label="sale orders" Click="SaleOrderRBT_Click" />
+                   <my:RibbonButton Name="ShipmentRBT" Label="shipments" Click="ShipmentRBT_Click" />
+                   <my:RibbonButton Name="InvoiceRBT" Label="invoices" Click="InvoiceRBT_Click" />
+                </my:RibbonGroup>
+                <my:RibbonGroup Header="Administration">
+                    <my:RibbonButton Name="AddressesRBT" Label="addresses" Click="AddressesRBT_Click" />
+                    <my:RibbonButton Name="ChartsRBT"  Label="charts" Click="ChartsRBT_Click" />
+                    <my:RibbonButton Name="LegalEntitiesRBT" Label="legal entities" Click="LegalEntitiesRBT_Click" />
+                    <my:RibbonButton Name="BanksRBT" Label="banks" Click="BanksRBT_Click" />
+                    <my:RibbonButton Name="CalendarsRBT" Label="calendars" Click="CalendarsRBT_Click" />
+                    <my:RibbonButton Name="TaxesRBT"  Label="taxes" Click="TaxesRBT_Click" />
+                    <my:RibbonButton Name="CurrenciesRBT" Label="currencies" Click="CurrenciesRBT_Click"  />
+                    <my:RibbonButton Name="RatesRBT" Label="rates" Click="RatesRBT_Click"  />
+                </my:RibbonGroup>
+            </my:RibbonTab>
+           </my:Ribbon>
+        <TextBox DockPanel.Dock="Bottom">Dock = "Bottom"</TextBox>
+        <TextBox DockPanel.Dock="Left" Width="0" Visibility="Hidden" BorderBrush="Transparent">Dock = "Left"</TextBox>
+     </DockPanel>
+
+
+</Page>

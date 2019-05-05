@@ -1,0 +1,38 @@
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.exe.manifest
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.xbap
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.exe
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.pdb
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\Page1.baml
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\Page1.g.cs
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\App.g.cs
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1_MarkupCompile.cache
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.g.resources
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.Properties.Resources.resources
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.csproj.GenerateResource.Cache
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.TrustInfo.xml
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.exe.manifest
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.xbap
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.exe
+C:\Users\ilyas\AppData\Local\Temporary Projects\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.exe
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Page1.baml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\Page1.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\App.g.cs
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1_MarkupCompile.cache
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.g.resources
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.Properties.Resources.resources
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.csproj.GenerateResource.Cache
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.exe
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.dll
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\Microsoft.Windows.Shell.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.pdb
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\RibbonControlsLibrary.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\bin\Debug\WpfBrowserApplication1.xbap
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.TrustInfo.xml
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.exe.manifest
+I:\Documents\Visual Studio 2010\Projects\C#\WpfBrowserApplication1\WpfBrowserApplication1\obj\Debug\WpfBrowserApplication1.xbap
