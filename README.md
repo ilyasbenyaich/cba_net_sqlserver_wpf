@@ -1,30 +1,33 @@
 [CBA] .NET (WPF) & SQL SERVER
 ==============================
 
---Français
-
-Ceci est la version .NET (WPF) & SQL SERVER de "Cloud Business Applications".
-
-Pour en savoir plus sur ce projet en particulier, veuillez visiter le lien suivant:
-
-http://panoplyweb.com/?portfolio=wpf-entity-framework-sql-server
-
-Pour en savoir plus sur les projets "Cloud Business Applications" , veuillez visiter le lien suivant:
-
-http://panoplyweb.com/a-propos/
-
-Merci!
-
 --English
 
 This the .NET (WPF) & SQL SERVER for the "Cloud Business Applications" project.
 
 To learn more about this project in particular, please use the following link:
 
-http://panoplyweb.com/?portfolio=wpf-entity-framework-sql-server
+https://panoplytechen.wordpress.com/2017/12/15/cba-wpf-entity-framework-and-sql-server/
 
 To learn more about the "Cloud Business Applications" projects overall, please visit the following page:
 
-http://panoplyweb.com/a-propos/
+https://panoplytechen.wordpress.com/2017/11/24/cloud-business-applications-intro/
 
 Thank you!
+
+
+--Français
+
+Ceci est la version .NET (WPF) & SQL SERVER de "Cloud Business Applications".
+
+Pour en savoir plus sur ce projet en particulier, veuillez visiter le lien suivant:
+
+https://panoplytechfr.wordpress.com/2017/12/15/cba-wpf-entity-framework-et-sql-server/
+
+Pour en savoir plus sur les projets "Cloud Business Applications" , veuillez visiter le lien suivant:
+
+https://panoplytechfr.wordpress.com/2017/11/24/introduction-aux-projets-cba/
+
+Merci!
+
+
