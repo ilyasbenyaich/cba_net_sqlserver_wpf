@@ -11,7 +11,7 @@ https://panoplytechen.wordpress.com/2017/12/15/cba-wpf-entity-framework-and-sql-
 
 To learn more about the "Cloud Business Applications" projects overall, please visit the following page:
 
-https://panoplytechen.wordpress.com/2017/11/24/cloud-business-applications-intro/
+https://panoplytechen.wordpress.com/cloud-business-applications/
 
 Thank you!
 
@@ -26,7 +26,7 @@ https://panoplytechfr.wordpress.com/2017/12/15/cba-wpf-entity-framework-et-sql-s
 
 Pour en savoir plus sur les projets "Cloud Business Applications" , veuillez visiter le lien suivant:
 
-https://panoplytechfr.wordpress.com/2017/11/24/introduction-aux-projets-cba/
+https://panoplytechfr.wordpress.com/cloud-business-applications/
 
 Merci!
 
